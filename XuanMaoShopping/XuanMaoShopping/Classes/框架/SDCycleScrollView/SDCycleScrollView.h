@@ -59,10 +59,6 @@ typedef enum {
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index;
 
 
-
-
-
-
 // 不需要自定义轮播cell的请忽略以下两个的代理方法
 
 // ========== 轮播自定义cell ==========

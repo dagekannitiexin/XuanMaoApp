@@ -82,14 +82,13 @@
 #define MRRandomColor MRRGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 // 全局主题颜色
-#define MRGlobalBg MRRGBColor(255, 255, 255)
+#define MRGlobalBg MRRGBColor(250, 250, 250)
 
 // 主题背景颜色
 #define LYBgColor MRRGBColor(240, 240, 240)
 
-
-// 主题背景颜色
-#define LYBgColor MRRGBColor(240, 240, 240)
+//灰色字体颜色
+#define XMGaryColor MRRGBColor(214, 214, 214)
 
 //灰色面板
 #define XMBgColor MRRGBColor(240, 240, 240)

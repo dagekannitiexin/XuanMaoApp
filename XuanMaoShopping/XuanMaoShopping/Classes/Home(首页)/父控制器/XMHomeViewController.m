@@ -75,7 +75,7 @@
 - (void)creatnavigationbar
 {
     
-    self.navigationItem.titleView = [[UIView alloc]init];
+//    self.navigationItem.titleView = [[UIView alloc]init];
     //设置leftBarButtonItem
     UIButton *leftViewBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0,30, 30)];
     [leftViewBtn setImage:[UIImage imageNamed:@"home_PersonalCenter"] forState:UIControlStateNormal];
@@ -177,6 +177,8 @@
     //第四个view（人气推荐部分）
     [_headView addSubview:[self madeHeadViewFour]];
     
+    //填加一个底线
+    [_headView addSubview:[self addFootLineView]];
     //最后统计_headView大小
     _headView.frame = CGRectMake(0, 64, SCREEN_WIDTH, _totleHeight);
 }
@@ -250,7 +252,7 @@
 {
     //这个view上面包含灰色界面  orgin：viewfour+10
     UIView *viewFour = [[UIView alloc]init];
-    
+    viewFour.backgroundColor = [UIColor whiteColor];
     //标题栏
     XMGoodsTitleStyleView *titleView = [[[NSBundle mainBundle]loadNibNamed:@"XMGoodsTitleStyleView" owner:nil options:nil]lastObject];
     [viewFour addSubview:titleView];
@@ -266,8 +268,17 @@
         goodsView.origin = CGPointMake(goodsViewWidthSpace, titleView.bottom+(goodsViewHeight+goodsViewHeighSpace)*i);
         viewFour.frame = CGRectMake(0, _totleHeight+10, SCREEN_WIDTH, goodsView.bottom+15);
     }
-    _totleHeight = _totleHeight +viewFour.height;
+    _totleHeight = _totleHeight +viewFour.height+20;
     return viewFour;
+}
+
+- (UIView*)addFootLineView
+{
+    UIView *footLineView = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 200)];
+    footLineView.backgroundColor = RGBACOLOR(231, 231, 231, 1);
+    UIView *dixian = [[[NSBundle mainBundle]loadNibNamed:@"XMFootLineView" owner:nil options:nil]lastObject];
+    [footLineView addSubview:dixian];
+    return footLineView;
 }
 #pragma mark - btnClick
 - (void)activeBtnclick:(UIButton*)sender
