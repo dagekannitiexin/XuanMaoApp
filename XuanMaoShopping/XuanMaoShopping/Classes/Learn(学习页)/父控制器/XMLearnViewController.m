@@ -12,6 +12,7 @@
 #import "NewPagedFlowView.h"
 #import "HeadButton.h"
 #import "XMLearnStyleTitleView.h"
+#import "XMLearnStyleViewTwo.h"
 
 @interface XMLearnViewController ()<NewPagedFlowViewDelegate,NewPagedFlowViewDataSource>{
     CGFloat _totleHeight;
@@ -65,7 +66,7 @@
 
 -(void)initTableView
 {
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49)];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49-64)];
     [self.view addSubview:_tableView];
     
     
@@ -112,6 +113,9 @@
     
     // 添加第三个view
     [_headView addSubview:[self madeHeadViewThree]];
+    
+    //添加第四个view
+    [_headView addSubview:[self madeHeadViewFour]];
     //最后统计_headView大小
     _headView.frame = CGRectMake(0, 64, SCREEN_WIDTH, _totleHeight);
     [self.view addSubview:_headView];
@@ -148,11 +152,56 @@
 
 - (UIView*)madeHeadViewThree
 {
-    XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 60)];
+    UIView *headViewThree = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 315)];
+    headViewThree.backgroundColor = [UIColor yellowColor];
+    
+    XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
     titleView.titleLabel.text =@"最热买手";
     titleView.backgroundColor = [UIColor whiteColor];
-    _totleHeight = _totleHeight +titleView.height+50;
-    return titleView;
+    [headViewThree addSubview:titleView];
+    
+    //滚动介绍栏
+    CGFloat hostW = 230;
+    CGFloat hostH = 230;
+    CGFloat hostSpace = 15;
+    CGFloat hostViewSpace = 10;
+    
+    UIScrollView *hostScrView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, titleView.bottom, SCREEN_WIDTH, headViewThree.height-titleView.bottom)];
+    hostScrView.backgroundColor = RGBACOLOR(247, 247, 247, 1);
+    hostScrView.showsVerticalScrollIndicator = FALSE;
+    hostScrView.showsHorizontalScrollIndicator = FALSE;
+    hostScrView.alwaysBounceHorizontal = YES;
+    hostScrView.layer.masksToBounds = YES;
+    [headViewThree addSubview:hostScrView];
+    
+    
+    for (int i=0; i<5; i++) {
+        XMLearnStyleViewTwo *hostView = [[[NSBundle mainBundle]loadNibNamed:@"XMLearnStyleViewTwo" owner:nil options:nil]lastObject];
+        hostView.origin = CGPointMake(hostSpace +(hostW+hostViewSpace)*i, 0);
+        [hostScrView addSubview:hostView];
+        hostScrView.contentSize = CGSizeMake(hostView.right+20, hostH);
+        
+        NSArray *array = [NSArray arrayWithObjects:@"男生护肤",@"男闺蜜推荐",@"真人实测", nil];
+        [hostView setlabelOfHost:array];
+    }
+    
+    
+    _totleHeight = _totleHeight +headViewThree.height;
+    return headViewThree;
+}
+
+- (UIView*)madeHeadViewFour
+{
+    UIView *headViewFour = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 200)];
+    headViewFour.backgroundColor = [UIColor yellowColor];
+    
+    XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+    titleView.titleLabel.text =@"推荐买手";
+    titleView.backgroundColor = [UIColor whiteColor];
+    [headViewFour addSubview:titleView];
+    
+    _totleHeight = _totleHeight +headViewFour.height;
+    return headViewFour;
 }
 
 #pragma mark - btnClick

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */; };
+		18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */; };
+		18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */; };
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
+		18E3E7C01F5F8A1A007D86FC /* XMLearnStyleViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E3E7BF1F5F8A1A007D86FC /* XMLearnStyleViewTwo.m */; };
+		18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */; };
 		18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8E0291F5E39E600006A18 /* XMFootLineView.xib */; };
 		18FF06A81F5E413000EA1D13 /* XMFootLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06A71F5E413000EA1D13 /* XMFootLineView.m */; };
 		18FF06B21F5E813900EA1D13 /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06AF1F5E813900EA1D13 /* NewPagedFlowView.m */; };
@@ -92,9 +97,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18501D201F5FCC4900FDCF51 /* XMLabelExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLabelExtension.h; sourceTree = "<group>"; };
+		18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLabelExtension.m; sourceTree = "<group>"; };
+		18501D231F5FF11F00FDCF51 /* XMLearnStyleViewFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewFour.h; sourceTree = "<group>"; };
+		18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleViewFour.m; sourceTree = "<group>"; };
+		18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewFour.xib; sourceTree = "<group>"; };
 		187ED9B41F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGoodsViewStyleThreeView.h; sourceTree = "<group>"; };
 		187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGoodsViewStyleThreeView.m; sourceTree = "<group>"; };
 		187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGoodsViewStyleThreeView.xib; sourceTree = "<group>"; };
+		18E3E7BE1F5F8A1A007D86FC /* XMLearnStyleViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewTwo.h; sourceTree = "<group>"; };
+		18E3E7BF1F5F8A1A007D86FC /* XMLearnStyleViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleViewTwo.m; sourceTree = "<group>"; };
+		18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewTwo.xib; sourceTree = "<group>"; };
 		18F8E0291F5E39E600006A18 /* XMFootLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMFootLineView.xib; sourceTree = "<group>"; };
 		18FF06A61F5E413000EA1D13 /* XMFootLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFootLineView.h; sourceTree = "<group>"; };
 		18FF06A71F5E413000EA1D13 /* XMFootLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFootLineView.m; sourceTree = "<group>"; };
@@ -458,6 +471,14 @@
 				18FF06B81F5E9D6700EA1D13 /* XMLearnStyleTitleView.m */,
 				18FF06B41F5E9D4100EA1D13 /* XMLearnStyleViewOne.h */,
 				18FF06B51F5E9D4100EA1D13 /* XMLearnStyleViewOne.m */,
+				18E3E7BE1F5F8A1A007D86FC /* XMLearnStyleViewTwo.h */,
+				18E3E7BF1F5F8A1A007D86FC /* XMLearnStyleViewTwo.m */,
+				18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */,
+				18501D201F5FCC4900FDCF51 /* XMLabelExtension.h */,
+				18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */,
+				18501D231F5FF11F00FDCF51 /* XMLearnStyleViewFour.h */,
+				18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */,
+				18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,6 +782,8 @@
 				187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */,
 				18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,
+				18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */,
+				18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +812,7 @@
 				2377976F1F553432008B2DA8 /* XMBaseViewController.m in Sources */,
 				237797C81F5559A4008B2DA8 /* UIView+WebCache.m in Sources */,
 				23294DE71F56495F00720245 /* MJFoundation.m in Sources */,
+				18E3E7C01F5F8A1A007D86FC /* XMLearnStyleViewTwo.m in Sources */,
 				23294DEC1F56496000720245 /* NSObject+MJKeyValue.m in Sources */,
 				237797901F555979008B2DA8 /* TADotView.m in Sources */,
 				237797C91F5559A4008B2DA8 /* UIView+WebCacheOperation.m in Sources */,
@@ -819,10 +843,12 @@
 				237797C71F5559A4008B2DA8 /* UIImageView+WebCache.m in Sources */,
 				237797CC1F5568E0008B2DA8 /* HeadButton.m in Sources */,
 				237797041F55321E008B2DA8 /* main.m in Sources */,
+				18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */,
 				2377977D1F5535B0008B2DA8 /* XMTabBarController.m in Sources */,
 				237797921F555979008B2DA8 /* SDCollectionViewCell.m in Sources */,
 				18FF06B21F5E813900EA1D13 /* NewPagedFlowView.m in Sources */,
 				237797BB1F5559A4008B2DA8 /* SDImageCache.m in Sources */,
+				18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */,
 				237797C61F5559A4008B2DA8 /* UIImageView+HighlightedWebCache.m in Sources */,
 				23294DF21F56509700720245 /* goodsViewStyleOne.m in Sources */,
 				237797BC1F5559A4008B2DA8 /* SDImageCacheConfig.m in Sources */,
