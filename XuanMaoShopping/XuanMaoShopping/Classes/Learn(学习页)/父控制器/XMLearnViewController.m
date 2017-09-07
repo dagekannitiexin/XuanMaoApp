@@ -13,6 +13,8 @@
 #import "HeadButton.h"
 #import "XMLearnStyleTitleView.h"
 #import "XMLearnStyleViewTwo.h"
+#import "XMLearnStyleViewFour.h"
+#import "XMFootLineView.h"
 
 @interface XMLearnViewController ()<NewPagedFlowViewDelegate,NewPagedFlowViewDataSource>{
     CGFloat _totleHeight;
@@ -116,6 +118,10 @@
     
     //添加第四个view
     [_headView addSubview:[self madeHeadViewFour]];
+    
+    //填加一个底线
+    [_headView addSubview:[self addFootLineView]];
+    
     //最后统计_headView大小
     _headView.frame = CGRectMake(0, 64, SCREEN_WIDTH, _totleHeight);
     [self.view addSubview:_headView];
@@ -200,8 +206,31 @@
     titleView.backgroundColor = [UIColor whiteColor];
     [headViewFour addSubview:titleView];
     
+    for (int i=0; i<10; i++) {
+        XMLearnStyleViewFour *viewFour = [[[NSBundle mainBundle]loadNibNamed:@"XMLearnStyleViewFour" owner:nil options:nil]lastObject];
+        viewFour.origin = CGPointMake(0, titleView.bottom+viewFour.height*i);
+        NSArray *array = [NSArray arrayWithObjects:@"美妆控",@"爱实测",@"爱分享~~", nil];
+        [viewFour createLabel:array];
+        
+        NSArray *array2 = [NSArray arrayWithObjects:@"Img_default",@"Img_default",@"Img_default", nil];
+        [viewFour createImg:array2];
+        
+        [headViewFour addSubview:viewFour];
+        
+        headViewFour.size = CGSizeMake(SCREEN_WIDTH, viewFour.bottom);
+        
+    }
     _totleHeight = _totleHeight +headViewFour.height;
     return headViewFour;
+}
+
+- (UIView*)addFootLineView
+{
+    UIView *footLineView = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 200)];
+    footLineView.backgroundColor = RGBACOLOR(231, 231, 231, 1);
+    UIView *dixian = [[[NSBundle mainBundle]loadNibNamed:@"XMFootLineView" owner:nil options:nil]lastObject];
+    [footLineView addSubview:dixian];
+    return footLineView;
 }
 
 #pragma mark - btnClick

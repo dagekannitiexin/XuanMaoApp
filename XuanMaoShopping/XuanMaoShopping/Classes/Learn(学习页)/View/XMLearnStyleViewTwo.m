@@ -34,7 +34,7 @@
     CGFloat labelSpace = 15;
     CGFloat labelViewSpace = 5;
     _bottomWith = labelSpace;
-    for (int i=0; i<3; i++) {
+    for (int i=0; i<hostLabels.count; i++) {
         XMLabelExtension *labelext = [[XMLabelExtension alloc]init];
         [labelext setLabelTextColor:RGBACOLOR(175, 175, 175, 1) textName:hostLabels[i]];
         labelext.frame = CGRectMake(labelViewSpace+_bottomWith, self.hostDescribe.bottom+13, labelext.width, labelext.height);

@@ -12,6 +12,10 @@
 		18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */; };
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
+		18DE408E1F61276D005D7942 /* XMMeHeadStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE408D1F61276D005D7942 /* XMMeHeadStyleView.m */; };
+		18DE40901F612779005D7942 /* XMMeHeadStyleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DE408F1F612779005D7942 /* XMMeHeadStyleView.xib */; };
+		18DE40961F61377F005D7942 /* XMMeCellStyleOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE40951F61377F005D7942 /* XMMeCellStyleOne.m */; };
+		18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DE40971F61378E005D7942 /* XMMeCellStyleOne.xib */; };
 		18E3E7C01F5F8A1A007D86FC /* XMLearnStyleViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E3E7BF1F5F8A1A007D86FC /* XMLearnStyleViewTwo.m */; };
 		18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */; };
 		18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8E0291F5E39E600006A18 /* XMFootLineView.xib */; };
@@ -105,6 +109,12 @@
 		187ED9B41F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGoodsViewStyleThreeView.h; sourceTree = "<group>"; };
 		187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGoodsViewStyleThreeView.m; sourceTree = "<group>"; };
 		187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGoodsViewStyleThreeView.xib; sourceTree = "<group>"; };
+		18DE408C1F61276D005D7942 /* XMMeHeadStyleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeHeadStyleView.h; sourceTree = "<group>"; };
+		18DE408D1F61276D005D7942 /* XMMeHeadStyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeHeadStyleView.m; sourceTree = "<group>"; };
+		18DE408F1F612779005D7942 /* XMMeHeadStyleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMMeHeadStyleView.xib; sourceTree = "<group>"; };
+		18DE40941F61377F005D7942 /* XMMeCellStyleOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeCellStyleOne.h; sourceTree = "<group>"; };
+		18DE40951F61377F005D7942 /* XMMeCellStyleOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeCellStyleOne.m; sourceTree = "<group>"; };
+		18DE40971F61378E005D7942 /* XMMeCellStyleOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMMeCellStyleOne.xib; sourceTree = "<group>"; };
 		18E3E7BE1F5F8A1A007D86FC /* XMLearnStyleViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewTwo.h; sourceTree = "<group>"; };
 		18E3E7BF1F5F8A1A007D86FC /* XMLearnStyleViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleViewTwo.m; sourceTree = "<group>"; };
 		18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewTwo.xib; sourceTree = "<group>"; };
@@ -495,10 +505,10 @@
 		237797441F553281008B2DA8 /* Me(我) */ = {
 			isa = PBXGroup;
 			children = (
+				237797481F553281008B2DA8 /* 父控制器 */,
 				237797451F553281008B2DA8 /* Controller */,
 				237797461F553281008B2DA8 /* Model */,
 				237797471F553281008B2DA8 /* View */,
-				237797481F553281008B2DA8 /* 父控制器 */,
 			);
 			path = "Me(我)";
 			sourceTree = "<group>";
@@ -520,6 +530,12 @@
 		237797471F553281008B2DA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18DE408C1F61276D005D7942 /* XMMeHeadStyleView.h */,
+				18DE408D1F61276D005D7942 /* XMMeHeadStyleView.m */,
+				18DE408F1F612779005D7942 /* XMMeHeadStyleView.xib */,
+				18DE40941F61377F005D7942 /* XMMeCellStyleOne.h */,
+				18DE40951F61377F005D7942 /* XMMeCellStyleOne.m */,
+				18DE40971F61378E005D7942 /* XMMeCellStyleOne.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -783,7 +799,9 @@
 				18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,
 				18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */,
+				18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */,
 				18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */,
+				18DE40901F612779005D7942 /* XMMeHeadStyleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,6 +855,7 @@
 				23776AF31F5CE4BD00AF4470 /* XMGoodsViewStyleTwoView.m in Sources */,
 				237797941F555979008B2DA8 /* UIView+SDExtension.m in Sources */,
 				237797BA1F5559A4008B2DA8 /* NSImage+WebCache.m in Sources */,
+				18DE408E1F61276D005D7942 /* XMMeHeadStyleView.m in Sources */,
 				237797911F555979008B2DA8 /* TAPageControl.m in Sources */,
 				237797B91F5559A4008B2DA8 /* NSData+ImageContentType.m in Sources */,
 				23294DEA1F56496000720245 /* NSObject+MJCoding.m in Sources */,
@@ -848,6 +867,7 @@
 				237797921F555979008B2DA8 /* SDCollectionViewCell.m in Sources */,
 				18FF06B21F5E813900EA1D13 /* NewPagedFlowView.m in Sources */,
 				237797BB1F5559A4008B2DA8 /* SDImageCache.m in Sources */,
+				18DE40961F61377F005D7942 /* XMMeCellStyleOne.m in Sources */,
 				18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */,
 				237797C61F5559A4008B2DA8 /* UIImageView+HighlightedWebCache.m in Sources */,
 				23294DF21F56509700720245 /* goodsViewStyleOne.m in Sources */,

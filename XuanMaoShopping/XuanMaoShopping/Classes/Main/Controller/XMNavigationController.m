@@ -23,7 +23,7 @@
     navigationBar.barTintColor = MRGlobalBg;
     navigationBar.translucent = NO;
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    attrs[NSForegroundColorAttributeName] = [UIColor blackColor];
     
     [navigationBar setTitleTextAttributes:attrs];
     [navigationBar setTintColor:[UIColor whiteColor]];
