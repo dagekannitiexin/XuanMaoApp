@@ -90,6 +90,9 @@
 //灰色字体颜色
 #define XMGaryColor MRRGBColor(214, 214, 214)
 
+//底线颜色
+#define XMBottomLine MRRGBColor(151, 151, 151)
+
 //灰色面板
 #define XMBgColor MRRGBColor(240, 240, 240)
 
