@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+/*
+ iconImg
+ */
+@property (weak, nonatomic) IBOutlet UIImageView *iconImg;
 
 /*
  只有一些特殊cell有

@@ -43,8 +43,6 @@
     //创建头部视图
     [self initHeadView];
     
-    
-    
     //初始化tabview
     [self initTableView];
 }
@@ -190,15 +188,17 @@
     UIView *viewTwo = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight+10, SCREEN_WIDTH, 295)];
     viewTwo.backgroundColor = [UIColor whiteColor];
     XMGoodsTitleStyleView *titleView = [[[NSBundle mainBundle] loadNibNamed:@"XMGoodsTitleStyleView" owner:nil options:nil]lastObject];
+    titleView.width = SCREEN_WIDTH;
     [viewTwo addSubview:titleView];
     
     
     CGFloat spaceWithCenter = 5.0;
-    CGFloat shopViewWith = 178.0;
     CGFloat shopViewHeight = 115.0;
-    CGFloat spaceWith = (SCREEN_WIDTH - 5-2*shopViewWith)/2.0;
+    CGFloat spaceWith = 10;
+    CGFloat shopViewWith = (SCREEN_WIDTH - spaceWithCenter - 2*spaceWith)/2;
     for (int i =0; i<4; i++) {
         goodsViewStyleOne *shopView = [[[NSBundle mainBundle]loadNibNamed:@"goodsViewStyleOne" owner:nil options:nil]lastObject];
+        shopView.width = shopViewWith;
         [viewTwo addSubview:shopView];
         CGPoint viewPoint;
         if (i<=1){
@@ -223,6 +223,7 @@
     
     //头部view
     XMGoodsViewStyleTwoHeadView *shopHeadView = [[[NSBundle mainBundle]loadNibNamed:@"XMGoodsViewStyleTwoHeadView" owner:nil options:nil]lastObject];
+    shopHeadView.width = SCREEN_WIDTH;
     [viewThree addSubview:shopHeadView];
     
     //创建商品视图
@@ -257,12 +258,14 @@
     XMGoodsTitleStyleView *titleView = [[[NSBundle mainBundle]loadNibNamed:@"XMGoodsTitleStyleView" owner:nil options:nil]lastObject];
     [viewFour addSubview:titleView];
     
-    CGFloat goodsViewHeight = 140;
-    CGFloat goodsViewWidth = 345;
     CGFloat goodsViewHeighSpace = 15;
-    CGFloat goodsViewWidthSpace = (SCREEN_WIDTH - goodsViewWidth)/2;
+    CGFloat goodsViewWidthSpace = 15;
+    CGFloat goodsViewHeight = 140;
+    CGFloat goodsViewWidth = SCREEN_WIDTH -2*goodsViewWidthSpace;
+    ;
     for (int i =0; i<10; i++) {
         XMGoodsViewStyleThreeView *goodsView = [[[NSBundle mainBundle]loadNibNamed:@"XMGoodsViewStyleThreeView" owner:nil options:nil]lastObject];
+        goodsView.width = goodsViewWidth;
         [viewFour addSubview:goodsView];
         //设置位置
         goodsView.origin = CGPointMake(goodsViewWidthSpace, titleView.bottom+(goodsViewHeight+goodsViewHeighSpace)*i);

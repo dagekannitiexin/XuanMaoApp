@@ -209,6 +209,7 @@
     for (int i=0; i<10; i++) {
         XMLearnStyleViewFour *viewFour = [[[NSBundle mainBundle]loadNibNamed:@"XMLearnStyleViewFour" owner:nil options:nil]lastObject];
         viewFour.origin = CGPointMake(0, titleView.bottom+viewFour.height*i);
+        viewFour.width = SCREEN_WIDTH;
         NSArray *array = [NSArray arrayWithObjects:@"美妆控",@"爱实测",@"爱分享~~", nil];
         [viewFour createLabel:array];
         

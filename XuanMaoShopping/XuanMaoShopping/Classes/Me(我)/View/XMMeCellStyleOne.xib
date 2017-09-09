@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qv8-hP-U3b" id="zUa-CV-3kd">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="doA-LF-Sz8">
@@ -27,10 +27,10 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息中心" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe8-6E-g5Z">
-                        <rect key="frame" x="57" y="22" width="100" height="15"/>
+                        <rect key="frame" x="57" y="22" width="120" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="1wB-QT-2dI"/>
-                            <constraint firstAttribute="width" constant="100" id="n01-2t-dJJ"/>
+                            <constraint firstAttribute="width" constant="120" id="n01-2t-dJJ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
@@ -68,6 +68,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="detailfootLabel" destination="i2W-md-ohG" id="Dgg-Jm-y8E"/>
+                <outlet property="iconImg" destination="doA-LF-Sz8" id="fOg-BO-49F"/>
                 <outlet property="titleLabel" destination="Qe8-6E-g5Z" id="ci2-bV-uy8"/>
             </connections>
             <point key="canvasLocation" x="119.5" y="188.5"/>

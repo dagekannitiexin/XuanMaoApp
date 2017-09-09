@@ -12,6 +12,7 @@
 		18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */; };
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
+		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
 		18DE408E1F61276D005D7942 /* XMMeHeadStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE408D1F61276D005D7942 /* XMMeHeadStyleView.m */; };
 		18DE40901F612779005D7942 /* XMMeHeadStyleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DE408F1F612779005D7942 /* XMMeHeadStyleView.xib */; };
 		18DE40961F61377F005D7942 /* XMMeCellStyleOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE40951F61377F005D7942 /* XMMeCellStyleOne.m */; };
@@ -109,6 +110,8 @@
 		187ED9B41F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGoodsViewStyleThreeView.h; sourceTree = "<group>"; };
 		187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGoodsViewStyleThreeView.m; sourceTree = "<group>"; };
 		187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGoodsViewStyleThreeView.xib; sourceTree = "<group>"; };
+		1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMessageCenter.h; sourceTree = "<group>"; };
+		1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMessageCenter.m; sourceTree = "<group>"; };
 		18DE408C1F61276D005D7942 /* XMMeHeadStyleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeHeadStyleView.h; sourceTree = "<group>"; };
 		18DE408D1F61276D005D7942 /* XMMeHeadStyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeHeadStyleView.m; sourceTree = "<group>"; };
 		18DE408F1F612779005D7942 /* XMMeHeadStyleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMMeHeadStyleView.xib; sourceTree = "<group>"; };
@@ -516,6 +519,8 @@
 		237797451F553281008B2DA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */,
+				1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -845,6 +850,7 @@
 				23294DF71F56890800720245 /* XMGoodsTitleStyleView.m in Sources */,
 				23294DED1F56496000720245 /* UIImage+Resizable.m in Sources */,
 				237797931F555979008B2DA8 /* SDCycleScrollView.m in Sources */,
+				1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */,
 				23294DE81F56496000720245 /* MJIvar.m in Sources */,
 				2377974E1F553281008B2DA8 /* XMHomeViewController.m in Sources */,
 				18FF06A81F5E413000EA1D13 /* XMFootLineView.m in Sources */,

@@ -17,6 +17,7 @@
     self.layer.cornerRadius = 5;
     //设置背景颜色
     self.backgroundColor = XMBgColor;
+    
 }
 
 
