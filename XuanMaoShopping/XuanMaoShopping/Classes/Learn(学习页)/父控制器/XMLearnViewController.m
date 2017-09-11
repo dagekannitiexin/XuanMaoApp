@@ -59,11 +59,12 @@
 
 - (void)creatnavigationbar
 {
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 46)];
-    titleLabel.text = @"商学院";
-    titleLabel.textColor = [UIColor blackColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.navigationItem.titleView = titleLabel;
+//    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 46)];
+//    titleLabel.text = @"商学院";
+//    titleLabel.textColor = [UIColor blackColor];
+//    titleLabel.textAlignment = NSTextAlignmentCenter;
+//    self.navigationItem.titleView = titleLabel;
+    self.title = @"商学院";
 }
 
 -(void)initTableView

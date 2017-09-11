@@ -11,6 +11,9 @@
 #import "XMMeCellStyleOne.h"
 //跳转到下列控制器
 #import "XMMeMessageCenter.h"
+#import "XMMeMyOrder.h"
+#import "XMMeGroupBuy.h"
+#import "XMMeFollowing.h"
 
 @interface XMMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -176,9 +179,18 @@
     //分组点击事件触发
     if (indexPath.section ==0){
         
-        if (indexPath.row ==1){ //消息中心
+        if (indexPath.row == 1){ //消息中心
             XMMeMessageCenter *VCMessage = [[XMMeMessageCenter alloc]init];
             [self.navigationController pushViewController:VCMessage animated:YES];
+        }else if (indexPath.row == 2){//我的订单
+            XMMeMyOrder *VCOrder = [[XMMeMyOrder alloc]init];
+            [self.navigationController pushViewController:VCOrder animated:YES];
+        }else if (indexPath.row == 3){ //我的拼团
+            XMMeGroupBuy *VCGroup = [[XMMeGroupBuy alloc]init];
+            [self.navigationController pushViewController:VCGroup animated:YES];
+        }else if (indexPath.row == 4){ //我的关注
+            XMMeFollowing *VCFollow = [[XMMeFollowing alloc]init];
+            [self.navigationController pushViewController:VCFollow animated:YES];
         }
     }
 }

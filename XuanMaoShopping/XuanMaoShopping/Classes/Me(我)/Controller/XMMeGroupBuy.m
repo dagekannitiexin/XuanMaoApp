@@ -1,23 +1,23 @@
 //
-//  XMMeMessageCenter.m
+//  XMMeGroupBuy.m
 //  XuanMaoShopping
 //
-//  Created by apple on 17/9/8.
+//  Created by apple on 17/9/11.
 //  Copyright © 2017年 林林尤达. All rights reserved.
 //
 
-#import "XMMeMessageCenter.h"
+#import "XMMeGroupBuy.h"
 
-@interface XMMeMessageCenter ()
+@interface XMMeGroupBuy ()
 
 @end
 
-@implementation XMMeMessageCenter
+@implementation XMMeGroupBuy
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    self.view.backgroundColor = [UIColor whiteColor];
+    // Do any additional setup after loading the view.
+    
     [self creatnavigationbar];
     
     //如果无数据
@@ -46,7 +46,7 @@
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 175, 44)];
     titleLabel.centerX = navView.centerX;
     titleLabel.centerY = 20+22;
-    titleLabel.text = @"消息中心";
+    titleLabel.text = @"我的拼团";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
     [navView addSubview:titleLabel];
@@ -71,7 +71,7 @@
     [self.view addSubview:emptyView];
     
     UIImageView *bgView = [[UIImageView alloc]init];
-    bgView.image = [UIImage imageNamed:@"bgEmptyMessage"];
+    bgView.image = [UIImage imageNamed:@"bgOrderEmpty"];
     bgView.size = CGSizeMake(190, 190);
     bgView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
     bgView.y = bgView.y -64;
@@ -79,7 +79,7 @@
     
     UILabel *messageLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
     messageLabel.y = bgView.bottom +30;
-    messageLabel.text = @"暂时还没有消息";
+    messageLabel.text = @"还没有拼团";
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.font = [UIFont systemFontOfSize:15];
     messageLabel.textColor = XMGaryColor;
