@@ -10,9 +10,16 @@
 		18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */; };
 		18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */; };
 		18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */; };
+		187909111F676E5A004FD227 /* XMMeCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = 187909101F676E5A004FD227 /* XMMeCoupon.m */; };
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
 		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
+		18A441E81F67B5F300DB5C82 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E51F67B5F300DB5C82 /* Utility.m */; };
+		18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E71F67B5F300DB5C82 /* WebViewController.m */; };
+		18A441EF1F67B63400DB5C82 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441EC1F67B63400DB5C82 /* NJKWebViewProgress.m */; };
+		18A441F01F67B63400DB5C82 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441EE1F67B63400DB5C82 /* NJKWebViewProgressView.m */; };
+		18A441F31F67B78800DB5C82 /* XMMeGift.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441F21F67B78800DB5C82 /* XMMeGift.m */; };
+		18A441F61F67C04E00DB5C82 /* XMShareBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441F51F67C04E00DB5C82 /* XMShareBtn.m */; };
 		18D20C891F662E6A007B7905 /* XMMeMyOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C881F662E6A007B7905 /* XMMeMyOrder.m */; };
 		18D20C8C1F662F8F007B7905 /* XMMeGroupBuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C8B1F662F8F007B7905 /* XMMeGroupBuy.m */; };
 		18D20C8F1F66335E007B7905 /* XMMeFollowing.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C8E1F66335E007B7905 /* XMMeFollowing.m */; };
@@ -110,11 +117,25 @@
 		18501D231F5FF11F00FDCF51 /* XMLearnStyleViewFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewFour.h; sourceTree = "<group>"; };
 		18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleViewFour.m; sourceTree = "<group>"; };
 		18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewFour.xib; sourceTree = "<group>"; };
+		1879090F1F676E5A004FD227 /* XMMeCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeCoupon.h; sourceTree = "<group>"; };
+		187909101F676E5A004FD227 /* XMMeCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeCoupon.m; sourceTree = "<group>"; };
 		187ED9B41F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGoodsViewStyleThreeView.h; sourceTree = "<group>"; };
 		187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGoodsViewStyleThreeView.m; sourceTree = "<group>"; };
 		187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGoodsViewStyleThreeView.xib; sourceTree = "<group>"; };
 		1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMessageCenter.h; sourceTree = "<group>"; };
 		1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMessageCenter.m; sourceTree = "<group>"; };
+		18A441E41F67B5F300DB5C82 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		18A441E51F67B5F300DB5C82 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		18A441E61F67B5F300DB5C82 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		18A441E71F67B5F300DB5C82 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		18A441EB1F67B63400DB5C82 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		18A441EC1F67B63400DB5C82 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		18A441ED1F67B63400DB5C82 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		18A441EE1F67B63400DB5C82 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		18A441F11F67B78800DB5C82 /* XMMeGift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeGift.h; sourceTree = "<group>"; };
+		18A441F21F67B78800DB5C82 /* XMMeGift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeGift.m; sourceTree = "<group>"; };
+		18A441F41F67C04E00DB5C82 /* XMShareBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMShareBtn.h; sourceTree = "<group>"; };
+		18A441F51F67C04E00DB5C82 /* XMShareBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMShareBtn.m; sourceTree = "<group>"; };
 		18D20C871F662E6A007B7905 /* XMMeMyOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMyOrder.h; sourceTree = "<group>"; };
 		18D20C881F662E6A007B7905 /* XMMeMyOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMyOrder.m; sourceTree = "<group>"; };
 		18D20C8A1F662F8F007B7905 /* XMMeGroupBuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeGroupBuy.h; sourceTree = "<group>"; };
@@ -282,6 +303,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A441EA1F67B63400DB5C82 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				18A441EB1F67B63400DB5C82 /* NJKWebViewProgress.h */,
+				18A441EC1F67B63400DB5C82 /* NJKWebViewProgress.m */,
+				18A441ED1F67B63400DB5C82 /* NJKWebViewProgressView.h */,
+				18A441EE1F67B63400DB5C82 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 		18FF06AD1F5E813900EA1D13 /* NewPagedFlowView */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +568,10 @@
 				18D20C8B1F662F8F007B7905 /* XMMeGroupBuy.m */,
 				18D20C8D1F66335E007B7905 /* XMMeFollowing.h */,
 				18D20C8E1F66335E007B7905 /* XMMeFollowing.m */,
+				18A441F11F67B78800DB5C82 /* XMMeGift.h */,
+				18A441F21F67B78800DB5C82 /* XMMeGift.m */,
+				1879090F1F676E5A004FD227 /* XMMeCoupon.h */,
+				187909101F676E5A004FD227 /* XMMeCoupon.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -556,6 +592,8 @@
 				18DE40941F61377F005D7942 /* XMMeCellStyleOne.h */,
 				18DE40951F61377F005D7942 /* XMMeCellStyleOne.m */,
 				18DE40971F61378E005D7942 /* XMMeCellStyleOne.xib */,
+				18A441F41F67C04E00DB5C82 /* XMShareBtn.h */,
+				18A441F51F67C04E00DB5C82 /* XMShareBtn.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -572,6 +610,10 @@
 		2377974B1F553281008B2DA8 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				18A441E41F67B5F300DB5C82 /* Utility.h */,
+				18A441E51F67B5F300DB5C82 /* Utility.m */,
+				18A441E61F67B5F300DB5C82 /* WebViewController.h */,
+				18A441E71F67B5F300DB5C82 /* WebViewController.m */,
 			);
 			path = "工具";
 			sourceTree = "<group>";
@@ -579,6 +621,7 @@
 		2377974C1F553281008B2DA8 /* 框架 */ = {
 			isa = PBXGroup;
 			children = (
+				18A441EA1F67B63400DB5C82 /* NJKWebViewProgress */,
 				23CC472B1F593AB700A0C2E3 /* UIView+YYAdd.h */,
 				23CC472C1F593AB700A0C2E3 /* UIView+YYAdd.m */,
 				18FF06AD1F5E813900EA1D13 /* NewPagedFlowView */,
@@ -858,7 +901,10 @@
 				18FF06B31F5E813900EA1D13 /* PGIndexBannerSubiew.m in Sources */,
 				2377978E1F555979008B2DA8 /* TAAbstractDotView.m in Sources */,
 				23294DEB1F56496000720245 /* NSObject+MJIvar.m in Sources */,
+				18A441E81F67B5F300DB5C82 /* Utility.m in Sources */,
+				18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */,
 				237797071F55321E008B2DA8 /* AppDelegate.m in Sources */,
+				18A441F01F67B63400DB5C82 /* NJKWebViewProgressView.m in Sources */,
 				237797C51F5559A4008B2DA8 /* UIImage+MultiFormat.m in Sources */,
 				23294DE61F56495F00720245 /* MJConst.m in Sources */,
 				23294DEE1F56496000720245 /* UIView+Frame.m in Sources */,
@@ -880,8 +926,10 @@
 				18DE408E1F61276D005D7942 /* XMMeHeadStyleView.m in Sources */,
 				237797911F555979008B2DA8 /* TAPageControl.m in Sources */,
 				18D20C8F1F66335E007B7905 /* XMMeFollowing.m in Sources */,
+				18A441F31F67B78800DB5C82 /* XMMeGift.m in Sources */,
 				237797B91F5559A4008B2DA8 /* NSData+ImageContentType.m in Sources */,
 				23294DEA1F56496000720245 /* NSObject+MJCoding.m in Sources */,
+				18A441EF1F67B63400DB5C82 /* NJKWebViewProgress.m in Sources */,
 				237797C71F5559A4008B2DA8 /* UIImageView+WebCache.m in Sources */,
 				237797CC1F5568E0008B2DA8 /* HeadButton.m in Sources */,
 				237797041F55321E008B2DA8 /* main.m in Sources */,
@@ -896,6 +944,7 @@
 				23294DF21F56509700720245 /* goodsViewStyleOne.m in Sources */,
 				237797BC1F5559A4008B2DA8 /* SDImageCacheConfig.m in Sources */,
 				237797C11F5559A4008B2DA8 /* SDWebImageManager.m in Sources */,
+				187909111F676E5A004FD227 /* XMMeCoupon.m in Sources */,
 				237797BE1F5559A4008B2DA8 /* SDWebImageDecoder.m in Sources */,
 				18FF06B91F5E9D6700EA1D13 /* XMLearnStyleTitleView.m in Sources */,
 				237797C01F5559A4008B2DA8 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -903,6 +952,7 @@
 				237797741F5534AA008B2DA8 /* XMNavigationController.m in Sources */,
 				237797671F553401008B2DA8 /* UIImage+MRExtension.m in Sources */,
 				237797BD1F5559A4008B2DA8 /* SDWebImageCompat.m in Sources */,
+				18A441F61F67C04E00DB5C82 /* XMShareBtn.m in Sources */,
 				23CC472D1F593AB700A0C2E3 /* UIView+YYAdd.m in Sources */,
 				237797C31F5559A4008B2DA8 /* UIButton+WebCache.m in Sources */,
 				237797C41F5559A4008B2DA8 /* UIImage+GIF.m in Sources */,

@@ -14,6 +14,8 @@
 #import "XMMeMyOrder.h"
 #import "XMMeGroupBuy.h"
 #import "XMMeFollowing.h"
+#import "XMMeGift.h"
+#import "XMMeCoupon.h"
 
 @interface XMMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -191,6 +193,15 @@
         }else if (indexPath.row == 4){ //我的关注
             XMMeFollowing *VCFollow = [[XMMeFollowing alloc]init];
             [self.navigationController pushViewController:VCFollow animated:YES];
+        }
+    }else if (indexPath.section == 1){
+        if (indexPath.row == 0){
+            XMMeGift *VCGift = [[XMMeGift alloc]init];
+            VCGift.urlStr = @"https://share.xinpinget.com/user/share";
+            [self.navigationController pushViewController:VCGift animated:YES];
+        }else {
+            XMMeCoupon *VCCoupon = [[XMMeCoupon alloc]init];
+            [self.navigationController pushViewController:VCCoupon animated:YES];
         }
     }
 }

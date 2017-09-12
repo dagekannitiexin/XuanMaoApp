@@ -63,6 +63,7 @@
 
 
 #define KWidth_Scale    [UIScreen mainScreen].bounds.size.width/375.0f
+#define KHeight_Scale    [UIScreen mainScreen].bounds.size.height/667.0f
 
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
@@ -89,7 +90,7 @@
 
 //灰色字体颜色
 #define XMGaryColor MRRGBColor(214, 214, 214)
-
+#define XMHeigtGaryColor MRRGBColor(187, 187, 187)
 //底线颜色
 #define XMBottomLine MRRGBColor(151, 151, 151)
 
