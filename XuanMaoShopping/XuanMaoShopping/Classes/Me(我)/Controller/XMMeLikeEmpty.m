@@ -1,18 +1,18 @@
 //
-//  XMMeMyOrder.m
+//  XMMeLikeEmpty.m
 //  XuanMaoShopping
 //
-//  Created by apple on 17/9/11.
+//  Created by apple on 17/9/13.
 //  Copyright © 2017年 林林尤达. All rights reserved.
 //
 
-#import "XMMeMyOrder.h"
+#import "XMMeLikeEmpty.h"
 
-@interface XMMeMyOrder ()
+@interface XMMeLikeEmpty ()
 
 @end
 
-@implementation XMMeMyOrder
+@implementation XMMeLikeEmpty
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,7 +45,7 @@
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 175, 44)];
     titleLabel.centerX = navView.centerX;
     titleLabel.centerY = 20+22;
-    titleLabel.text = @"我的订单";
+    titleLabel.text = @"我的喜欢";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
     [navView addSubview:titleLabel];
@@ -70,20 +70,19 @@
     [self.view addSubview:emptyView];
     
     UIImageView *bgView = [[UIImageView alloc]init];
-    bgView.image = [UIImage imageNamed:@"bgOrderEmpty"];
+    bgView.image = [UIImage imageNamed:@"bgLikeEmpty"];
     bgView.size = CGSizeMake(190, 190);
     bgView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
     bgView.y = 140*KHeight_Scale;
     
     UILabel *messageLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
     messageLabel.y = bgView.bottom +20;
-    messageLabel.text = @"暂时还没有定单";
+    messageLabel.text = @"你喜欢过的东西都会在这里";
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.font = [UIFont systemFontOfSize:15];
     messageLabel.textColor = XMGaryColor;
     [emptyView addSubview:messageLabel];
     [emptyView addSubview:bgView];
 }
-
 
 @end

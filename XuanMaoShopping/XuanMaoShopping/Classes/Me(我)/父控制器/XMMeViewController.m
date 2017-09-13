@@ -16,6 +16,8 @@
 #import "XMMeFollowing.h"
 #import "XMMeGift.h"
 #import "XMMeCoupon.h"
+#import "XMMeLikeEmpty.h"
+#import "XMMeAddressEmpty.h"
 
 @interface XMMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -101,7 +103,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section ==0){
-        return _arrayWithTitlte.count;
+        return _arrayWithTitlte.count+1;
     }else if (section ==1){
         return _arrayWithTitleTwo.count;
     }else{
@@ -193,6 +195,9 @@
         }else if (indexPath.row == 4){ //我的关注
             XMMeFollowing *VCFollow = [[XMMeFollowing alloc]init];
             [self.navigationController pushViewController:VCFollow animated:YES];
+        }else if (indexPath.row == 5){ //我的喜欢
+            XMMeLikeEmpty *VCLike = [[XMMeLikeEmpty alloc]init];
+            [self.navigationController pushViewController:VCLike animated:YES];
         }
     }else if (indexPath.section == 1){
         if (indexPath.row == 0){
@@ -202,6 +207,19 @@
         }else {
             XMMeCoupon *VCCoupon = [[XMMeCoupon alloc]init];
             [self.navigationController pushViewController:VCCoupon animated:YES];
+        }
+    }else if (indexPath.section == 2){
+        if (indexPath.row ==0){
+        
+        }else if (indexPath.row ==1){
+        
+        }else if (indexPath.row ==2){
+        
+        }else if (indexPath.row ==3){
+            XMMeAddressEmpty *VCAddress = [[XMMeAddressEmpty alloc]init];
+            [self.navigationController pushViewController:VCAddress animated:YES];
+        }else if (indexPath.row ==4){
+        
         }
     }
 }

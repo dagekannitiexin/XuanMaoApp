@@ -74,11 +74,10 @@
     bgView.image = [UIImage imageNamed:@"bgOrderEmpty"];
     bgView.size = CGSizeMake(190, 190);
     bgView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
-    bgView.y = bgView.y -64;
-    
+    bgView.y = 140*KHeight_Scale;
     
     UILabel *messageLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
-    messageLabel.y = bgView.bottom +30;
+    messageLabel.y = bgView.bottom +20;
     messageLabel.text = @"还没有拼团";
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.font = [UIFont systemFontOfSize:15];

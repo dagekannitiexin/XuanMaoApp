@@ -7,7 +7,6 @@
 //
 
 #import "XMBaseViewController.h"
-#import "Define.h"
 @interface XMBaseViewController ()
 
 @end

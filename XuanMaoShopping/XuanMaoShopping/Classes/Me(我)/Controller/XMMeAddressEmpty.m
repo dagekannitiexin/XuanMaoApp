@@ -1,18 +1,21 @@
 //
-//  XMMeMyOrder.m
+//  XMMeAddressEmpty.m
 //  XuanMaoShopping
 //
-//  Created by apple on 17/9/11.
+//  Created by apple on 17/9/13.
 //  Copyright © 2017年 林林尤达. All rights reserved.
 //
 
-#import "XMMeMyOrder.h"
+#import "XMMeAddressEmpty.h"
+#import "XMMeAddressEmptyDetail.h"
 
-@interface XMMeMyOrder ()
+@interface XMMeAddressEmpty (){
+    UIView *_emptyView;
+}
 
 @end
 
-@implementation XMMeMyOrder
+@implementation XMMeAddressEmpty
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,8 +24,17 @@
     
     //如果无数据
     [self createEmptyView];
+    
+    //新增收货地址
+    [self addAddressBtn];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -45,7 +57,7 @@
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 175, 44)];
     titleLabel.centerX = navView.centerX;
     titleLabel.centerY = 20+22;
-    titleLabel.text = @"我的订单";
+    titleLabel.text = @"管理收货地址";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
     [navView addSubview:titleLabel];
@@ -65,25 +77,45 @@
 #pragma mark- initView
 - (void)createEmptyView
 {
-    UIView *emptyView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
-    emptyView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:emptyView];
+    _emptyView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
+    _emptyView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_emptyView];
     
     UIImageView *bgView = [[UIImageView alloc]init];
-    bgView.image = [UIImage imageNamed:@"bgOrderEmpty"];
+    bgView.image = [UIImage imageNamed:@"bgAddressEmpty"];
     bgView.size = CGSizeMake(190, 190);
     bgView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
     bgView.y = 140*KHeight_Scale;
     
     UILabel *messageLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
     messageLabel.y = bgView.bottom +20;
-    messageLabel.text = @"暂时还没有定单";
+    messageLabel.text = @"暂无收货地址";
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.font = [UIFont systemFontOfSize:15];
     messageLabel.textColor = XMGaryColor;
-    [emptyView addSubview:messageLabel];
-    [emptyView addSubview:bgView];
+    [_emptyView addSubview:messageLabel];
+    [_emptyView addSubview:bgView];
 }
 
 
+- (void)addAddressBtn
+{
+    UIButton *addNewAddressBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-64-50, SCREEN_WIDTH, 50)];
+    addNewAddressBtn.backgroundColor = RGBACOLOR(208, 88, 84, 1);
+    [addNewAddressBtn setTitle:@"新增收货地址" forState:UIControlStateNormal];
+    [addNewAddressBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [addNewAddressBtn setImage:[UIImage imageNamed:@"iconSubAdd"] forState:UIControlStateNormal];
+    [addNewAddressBtn setImage:[UIImage imageNamed:@"iconSubAdd"] forState:UIControlStateHighlighted];
+    
+    [addNewAddressBtn addTarget:self action:@selector(addNewAddressBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_emptyView addSubview:addNewAddressBtn];
+}
+
+- (void)addNewAddressBtnClick
+{
+    XMMeAddressEmptyDetail *VC = [[XMMeAddressEmptyDetail alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
+}
 @end
