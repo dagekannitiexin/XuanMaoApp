@@ -91,6 +91,7 @@
 //灰色字体颜色
 #define XMGaryColor MRRGBColor(214, 214, 214)
 #define XMHeigtGaryColor MRRGBColor(187, 187, 187)
+#define XMPalceHolderColor MRRGBColor(199, 199, 205)
 //底线颜色
 #define XMBottomLine MRRGBColor(151, 151, 151)
 

@@ -7,9 +7,12 @@
 //
 
 #import "XMMeAddressEmptyDetail.h"
+#import "XMMeAdressView.h"
 
-@interface XMMeAddressEmptyDetail ()
-
+@interface XMMeAddressEmptyDetail (){
+    UIImageView *_cricleImg;
+}
+@property (nonatomic,assign)BOOL isNomalAddress; //是否设置默认地址
 @end
 
 @implementation XMMeAddressEmptyDetail
@@ -59,7 +62,37 @@
 
 - (void)createAdressView
 {
+    XMMeAdressView *view = [[NSBundle mainBundle]loadNibNamed:@"XMMeAdressView" owner:nil options:nil].lastObject;
+    view.origin = CGPointMake(0, 0);
+    view.width = SCREEN_WIDTH;
+    [self.view addSubview:view];
     
+    XXTextView *textView = [[XXTextView alloc]initWithFrame:CGRectMake(67, 150, SCREEN_WIDTH -70-15, 78)];
+    textView.xx_placeholder = @"详细地址";
+    textView.xx_placeholderColor = XMPalceHolderColor;
+    textView.xx_placeholderFont = [UIFont systemFontOfSize:14.0f];
+    [self.view addSubview:textView];
+    
+    //加入设置为默认收货地址
+    UIView *setNomalView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 135, 17)];
+    setNomalView.backgroundColor = [UIColor clearColor];
+    setNomalView.center = CGPointMake(self.view.centerX, view.bottom+30);
+    [self.view addSubview:setNomalView];
+    
+    _cricleImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 17, 17)];
+    _cricleImg.image = [UIImage imageNamed:@"iconAddressCheckNormal"];
+    [setNomalView addSubview:_cricleImg];
+    
+    UILabel *setNamal = [[UILabel alloc]initWithFrame:CGRectMake(_cricleImg.right+7, 0, 120, 17)];
+    setNamal.text  = @"设为默认收货地址";
+    setNamal.textColor = [UIColor blackColor];
+    setNamal.font = [UIFont systemFontOfSize:14];
+    [setNomalView addSubview:setNamal];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(nomalAddress)];
+    [setNomalView addGestureRecognizer:tap];
+    
+    self.isNomalAddress = NO;
 }
 
 #pragma mark - brnClick
@@ -73,5 +106,15 @@
     NSLog(@"点击保存啦");
 }
 
-
+- (void)nomalAddress
+{
+    if (self.isNomalAddress){
+        _cricleImg.image = [UIImage imageNamed:@"iconAddressCheckNormal"];
+        self.isNomalAddress = NO;
+    }else {
+        _cricleImg.image = [UIImage imageNamed:@"iconAddressCheckSelected"];
+        self.isNomalAddress = YES;
+    }
+    
+}
 @end
