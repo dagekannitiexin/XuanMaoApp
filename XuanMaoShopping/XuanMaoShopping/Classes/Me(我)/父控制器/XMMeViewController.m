@@ -18,6 +18,7 @@
 #import "XMMeCoupon.h"
 #import "XMMeLikeEmpty.h"
 #import "XMMeAddressEmpty.h"
+#import "XMMeSetting.h"
 
 @interface XMMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -219,7 +220,8 @@
             XMMeAddressEmpty *VCAddress = [[XMMeAddressEmpty alloc]init];
             [self.navigationController pushViewController:VCAddress animated:YES];
         }else if (indexPath.row ==4){
-        
+            XMMeSetting *VCSetting = [[XMMeSetting alloc]init];
+            [self.navigationController pushViewController:VCSetting animated:YES];
         }
     }
 }

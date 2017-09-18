@@ -1,0 +1,162 @@
+//
+//  XMMeSetting.m
+//  XuanMaoShopping
+//
+//  Created by apple on 2017/9/18.
+//  Copyright © 2017年 林林尤达. All rights reserved.
+//
+
+#import "XMMeSetting.h"
+#import "XMMeCellStyleOne.h"
+
+@interface XMMeSetting ()<UITableViewDelegate,UITableViewDataSource>{
+    UITableView *_tableView;
+    NSMutableArray *_titleArray;
+    NSMutableArray *_imageArray;
+}
+
+@end
+
+@implementation XMMeSetting
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self creatnavigationbar];
+    //新建tableview
+    [self createTableView];
+    
+    _titleArray = [NSMutableArray arrayWithObjects:@"清理缓存",@"鼓励一下",@"隐私和协议",@"加入我们",@"退出登录", nil];
+    _imageArray = [NSMutableArray arrayWithObjects:@"iconCleanCach",@"iconSettingSore",@"iconSettingPrivacy",@"iconSettingAbout",@"iconSettingLogout", nil];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
+
+- (void)creatnavigationbar
+{
+    UIView *navView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
+    navView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:navView];
+    
+    //添加返回按钮
+    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(15, 31.5, 12.5, 21)];
+    [backBtn setImage:[UIImage imageNamed:@"Back Chevron"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"Back Helight"] forState:UIControlStateHighlighted];
+    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    [navView addSubview:backBtn];
+    
+    // 添加title视图
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 175, 44)];
+    titleLabel.centerX = navView.centerX;
+    titleLabel.centerY = 20+22;
+    titleLabel.text = @"设置";
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
+    [navView addSubview:titleLabel];
+    
+    
+    //添加底线
+    UIView * bottomline = [[UIView alloc]initWithFrame:CGRectMake(0, navView.height-0.5, SCREEN_WIDTH, 0.5)];
+    bottomline.backgroundColor = XMBottomLine;
+    [navView addSubview:bottomline];
+}
+
+- (void)backClick
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)createTableView
+{
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
+    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.delegate =self;
+    _tableView.dataSource = self;
+    [_tableView registerNib:[UINib nibWithNibName:@"XMMeCellStyleOne" bundle:nil] forCellReuseIdentifier:@"CellDefault"];
+    _tableView.separatorStyle = UITableViewCellEditingStyleNone;
+    _tableView.scrollEnabled = NO;
+    [self.view addSubview:_tableView];
+}
+
+
+#pragma mark - UITableViewDelegate UITableVIewDateSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 4;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 1){
+        return 2;
+    }else {
+        return 1;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 25;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 12)];
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 62.0;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"CellDefault";
+    XMMeCellStyleOne *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell){
+        cell = [[XMMeCellStyleOne alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    if (indexPath.section ==0){
+        cell.titleLabel.text = _titleArray[0];
+        cell.iconImg.image = [UIImage imageNamed:_imageArray[0]];
+        cell.detailfootLabel.hidden = NO;
+        cell.detailfootLabel.text = @"已经使用 90.2MB";
+        cell.detailfootLabel.font = [UIFont systemFontOfSize:12];
+    }else if (indexPath.section ==1){
+        if (indexPath.row ==0){
+            cell.titleLabel.text = _titleArray[1];
+            cell.iconImg.image = [UIImage imageNamed:_imageArray[1]];
+        }else{
+            cell.titleLabel.text = _titleArray[2];
+            cell.iconImg.image = [UIImage imageNamed:_imageArray[2]];
+        }
+    }else if (indexPath.section ==2){
+        cell.titleLabel.text = _titleArray[3];
+        cell.iconImg.image = [UIImage imageNamed:_imageArray[3]];
+    }else if (indexPath.section ==3){
+        cell.titleLabel.text = _titleArray[4];
+        cell.iconImg.image = [UIImage imageNamed:_imageArray[4]];
+    }
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==0){
+        //清空缓存
+    }else if (indexPath.section ==1){
+        if (indexPath.row==0){
+            //鼓励一下，跳转到appstore
+        }else {
+            //隐私和协议
+        }
+    }else if (indexPath.section ==2){
+        //加入我们  跳转网页
+    }else if (indexPath.section ==3){
+        //退出登录
+    }
+}
+@end

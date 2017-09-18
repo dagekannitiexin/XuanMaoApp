@@ -16,6 +16,7 @@
 		18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */; };
 		18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */; };
 		18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */; };
+		1854E7B41F6FC8F6004BDA63 /* XMMeSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854E7B31F6FC8F6004BDA63 /* XMMeSetting.m */; };
 		187909111F676E5A004FD227 /* XMMeCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = 187909101F676E5A004FD227 /* XMMeCoupon.m */; };
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
@@ -151,6 +152,8 @@
 		18501D231F5FF11F00FDCF51 /* XMLearnStyleViewFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewFour.h; sourceTree = "<group>"; };
 		18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleViewFour.m; sourceTree = "<group>"; };
 		18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewFour.xib; sourceTree = "<group>"; };
+		1854E7B21F6FC8F6004BDA63 /* XMMeSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeSetting.h; sourceTree = "<group>"; };
+		1854E7B31F6FC8F6004BDA63 /* XMMeSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeSetting.m; sourceTree = "<group>"; };
 		1879090F1F676E5A004FD227 /* XMMeCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeCoupon.h; sourceTree = "<group>"; };
 		187909101F676E5A004FD227 /* XMMeCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeCoupon.m; sourceTree = "<group>"; };
 		187ED9B41F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGoodsViewStyleThreeView.h; sourceTree = "<group>"; };
@@ -712,6 +715,8 @@
 				18233E351F68D8E200B80F69 /* XMMeAddressEmpty.m */,
 				18233E371F68FD9400B80F69 /* XMMeAddressEmptyDetail.h */,
 				18233E381F68FD9400B80F69 /* XMMeAddressEmptyDetail.m */,
+				1854E7B21F6FC8F6004BDA63 /* XMMeSetting.h */,
+				1854E7B31F6FC8F6004BDA63 /* XMMeSetting.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1103,6 +1108,7 @@
 				18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */,
 				237797C61F5559A4008B2DA8 /* UIImageView+HighlightedWebCache.m in Sources */,
 				23294DF21F56509700720245 /* goodsViewStyleOne.m in Sources */,
+				1854E7B41F6FC8F6004BDA63 /* XMMeSetting.m in Sources */,
 				18CA94D31F6A4F3800B1A198 /* README.md in Sources */,
 				237797BC1F5559A4008B2DA8 /* SDImageCacheConfig.m in Sources */,
 				237797C11F5559A4008B2DA8 /* SDWebImageManager.m in Sources */,
@@ -1278,7 +1284,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1292,7 +1298,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";

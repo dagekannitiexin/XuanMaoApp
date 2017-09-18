@@ -21,4 +21,6 @@
  只有一些特殊cell有
  */
 @property (weak, nonatomic) IBOutlet UILabel *detailfootLabel;
+
+
 @end
