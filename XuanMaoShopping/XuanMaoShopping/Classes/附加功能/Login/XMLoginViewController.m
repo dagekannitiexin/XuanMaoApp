@@ -17,6 +17,7 @@
 
 @property (nonatomic,strong)UIView *loginViewOne;
 @property (nonatomic,strong)UIView *loginViewTwo;
+@property (nonatomic,strong)UIView *LoginView;
 
 @end
 
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     //添加播放器
     [self createMp4];
@@ -65,25 +67,25 @@
  */
 - (void)createFootView
 {
-    UIView *LoginView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-135, SCREEN_WIDTH, 135)];
-    LoginView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:LoginView];
+    _LoginView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-135, SCREEN_WIDTH*2, 135)];
+    _LoginView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_LoginView];
     
     //增加分界线
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.5)];
+    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH*2, 0.5)];
     lineView.backgroundColor = XMLowBottomLine;
-    [LoginView addSubview:lineView];
+    [_LoginView addSubview:lineView];
     
     //手机登录 微信登录界面
     _loginViewOne = [[UIView alloc]initWithFrame:CGRectMake(0, 1, SCREEN_WIDTH, 134)];
     _loginViewOne.backgroundColor = [UIColor whiteColor];
-    [LoginView addSubview:_loginViewOne];
+    [_LoginView addSubview:_loginViewOne];
     [self createButtonToViewOne];
     
     //qq  微博登录
     _loginViewTwo = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH, 1, SCREEN_WIDTH, 134)];
-    _loginViewTwo.backgroundColor = [UIColor yellowColor];
-    [LoginView addSubview:_loginViewTwo];
+    _loginViewTwo.backgroundColor = [UIColor whiteColor];
+    [_LoginView addSubview:_loginViewTwo];
     [self createButtonToViewTwo];
 }
 
@@ -134,6 +136,9 @@
     [self.loginViewOne addSubview:otherLabel];
     
     //手势跳转动画
+    otherLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapLogin = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(removieViewOne)];
+    [otherLabel addGestureRecognizer:tapLogin];
     
 }
 
@@ -159,6 +164,15 @@
     [weiBoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [weiBoBtn setImage:[UIImage imageNamed:@"iconLoginWeibo"] forState:UIControlStateNormal];
     [self.loginViewTwo addSubview:weiBoBtn];
+    
+    //增加返回按钮
+    UIButton *backToViewTwoBtn = [[UIButton alloc]initWithFrame:CGRectMake(buttonOrginX, qqBtn.bottom+15, SCREEN_WIDTH -2*buttonOrginX, 45)];
+    backToViewTwoBtn.backgroundColor = RGBACOLOR(246, 246, 246, 1);
+    [backToViewTwoBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [backToViewTwoBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backToViewTwoBtn addTarget:self action:@selector(backToViewOne) forControlEvents:UIControlEventTouchUpInside];
+    backToViewTwoBtn.layer.cornerRadius = 5.0;
+    [self.loginViewTwo addSubview:backToViewTwoBtn];
 }
 #pragma mark - lazyinit
 
@@ -184,5 +198,26 @@
 {
     NSLog(@"播放完成啦");
     self.tap.enabled = NO;
+}
+
+/*
+ 移动到loginViewTwo
+ */
+- (void)removieViewOne
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.LoginView.x = -SCREEN_WIDTH;
+    }];
+}
+
+/*
+ 移动回loginViewOne
+ */
+
+- (void)backToViewOne
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.LoginView.x = 0;
+    }];
 }
 @end

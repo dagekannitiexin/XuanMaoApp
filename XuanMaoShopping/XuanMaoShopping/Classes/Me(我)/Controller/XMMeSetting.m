@@ -185,7 +185,8 @@
         __weak typeof (alterOutSign)weakAlter = alterOutSign;
         [weakAlter addAction:[UIAlertAction actionWithTitle:@"退出登录" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"退出登录");
-            [self presentViewController:[[XMLoginViewController alloc]init] animated:NO completion:nil];
+            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[XMLoginViewController alloc]init]];
+            [self presentViewController:nav animated:NO completion:nil];
         }]];
         
         [weakAlter addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

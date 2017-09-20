@@ -22,6 +22,7 @@
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
 		18810AFA1F723064006EB0E4 /* XMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810AF91F723064006EB0E4 /* XMLoginViewController.m */; };
 		18810AFF1F723CC6006EB0E4 /* SFTMoview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */; };
+		18810B021F727E04006EB0E4 /* XMLoginPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810B011F727E04006EB0E4 /* XMLoginPhone.m */; };
 		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
 		18A441E81F67B5F300DB5C82 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E51F67B5F300DB5C82 /* Utility.m */; };
 		18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E71F67B5F300DB5C82 /* WebViewController.m */; };
@@ -164,6 +165,8 @@
 		18810AF81F723064006EB0E4 /* XMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginViewController.h; sourceTree = "<group>"; };
 		18810AF91F723064006EB0E4 /* XMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginViewController.m; sourceTree = "<group>"; };
 		18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFTMoview.mp4; sourceTree = "<group>"; };
+		18810B001F727E04006EB0E4 /* XMLoginPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginPhone.h; sourceTree = "<group>"; };
+		18810B011F727E04006EB0E4 /* XMLoginPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginPhone.m; sourceTree = "<group>"; };
 		1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMessageCenter.h; sourceTree = "<group>"; };
 		1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMessageCenter.m; sourceTree = "<group>"; };
 		18A441E41F67B5F300DB5C82 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
@@ -389,6 +392,8 @@
 			children = (
 				18810AF81F723064006EB0E4 /* XMLoginViewController.h */,
 				18810AF91F723064006EB0E4 /* XMLoginViewController.m */,
+				18810B001F727E04006EB0E4 /* XMLoginPhone.h */,
+				18810B011F727E04006EB0E4 /* XMLoginPhone.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1068,6 +1073,7 @@
 				237797901F555979008B2DA8 /* TADotView.m in Sources */,
 				237797C91F5559A4008B2DA8 /* UIView+WebCacheOperation.m in Sources */,
 				237797C21F5559A4008B2DA8 /* SDWebImagePrefetcher.m in Sources */,
+				18810B021F727E04006EB0E4 /* XMLoginPhone.m in Sources */,
 				18FF06B31F5E813900EA1D13 /* PGIndexBannerSubiew.m in Sources */,
 				2377978E1F555979008B2DA8 /* TAAbstractDotView.m in Sources */,
 				18CA94FA1F6A65FE00B1A198 /* MJPropertyType.m in Sources */,
