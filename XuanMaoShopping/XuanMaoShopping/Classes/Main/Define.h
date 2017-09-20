@@ -95,6 +95,7 @@
 //底线颜色
 #define XMBottomLine MRRGBColor(151, 151, 151)
 
+#define XMLowBottomLine MRRGBColor(216, 216, 216)
 //灰色面板
 #define XMBgColor MRRGBColor(240, 240, 240)
 

@@ -20,6 +20,8 @@
 		187909111F676E5A004FD227 /* XMMeCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = 187909101F676E5A004FD227 /* XMMeCoupon.m */; };
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
+		18810AFA1F723064006EB0E4 /* XMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810AF91F723064006EB0E4 /* XMLoginViewController.m */; };
+		18810AFF1F723CC6006EB0E4 /* SFTMoview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */; };
 		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
 		18A441E81F67B5F300DB5C82 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E51F67B5F300DB5C82 /* Utility.m */; };
 		18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E71F67B5F300DB5C82 /* WebViewController.m */; };
@@ -159,6 +161,9 @@
 		187ED9B41F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGoodsViewStyleThreeView.h; sourceTree = "<group>"; };
 		187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGoodsViewStyleThreeView.m; sourceTree = "<group>"; };
 		187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGoodsViewStyleThreeView.xib; sourceTree = "<group>"; };
+		18810AF81F723064006EB0E4 /* XMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginViewController.h; sourceTree = "<group>"; };
+		18810AF91F723064006EB0E4 /* XMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginViewController.m; sourceTree = "<group>"; };
+		18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFTMoview.mp4; sourceTree = "<group>"; };
 		1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMessageCenter.h; sourceTree = "<group>"; };
 		1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMessageCenter.m; sourceTree = "<group>"; };
 		18A441E41F67B5F300DB5C82 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
@@ -379,6 +384,15 @@
 			path = XXTextView;
 			sourceTree = "<group>";
 		};
+		18810AF71F72303C006EB0E4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18810AF81F723064006EB0E4 /* XMLoginViewController.h */,
+				18810AF91F723064006EB0E4 /* XMLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		18A441EA1F67B63400DB5C82 /* NJKWebViewProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +446,7 @@
 		18CA94D71F6A5CBC00B1A198 /* 资源 */ = {
 			isa = PBXGroup;
 			children = (
+				18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */,
 				18CA94D81F6A5CBC00B1A198 /* address.json */,
 				18CA94D91F6A5CBC00B1A198 /* hotelcity.json */,
 			);
@@ -785,6 +800,7 @@
 		2377974D1F553281008B2DA8 /* 附加功能 */ = {
 			isa = PBXGroup;
 			children = (
+				18810AF71F72303C006EB0E4 /* Login */,
 			);
 			path = "附加功能";
 			sourceTree = "<group>";
@@ -1013,6 +1029,7 @@
 				23294DF91F56892200720245 /* XMGoodsTitleStyleView.xib in Resources */,
 				187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */,
 				18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */,
+				18810AFF1F723CC6006EB0E4 /* SFTMoview.mp4 in Resources */,
 				18CA94C91F6A4F3800B1A198 /* LICENSE in Resources */,
 				18CA94DA1F6A5CBC00B1A198 /* address.json in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,
@@ -1121,6 +1138,7 @@
 				237797741F5534AA008B2DA8 /* XMNavigationController.m in Sources */,
 				18233E3C1F69040000B80F69 /* XMMeAdressView.m in Sources */,
 				237797671F553401008B2DA8 /* UIImage+MRExtension.m in Sources */,
+				18810AFA1F723064006EB0E4 /* XMLoginViewController.m in Sources */,
 				237797BD1F5559A4008B2DA8 /* SDWebImageCompat.m in Sources */,
 				18CA94CF1F6A4F3800B1A198 /* ActionSheetMultipleStringPicker.m in Sources */,
 				18CA94CA1F6A4F3800B1A198 /* AbstractActionSheetPicker.m in Sources */,
@@ -1284,7 +1302,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1298,7 +1316,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";

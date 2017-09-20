@@ -8,6 +8,7 @@
 
 #import "XMMeSetting.h"
 #import "XMMeCellStyleOne.h"
+#import "XMLoginViewController.h"
 
 @interface XMMeSetting ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -146,17 +147,51 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section==0){
-        //清空缓存
+        //选中效果消失
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        //清空缓存 跳出弹框
+        UIAlertController *alter = [UIAlertController alertControllerWithTitle:nil message:@"确定清理缓存么？" preferredStyle:UIAlertControllerStyleActionSheet];
+        //添加按钮
+        __weak typeof (alter)weakAlter = alter;
+        [weakAlter addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"缓存清除啦");
+        }]];
+        
+        [weakAlter addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alter animated:YES completion:nil];
+        
     }else if (indexPath.section ==1){
         if (indexPath.row==0){
             //鼓励一下，跳转到appstore
+            //https://itunes.apple.com/cn/app/jie-zou-da-shi/id493901993?mt=8
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/jie-zou-da-shi/id493901993?mt=8"]];
         }else {
-            //隐私和协议
+            //隐私和协议  待定接口
+            #warning 隐私和协议  待定接口
         }
     }else if (indexPath.section ==2){
         //加入我们  跳转网页
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://shoufutuan.gotoip11.com/cn/index.php"]];
+        
     }else if (indexPath.section ==3){
         //退出登录
+        //选中效果消失
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        //清空缓存 跳出弹框
+        UIAlertController *alterOutSign = [UIAlertController alertControllerWithTitle:nil message:@"确认退出登录" preferredStyle:UIAlertControllerStyleActionSheet];
+        //添加按钮
+        __weak typeof (alterOutSign)weakAlter = alterOutSign;
+        [weakAlter addAction:[UIAlertAction actionWithTitle:@"退出登录" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"退出登录");
+            [self presentViewController:[[XMLoginViewController alloc]init] animated:NO completion:nil];
+        }]];
+        
+        [weakAlter addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alterOutSign animated:YES completion:nil];
     }
 }
 @end
