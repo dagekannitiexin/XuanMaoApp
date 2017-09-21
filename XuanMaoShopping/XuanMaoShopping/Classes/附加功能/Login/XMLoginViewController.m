@@ -8,6 +8,7 @@
 
 #import "XMLoginViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "XMLoginPhone.h"
 
 @interface XMLoginViewController ()
 
@@ -22,6 +23,12 @@
 @end
 
 @implementation XMLoginViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.moviePlayerController play];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -112,6 +119,8 @@
     [phoneBtn setTitle:@"使用手机登录" forState:UIControlStateNormal];
     [phoneBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [phoneBtn setImage:[UIImage imageNamed:@"iconLoginPhone"] forState:UIControlStateNormal];
+    phoneBtn.tag = 101;
+    [phoneBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginViewOne addSubview:phoneBtn];
     
     UIButton *weCatBtn = [[UIButton alloc]initWithFrame:CGRectMake(buttonOrginX+buttonWith+buttonSapce, 14, buttonWith, 45)];
@@ -121,6 +130,8 @@
     [weCatBtn setTitle:@"使用微信登录" forState:UIControlStateNormal];
     [weCatBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [weCatBtn setImage:[UIImage imageNamed:@"iconLoginWechat"] forState:UIControlStateNormal];
+    weCatBtn.tag = 102;
+    [weCatBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginViewOne addSubview:weCatBtn];
     
     UILabel *otherLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, weCatBtn.bottom+35, 66, 11)];
@@ -154,6 +165,8 @@
     [qqBtn setTitle:@"使用QQ登录" forState:UIControlStateNormal];
     [qqBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [qqBtn setImage:[UIImage imageNamed:@"iconLoginQQ"] forState:UIControlStateNormal];
+    qqBtn.tag = 103;
+    [qqBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginViewTwo addSubview:qqBtn];
     
     UIButton *weiBoBtn = [[UIButton alloc]initWithFrame:CGRectMake(buttonOrginX+buttonWith+buttonSapce, 14, buttonWith, 45)];
@@ -163,6 +176,8 @@
     [weiBoBtn setTitle:@"使用微博登录" forState:UIControlStateNormal];
     [weiBoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [weiBoBtn setImage:[UIImage imageNamed:@"iconLoginWeibo"] forState:UIControlStateNormal];
+    weiBoBtn.tag = 104;
+    [weiBoBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginViewTwo addSubview:weiBoBtn];
     
     //增加返回按钮
@@ -219,5 +234,33 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.LoginView.x = 0;
     }];
+}
+
+/*
+ 各种登录方式
+ */
+- (void)loginWay:(UIButton*)sender
+{
+    NSInteger tag = sender.tag;
+    switch (tag) {
+        case 101:
+        {
+            NSLog(@"使用手机登录");
+            XMLoginPhone *VCPhone = [[XMLoginPhone alloc]init];
+            [self.navigationController pushViewController:VCPhone animated:YES];
+        }
+            break;
+        case 102:
+            NSLog(@"使用微信登录");
+            break;
+        case 103:
+            NSLog(@"使用QQ登录");
+            break;
+        case 104:
+            NSLog(@"使用微博登录");
+            break;
+        default:
+            break;
+    }
 }
 @end

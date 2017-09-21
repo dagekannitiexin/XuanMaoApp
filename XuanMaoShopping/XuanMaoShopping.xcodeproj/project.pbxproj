@@ -24,6 +24,8 @@
 		18810AFF1F723CC6006EB0E4 /* SFTMoview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */; };
 		18810B021F727E04006EB0E4 /* XMLoginPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810B011F727E04006EB0E4 /* XMLoginPhone.m */; };
 		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
+		189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 189994D51F739534008919DD /* XMLoginVerificationCode.m */; };
+		189994DA1F73ACC1008919DD /* WLUnitField.m in Sources */ = {isa = PBXBuildFile; fileRef = 189994D91F73ACC1008919DD /* WLUnitField.m */; };
 		18A441E81F67B5F300DB5C82 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E51F67B5F300DB5C82 /* Utility.m */; };
 		18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E71F67B5F300DB5C82 /* WebViewController.m */; };
 		18A441EF1F67B63400DB5C82 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441EC1F67B63400DB5C82 /* NJKWebViewProgress.m */; };
@@ -169,6 +171,10 @@
 		18810B011F727E04006EB0E4 /* XMLoginPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginPhone.m; sourceTree = "<group>"; };
 		1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMessageCenter.h; sourceTree = "<group>"; };
 		1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMessageCenter.m; sourceTree = "<group>"; };
+		189994D41F739534008919DD /* XMLoginVerificationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginVerificationCode.h; sourceTree = "<group>"; };
+		189994D51F739534008919DD /* XMLoginVerificationCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginVerificationCode.m; sourceTree = "<group>"; };
+		189994D81F73ACC1008919DD /* WLUnitField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLUnitField.h; sourceTree = "<group>"; };
+		189994D91F73ACC1008919DD /* WLUnitField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLUnitField.m; sourceTree = "<group>"; };
 		18A441E41F67B5F300DB5C82 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		18A441E51F67B5F300DB5C82 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		18A441E61F67B5F300DB5C82 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -394,8 +400,19 @@
 				18810AF91F723064006EB0E4 /* XMLoginViewController.m */,
 				18810B001F727E04006EB0E4 /* XMLoginPhone.h */,
 				18810B011F727E04006EB0E4 /* XMLoginPhone.m */,
+				189994D41F739534008919DD /* XMLoginVerificationCode.h */,
+				189994D51F739534008919DD /* XMLoginVerificationCode.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		189994D71F73ACC1008919DD /* 验证码 */ = {
+			isa = PBXGroup;
+			children = (
+				189994D81F73ACC1008919DD /* WLUnitField.h */,
+				189994D91F73ACC1008919DD /* WLUnitField.m */,
+			);
+			path = "验证码";
 			sourceTree = "<group>";
 		};
 		18A441EA1F67B63400DB5C82 /* NJKWebViewProgress */ = {
@@ -789,6 +806,7 @@
 		2377974C1F553281008B2DA8 /* 框架 */ = {
 			isa = PBXGroup;
 			children = (
+				189994D71F73ACC1008919DD /* 验证码 */,
 				18CA94DC1F6A65FE00B1A198 /* MJExtension */,
 				18CA94B11F6A4F3800B1A198 /* ActionSheetPicker-3.0 */,
 				1808AC0C1F6A1E2900430405 /* XXTextView */,
@@ -1086,6 +1104,7 @@
 				18A441F01F67B63400DB5C82 /* NJKWebViewProgressView.m in Sources */,
 				237797C51F5559A4008B2DA8 /* UIImage+MultiFormat.m in Sources */,
 				18CA94CC1F6A4F3800B1A198 /* ActionSheetDatePicker.m in Sources */,
+				189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */,
 				23294DF71F56890800720245 /* XMGoodsTitleStyleView.m in Sources */,
 				18D20C891F662E6A007B7905 /* XMMeMyOrder.m in Sources */,
 				237797931F555979008B2DA8 /* SDCycleScrollView.m in Sources */,
@@ -1150,6 +1169,7 @@
 				18CA94CA1F6A4F3800B1A198 /* AbstractActionSheetPicker.m in Sources */,
 				18A441F61F67C04E00DB5C82 /* XMShareBtn.m in Sources */,
 				23CC472D1F593AB700A0C2E3 /* UIView+YYAdd.m in Sources */,
+				189994DA1F73ACC1008919DD /* WLUnitField.m in Sources */,
 				237797C31F5559A4008B2DA8 /* UIButton+WebCache.m in Sources */,
 				18CA94CD1F6A4F3800B1A198 /* ActionSheetDistancePicker.m in Sources */,
 				237797C41F5559A4008B2DA8 /* UIImage+GIF.m in Sources */,

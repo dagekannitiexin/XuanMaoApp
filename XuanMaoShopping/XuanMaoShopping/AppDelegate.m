@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XMTabBarController.h"
+#import "XMLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,8 @@
     
     // 设置窗口的根控制器
     self.window.rootViewController = [[XMTabBarController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[XMLoginViewController alloc]init]];
+//    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     
