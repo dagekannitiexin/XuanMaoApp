@@ -85,6 +85,7 @@
     //重新获取
     _loadTimeAgain = [[UIButton alloc]initWithFrame:CGRectMake(0, _describeLabel.bottom +18, 90, 12)];
     _loadTimeAgain.centerX = self.view.centerX;
+    _loadTimeAgain.titleLabel.font = [UIFont systemFontOfSize:13];
     [_loadTimeAgain setTitle:@"重新获取" forState:UIControlStateNormal];
     [_loadTimeAgain setTitleColor:RGBACOLOR(210, 86, 81, 1) forState:UIControlStateNormal];
     [_loadTimeAgain addTarget:self action:@selector(loadAgain) forControlEvents:UIControlEventTouchUpInside];

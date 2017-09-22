@@ -21,7 +21,6 @@
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
 		18810AFA1F723064006EB0E4 /* XMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810AF91F723064006EB0E4 /* XMLoginViewController.m */; };
-		18810AFF1F723CC6006EB0E4 /* SFTMoview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */; };
 		18810B021F727E04006EB0E4 /* XMLoginPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810B011F727E04006EB0E4 /* XMLoginPhone.m */; };
 		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
 		189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 189994D51F739534008919DD /* XMLoginVerificationCode.m */; };
@@ -67,6 +66,7 @@
 		18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DE40971F61378E005D7942 /* XMMeCellStyleOne.xib */; };
 		18E3E7C01F5F8A1A007D86FC /* XMLearnStyleViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E3E7BF1F5F8A1A007D86FC /* XMLearnStyleViewTwo.m */; };
 		18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */; };
+		18F6DA511F75067100C8144D /* SFTMoview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18F6DA501F75067100C8144D /* SFTMoview.mp4 */; };
 		18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8E0291F5E39E600006A18 /* XMFootLineView.xib */; };
 		18FF06A81F5E413000EA1D13 /* XMFootLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06A71F5E413000EA1D13 /* XMFootLineView.m */; };
 		18FF06B21F5E813900EA1D13 /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06AF1F5E813900EA1D13 /* NewPagedFlowView.m */; };
@@ -166,7 +166,6 @@
 		187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGoodsViewStyleThreeView.xib; sourceTree = "<group>"; };
 		18810AF81F723064006EB0E4 /* XMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginViewController.h; sourceTree = "<group>"; };
 		18810AF91F723064006EB0E4 /* XMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginViewController.m; sourceTree = "<group>"; };
-		18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFTMoview.mp4; sourceTree = "<group>"; };
 		18810B001F727E04006EB0E4 /* XMLoginPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginPhone.h; sourceTree = "<group>"; };
 		18810B011F727E04006EB0E4 /* XMLoginPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginPhone.m; sourceTree = "<group>"; };
 		1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMessageCenter.h; sourceTree = "<group>"; };
@@ -251,6 +250,7 @@
 		18E3E7BE1F5F8A1A007D86FC /* XMLearnStyleViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewTwo.h; sourceTree = "<group>"; };
 		18E3E7BF1F5F8A1A007D86FC /* XMLearnStyleViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleViewTwo.m; sourceTree = "<group>"; };
 		18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewTwo.xib; sourceTree = "<group>"; };
+		18F6DA501F75067100C8144D /* SFTMoview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFTMoview.mp4; sourceTree = "<group>"; };
 		18F8E0291F5E39E600006A18 /* XMFootLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMFootLineView.xib; sourceTree = "<group>"; };
 		18FF06A61F5E413000EA1D13 /* XMFootLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFootLineView.h; sourceTree = "<group>"; };
 		18FF06A71F5E413000EA1D13 /* XMFootLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFootLineView.m; sourceTree = "<group>"; };
@@ -468,7 +468,7 @@
 		18CA94D71F6A5CBC00B1A198 /* 资源 */ = {
 			isa = PBXGroup;
 			children = (
-				18810AFE1F723CC6006EB0E4 /* SFTMoview.mp4 */,
+				18F6DA501F75067100C8144D /* SFTMoview.mp4 */,
 				18CA94D81F6A5CBC00B1A198 /* address.json */,
 				18CA94D91F6A5CBC00B1A198 /* hotelcity.json */,
 			);
@@ -1052,7 +1052,7 @@
 				23294DF91F56892200720245 /* XMGoodsTitleStyleView.xib in Resources */,
 				187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */,
 				18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */,
-				18810AFF1F723CC6006EB0E4 /* SFTMoview.mp4 in Resources */,
+				18F6DA511F75067100C8144D /* SFTMoview.mp4 in Resources */,
 				18CA94C91F6A4F3800B1A198 /* LICENSE in Resources */,
 				18CA94DA1F6A5CBC00B1A198 /* address.json in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,

@@ -75,7 +75,7 @@
 - (void)createFootView
 {
     _LoginView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-135, SCREEN_WIDTH*2, 135)];
-    _LoginView.backgroundColor = [UIColor whiteColor];
+    _LoginView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_LoginView];
     
     //增加分界线
