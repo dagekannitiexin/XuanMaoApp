@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1808AC0F1F6A1E2900430405 /* XXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808AC0E1F6A1E2900430405 /* XXTextView.m */; };
+		1817F9651F79ED9D00291F04 /* XMThematicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817F9641F79ED9D00291F04 /* XMThematicViewController.m */; };
+		1817F9711F7A1D1900291F04 /* XMThematilOfficialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817F96F1F7A1D1900291F04 /* XMThematilOfficialCell.m */; };
+		1817F9721F7A1D1900291F04 /* XMThematilOfficialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1817F9701F7A1D1900291F04 /* XMThematilOfficialCell.xib */; };
+		1817F9741F7A2F9400291F04 /* PublicSFTResources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1817F9731F7A2F9400291F04 /* PublicSFTResources.plist */; };
 		18233E331F68D06300B80F69 /* XMMeLikeEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E321F68D06300B80F69 /* XMMeLikeEmpty.m */; };
 		18233E361F68D8E200B80F69 /* XMMeAddressEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E351F68D8E200B80F69 /* XMMeAddressEmpty.m */; };
 		18233E391F68FD9400B80F69 /* XMMeAddressEmptyDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E381F68FD9400B80F69 /* XMMeAddressEmptyDetail.m */; };
@@ -143,6 +147,12 @@
 /* Begin PBXFileReference section */
 		1808AC0D1F6A1E2900430405 /* XXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTextView.h; sourceTree = "<group>"; };
 		1808AC0E1F6A1E2900430405 /* XXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTextView.m; sourceTree = "<group>"; };
+		1817F9631F79ED9D00291F04 /* XMThematicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMThematicViewController.h; sourceTree = "<group>"; };
+		1817F9641F79ED9D00291F04 /* XMThematicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMThematicViewController.m; sourceTree = "<group>"; };
+		1817F96E1F7A1D1900291F04 /* XMThematilOfficialCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMThematilOfficialCell.h; sourceTree = "<group>"; };
+		1817F96F1F7A1D1900291F04 /* XMThematilOfficialCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMThematilOfficialCell.m; sourceTree = "<group>"; };
+		1817F9701F7A1D1900291F04 /* XMThematilOfficialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMThematilOfficialCell.xib; sourceTree = "<group>"; };
+		1817F9731F7A2F9400291F04 /* PublicSFTResources.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PublicSFTResources.plist; sourceTree = "<group>"; };
 		18233E311F68D06300B80F69 /* XMMeLikeEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeLikeEmpty.h; sourceTree = "<group>"; };
 		18233E321F68D06300B80F69 /* XMMeLikeEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeLikeEmpty.m; sourceTree = "<group>"; };
 		18233E341F68D8E200B80F69 /* XMMeAddressEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeAddressEmpty.h; sourceTree = "<group>"; };
@@ -393,6 +403,50 @@
 			path = XXTextView;
 			sourceTree = "<group>";
 		};
+		1817F95E1F79ED1D00291F04 /* thematic（专题） */ = {
+			isa = PBXGroup;
+			children = (
+				1817F9621F79ED8A00291F04 /* 父控制器 */,
+				1817F95F1F79ED1D00291F04 /* Controller */,
+				1817F9601F79ED1D00291F04 /* Model */,
+				1817F9611F79ED1D00291F04 /* View */,
+			);
+			path = "thematic（专题）";
+			sourceTree = "<group>";
+		};
+		1817F95F1F79ED1D00291F04 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1817F9601F79ED1D00291F04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1817F9611F79ED1D00291F04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1817F96E1F7A1D1900291F04 /* XMThematilOfficialCell.h */,
+				1817F96F1F7A1D1900291F04 /* XMThematilOfficialCell.m */,
+				1817F9701F7A1D1900291F04 /* XMThematilOfficialCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1817F9621F79ED8A00291F04 /* 父控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				1817F9631F79ED9D00291F04 /* XMThematicViewController.h */,
+				1817F9641F79ED9D00291F04 /* XMThematicViewController.m */,
+			);
+			path = "父控制器";
+			sourceTree = "<group>";
+		};
 		18810AF71F72303C006EB0E4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +525,7 @@
 				18F6DA501F75067100C8144D /* SFTMoview.mp4 */,
 				18CA94D81F6A5CBC00B1A198 /* address.json */,
 				18CA94D91F6A5CBC00B1A198 /* hotelcity.json */,
+				1817F9731F7A2F9400291F04 /* PublicSFTResources.plist */,
 			);
 			path = "资源";
 			sourceTree = "<group>";
@@ -612,6 +667,7 @@
 				237797611F553381008B2DA8 /* Main */,
 				237797361F553281008B2DA8 /* Home(首页) */,
 				2377973D1F553281008B2DA8 /* Learn(学习页) */,
+				1817F95E1F79ED1D00291F04 /* thematic（专题） */,
 				237797441F553281008B2DA8 /* Me(我) */,
 				2377974B1F553281008B2DA8 /* 工具 */,
 				2377974C1F553281008B2DA8 /* 框架 */,
@@ -1042,6 +1098,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				232D11321F5BA734008F9FF2 /* XMGoodsViewStyleTwoHeadView.xib in Resources */,
+				1817F9721F7A1D1900291F04 /* XMThematilOfficialCell.xib in Resources */,
 				23294DF41F5650A800720245 /* goodsViewStyleOne.xib in Resources */,
 				237797121F55321E008B2DA8 /* LaunchScreen.storyboard in Resources */,
 				18233E3E1F69041200B80F69 /* XMMeAdressView.xib in Resources */,
@@ -1056,6 +1113,7 @@
 				18CA94C91F6A4F3800B1A198 /* LICENSE in Resources */,
 				18CA94DA1F6A5CBC00B1A198 /* address.json in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,
+				1817F9741F7A2F9400291F04 /* PublicSFTResources.plist in Resources */,
 				18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */,
 				18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */,
 				18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */,
@@ -1098,6 +1156,7 @@
 				18233E331F68D06300B80F69 /* XMMeLikeEmpty.m in Sources */,
 				18CA94CB1F6A4F3800B1A198 /* ActionSheetCustomPicker.m in Sources */,
 				18A441E81F67B5F300DB5C82 /* Utility.m in Sources */,
+				1817F9651F79ED9D00291F04 /* XMThematicViewController.m in Sources */,
 				18CA94D11F6A4F3800B1A198 /* DistancePickerView.m in Sources */,
 				18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */,
 				237797071F55321E008B2DA8 /* AppDelegate.m in Sources */,
@@ -1140,6 +1199,7 @@
 				18CA94F61F6A65FE00B1A198 /* MJExtensionConst.m in Sources */,
 				18CA94F91F6A65FE00B1A198 /* MJPropertyKey.m in Sources */,
 				18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */,
+				1817F9711F7A1D1900291F04 /* XMThematilOfficialCell.m in Sources */,
 				2377977D1F5535B0008B2DA8 /* XMTabBarController.m in Sources */,
 				18CA94FD1F6A65FE00B1A198 /* NSObject+MJKeyValue.m in Sources */,
 				237797921F555979008B2DA8 /* SDCollectionViewCell.m in Sources */,
@@ -1328,7 +1388,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1342,7 +1402,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";

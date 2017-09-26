@@ -11,6 +11,7 @@
 #import "XMHomeViewController.h"
 #import "XMLearnViewController.h"
 #import "XMMeViewController.h"
+#import "XMThematicViewController.h"
 
 
 @interface XMTabBarController ()<UITabBarDelegate>
@@ -25,9 +26,9 @@
     
     
     // 添加子控制器
-    [self addChildController:[[XMHomeViewController alloc]init] imageName:@"tabar_Homenew0" selectedImage:@"tabar_Homenew1" title:@"首页"];
+    [self addChildController:[[XMLearnViewController alloc]init] imageName:@"tabar_Homenew0" selectedImage:@"tabar_Homenew1" title:@"首页"];
     
-    [self addChildController:[[XMLearnViewController alloc]init] imageName:@"tabar_activitynew0" selectedImage:@"tabar_activitynew1" title:@"商学院"];
+    [self addChildController:[[XMThematicViewController alloc]init] imageName:@"tabar_activitynew0" selectedImage:@"tabar_activitynew1" title:@"专题"];
     
     [self addChildController:[[XMMeViewController alloc]init] imageName:@"tabar_shakenew0" selectedImage:@"tabar_shakenew1" title:@"我的"];
     

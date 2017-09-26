@@ -25,8 +25,7 @@
 
 @implementation XMLoginVerificationCode
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)extracted {
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBarHidden = YES;
     _timeInt = 60;
@@ -36,6 +35,11 @@
     [self initHomeView];
     
     [self createTimer];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self extracted];
 }
 
 - (void)creatnavigationbar
