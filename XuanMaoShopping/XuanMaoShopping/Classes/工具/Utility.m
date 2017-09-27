@@ -16,6 +16,7 @@
 {
     if (url && url.length){
         WebViewController *web = [[WebViewController alloc]init];
+        web.title = @"SoFullTeam首富团官微";
         web.urlStr = url;
         [nav pushViewController:web animated:YES];
         return;

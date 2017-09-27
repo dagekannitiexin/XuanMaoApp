@@ -12,6 +12,7 @@
 @interface XMThematicViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView  *_tableView;
     UIScrollView *_headView;
+    NSArray      *_wetArray;
 }
 
 @end
@@ -20,15 +21,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //处理数据
+    [self loadData];
     [self createHeadView];
-    
     [self createTableView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+}
+
+- (void)loadData{
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"PublicSFTResources" ofType:@"plist"];
+    _wetArray = [NSArray arrayWithContentsOfFile:path];
 }
 
 - (void)createHeadView{
@@ -77,7 +83,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return _wetArray.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -86,7 +92,22 @@
     if (!cell){
         cell = [[XMThematilOfficialCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    
+    NSDictionary *dic = _wetArray[indexPath.row];
+    cell.writerImg.image = [UIImage imageNamed:@"Img_default"];
+    cell.writerName.text = @"首富团推荐";
+    [cell.articlesImg sd_setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"img"]]];
+    cell.articlesTime.text  = [dic objectForKey:@"date"];
+    cell.articlesTitle.text = [dic objectForKey:@"title"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSString * tag = @"没有tag";
+    NSString * out_url = [_wetArray[indexPath.row]objectForKey:@"webUrl"];
+    NSString * type = @"没有type";
+    [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
 }
 @end
