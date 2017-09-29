@@ -86,7 +86,7 @@
 #define MRGlobalBg MRRGBColor(250, 250, 250)
 
 // 主题背景颜色
-#define LYBgColor MRRGBColor(240, 240, 240)
+#define LYBgColor MRRGBColor(244, 244, 244)
 
 //灰色字体颜色
 #define XMGaryColor MRRGBColor(214, 214, 214)

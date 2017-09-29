@@ -155,7 +155,7 @@
     CGFloat btnrecommendedH = 125;
     CGFloat recommendedspace = 15;
     for (int i=0; i<_activeArray.count; i++) {
-        HeadButton *btn = [[HeadButton alloc]initWithFrame:CGRectMake(5 + (btnrecommendedW+recommendedspace)*i, 20, btnrecommendedW, btnrecommendedH)];
+        HeadButton *btn = [[HeadButton alloc]initWithFrame:CGRectMake(10 + (btnrecommendedW+recommendedspace)*i, 20, btnrecommendedW, btnrecommendedH)];
         btn.tag = i+100;
         [btn setImage:[UIImage imageNamed:@"Img_default"] forState:UIControlStateNormal];
         [btn setTitle:[_activeArray objectAtIndex:i] forState:UIControlStateNormal];

@@ -14,7 +14,7 @@
 {
     if (self = [super initWithFrame:frame]){
         [self setTitleColor:RGBACOLOR(103, 103, 103, 1) forState:UIControlStateNormal];
-        self.titleLabel.font = [UIFont boldSystemFontOfSize:7];
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:13];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return self;
@@ -23,11 +23,11 @@
 // 比例设置为  img  90*90  label 90*30  距离15    1:3
 - (CGRect)imageRectForContentRect:(CGRect)contentRect
 {
-    return CGRectMake(0, 0, 30, 30);
+    return CGRectMake(0, 0, 60, 60);
 }
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
 {
-    return CGRectMake(0,35,30, 10);
+    return CGRectMake(0,68,60,13);
 }
 @end

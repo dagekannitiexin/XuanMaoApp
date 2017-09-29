@@ -50,6 +50,7 @@
     
     //初始化tabview
     [self initTableView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,11 +60,6 @@
 
 - (void)creatnavigationbar
 {
-//    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 46)];
-//    titleLabel.text = @"商学院";
-//    titleLabel.textColor = [UIColor blackColor];
-//    titleLabel.textAlignment = NSTextAlignmentCenter;
-//    self.navigationItem.titleView = titleLabel;
     self.title = @"商学院";
 }
 
@@ -71,19 +67,17 @@
 {
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49-64)];
     [self.view addSubview:_tableView];
-    
-    
-    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    _tableView.backgroundColor = LYBgColor;
+ _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     _tableView.showsVerticalScrollIndicator = NO;
     [_tableView setTableHeaderView:_headView];
-
 }
 
 - (void)initHeadView
 {
     //headView
     _headView = [[UIView alloc]init];
-    _headView.backgroundColor = MRGlobalBg;
+    _headView.backgroundColor = [UIColor whiteColor];
     _totleHeight = 0; //设置总head高度
     
     //创建轮转图
@@ -140,16 +134,18 @@
     activeView.layer.masksToBounds = YES;
     [_headView addSubview:activeView];
     
-    CGFloat btnrecommendedW = 90;
-    CGFloat btnrecommendedH = 125;
-    CGFloat recommendedspace = 15;
+    CGFloat btnrecommendedW = 60;
+    CGFloat btnrecommendedH = 81;
+    CGFloat recommendedspace = (SCREEN_WIDTH -2*15-5*btnrecommendedW)/4;
     for (int i=0; i<_activeArray.count; i++) {
-        HeadButton *btn = [[HeadButton alloc]initWithFrame:CGRectMake(5 + (btnrecommendedW+recommendedspace)*i, 20, btnrecommendedW, btnrecommendedH)];
+        HeadButton *btn = [[HeadButton alloc]initWithFrame:CGRectMake(15 + (btnrecommendedW+recommendedspace)*i, 0, btnrecommendedW, btnrecommendedH)];
         btn.tag = i+100;
         [btn setImage:[UIImage imageNamed:@"Img_default"] forState:UIControlStateNormal];
         [btn setTitle:[_activeArray objectAtIndex:i] forState:UIControlStateNormal];
         btn.tag = i+100;
         [btn addTarget:self action:@selector(activeBtnclick:) forControlEvents:UIControlEventTouchUpInside];
+        btn.imageView.layer.cornerRadius = btnrecommendedW/2;
+        btn.imageView.clipsToBounds = YES;
         [activeView addSubview:btn];
         activeView.contentSize = CGSizeMake(CGRectGetMaxX(btn.frame)+20, activeView.height);
     }
