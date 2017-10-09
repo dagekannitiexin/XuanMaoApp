@@ -77,6 +77,7 @@
 		18FF06B31F5E813900EA1D13 /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06B11F5E813900EA1D13 /* PGIndexBannerSubiew.m */; };
 		18FF06B61F5E9D4100EA1D13 /* XMLearnStyleViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06B51F5E9D4100EA1D13 /* XMLearnStyleViewOne.m */; };
 		18FF06B91F5E9D6700EA1D13 /* XMLearnStyleTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06B81F5E9D6700EA1D13 /* XMLearnStyleTitleView.m */; };
+		20E08C44656DCC46448999C9 /* libPods-XuanMaoShopping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2398C7F65403937485C994 /* libPods-XuanMaoShopping.a */; };
 		23294DF21F56509700720245 /* goodsViewStyleOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 23294DF11F56509700720245 /* goodsViewStyleOne.m */; };
 		23294DF41F5650A800720245 /* goodsViewStyleOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23294DF31F5650A800720245 /* goodsViewStyleOne.xib */; };
 		23294DF71F56890800720245 /* XMGoodsTitleStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23294DF61F56890800720245 /* XMGoodsTitleStyleView.m */; };
@@ -272,6 +273,7 @@
 		18FF06B51F5E9D4100EA1D13 /* XMLearnStyleViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleViewOne.m; sourceTree = "<group>"; };
 		18FF06B71F5E9D6700EA1D13 /* XMLearnStyleTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleTitleView.h; sourceTree = "<group>"; };
 		18FF06B81F5E9D6700EA1D13 /* XMLearnStyleTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLearnStyleTitleView.m; sourceTree = "<group>"; };
+		203668276F28B681D0927FA0 /* Pods-XuanMaoShopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XuanMaoShopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-XuanMaoShopping/Pods-XuanMaoShopping.release.xcconfig"; sourceTree = "<group>"; };
 		23294DF01F56509700720245 /* goodsViewStyleOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goodsViewStyleOne.h; sourceTree = "<group>"; };
 		23294DF11F56509700720245 /* goodsViewStyleOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goodsViewStyleOne.m; sourceTree = "<group>"; };
 		23294DF31F5650A800720245 /* goodsViewStyleOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = goodsViewStyleOne.xib; sourceTree = "<group>"; };
@@ -367,6 +369,8 @@
 		237797CB1F5568E0008B2DA8 /* HeadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadButton.m; sourceTree = "<group>"; };
 		23CC472B1F593AB700A0C2E3 /* UIView+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYAdd.h"; sourceTree = "<group>"; };
 		23CC472C1F593AB700A0C2E3 /* UIView+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYAdd.m"; sourceTree = "<group>"; };
+		9A2398C7F65403937485C994 /* libPods-XuanMaoShopping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XuanMaoShopping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E42A9C3459AF76A5229ECD /* Pods-XuanMaoShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XuanMaoShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XuanMaoShopping/Pods-XuanMaoShopping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +378,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E08C44656DCC46448999C9 /* libPods-XuanMaoShopping.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +613,8 @@
 				2377971B1F55321E008B2DA8 /* XuanMaoShoppingTests */,
 				237797261F55321E008B2DA8 /* XuanMaoShoppingUITests */,
 				237797001F55321E008B2DA8 /* Products */,
+				F2157AFBFAB7DDA294A8EDAE /* Pods */,
+				E9C5EFF23263D55E1EE6FC31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -990,6 +997,23 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		E9C5EFF23263D55E1EE6FC31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A2398C7F65403937485C994 /* libPods-XuanMaoShopping.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2157AFBFAB7DDA294A8EDAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1E42A9C3459AF76A5229ECD /* Pods-XuanMaoShopping.debug.xcconfig */,
+				203668276F28B681D0927FA0 /* Pods-XuanMaoShopping.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -997,9 +1021,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2377972C1F55321E008B2DA8 /* Build configuration list for PBXNativeTarget "XuanMaoShopping" */;
 			buildPhases = (
+				0FEF3002FE7A19BB805CF1F7 /* [CP] Check Pods Manifest.lock */,
 				237796FB1F55321E008B2DA8 /* Sources */,
 				237796FC1F55321E008B2DA8 /* Frameworks */,
 				237796FD1F55321E008B2DA8 /* Resources */,
+				8D79BBAC94BF5C18A999A852 /* [CP] Embed Pods Frameworks */,
+				A337F3C465B5D468A89B23A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1136,6 +1163,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FEF3002FE7A19BB805CF1F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XuanMaoShopping-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D79BBAC94BF5C18A999A852 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XuanMaoShopping/Pods-XuanMaoShopping-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A337F3C465B5D468A89B23A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XuanMaoShopping/Pods-XuanMaoShopping-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XuanMaoShopping/Pods-XuanMaoShopping-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		237796FB1F55321E008B2DA8 /* Sources */ = {
@@ -1383,6 +1464,7 @@
 		};
 		2377972D1F55321E008B2DA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1E42A9C3459AF76A5229ECD /* Pods-XuanMaoShopping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
@@ -1397,6 +1479,7 @@
 		};
 		2377972E1F55321E008B2DA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 203668276F28B681D0927FA0 /* Pods-XuanMaoShopping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X9KZX2DWJL;

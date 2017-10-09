@@ -15,6 +15,6 @@
 #import "UIView+YYAdd.h"
 #import "Utility.h"
 #import "UIImageView+WebCache.h"
-
+#import <MJRefresh.h>
 #endif /* XuanMaoShopping_Prefix_pch */
     

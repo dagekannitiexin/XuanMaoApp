@@ -45,17 +45,22 @@
     //设置导航栏
     [self creatnavigationbar];
     
+    UIImageView *dragon = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-40)/2, 64, 40, 40)];
+    dragon.backgroundColor = [UIColor yellowColor];
+    dragon.image = [UIImage imageNamed:@"dragon"];
+    [self.view addSubview:dragon];
+    
     //创建头部视图
     [self initHeadView];
     
     //初始化tabview
     [self initTableView];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 - (void)creatnavigationbar
@@ -71,6 +76,22 @@
  _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     _tableView.showsVerticalScrollIndicator = NO;
     [_tableView setTableHeaderView:_headView];
+    //设置上下拉刷新
+//    _tableView.estimatedRowHeight = 100;
+//    _tableView.rowHeight = UITableViewAutomaticDimension;
+//
+//    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerViewRefresh)];
+//    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerViewRefresh)];
+    MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        //下拉刷新要做的操作.
+    }];
+    gifHeader.stateLabel.hidden = YES;
+    gifHeader.lastUpdatedTimeLabel.hidden = YES;
+    
+    [gifHeader setImages:@[[UIImage imageNamed:@"dragon1"],[UIImage imageNamed:@"dragon2"]] forState:MJRefreshStateRefreshing];
+//    [gifHeader setImages:@[[UIImage imageNamed:@"dragon2"]]
+//                forState:MJRefreshStateRefreshing];
+    _tableView.header = gifHeader;
 }
 
 - (void)initHeadView
@@ -232,6 +253,16 @@
 }
 
 #pragma mark - btnClick
+- (void)headerViewRefresh
+{
+    
+}
+
+- (void)footerViewRefresh
+{
+
+}
+
 - (void)activeBtnclick:(UIButton*)sender
 {
 
