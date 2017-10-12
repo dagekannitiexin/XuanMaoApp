@@ -15,8 +15,13 @@
 #import "XMLearnStyleViewTwo.h"
 #import "XMLearnStyleViewFour.h"
 #import "XMFootLineView.h"
+#import "NewShakeViewController.h"
+#import "SignViewController.h"
 
-@interface XMLearnViewController ()<NewPagedFlowViewDelegate,NewPagedFlowViewDataSource>{
+
+
+
+@interface XMLearnViewController ()<NewPagedFlowViewDelegate,NewPagedFlowViewDataSource,UIViewControllerTransitioningDelegate>{
     CGFloat _totleHeight;
     UITableView *_tableView;
     UIView *_headView;
@@ -77,21 +82,21 @@
     _tableView.showsVerticalScrollIndicator = NO;
     [_tableView setTableHeaderView:_headView];
     //设置上下拉刷新
-//    _tableView.estimatedRowHeight = 100;
-//    _tableView.rowHeight = UITableViewAutomaticDimension;
+    _tableView.estimatedRowHeight = 100;
+    _tableView.rowHeight = UITableViewAutomaticDimension;
 //
 //    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerViewRefresh)];
 //    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerViewRefresh)];
     MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
         //下拉刷新要做的操作.
     }];
-    gifHeader.stateLabel.hidden = YES;
+    gifHeader.stateLabel.hidden = NO;
     gifHeader.lastUpdatedTimeLabel.hidden = YES;
-    
-    [gifHeader setImages:@[[UIImage imageNamed:@"dragon1"],[UIImage imageNamed:@"dragon2"]] forState:MJRefreshStateRefreshing];
-//    [gifHeader setImages:@[[UIImage imageNamed:@"dragon2"]]
-//                forState:MJRefreshStateRefreshing];
-    _tableView.header = gifHeader;
+    [gifHeader setImages:@[[UIImage imageNamed:@"dragon1"]] forState:MJRefreshStateIdle];
+    [gifHeader setImages:@[[UIImage imageNamed:@"dragon2"]] forState:MJRefreshStatePulling];
+    [gifHeader setImages:@[[UIImage imageNamed:@"dragon1"],[UIImage imageNamed:@"dragon2"]] duration:0.5 forState:MJRefreshStateRefreshing];
+    [gifHeader setRefreshingTarget:self refreshingAction:@selector(headerViewRefresh)];
+    _tableView.mj_header = gifHeader;
 }
 
 - (void)initHeadView
@@ -163,7 +168,6 @@
         btn.tag = i+100;
         [btn setImage:[UIImage imageNamed:@"Img_default"] forState:UIControlStateNormal];
         [btn setTitle:[_activeArray objectAtIndex:i] forState:UIControlStateNormal];
-        btn.tag = i+100;
         [btn addTarget:self action:@selector(activeBtnclick:) forControlEvents:UIControlEventTouchUpInside];
         btn.imageView.layer.cornerRadius = btnrecommendedW/2;
         btn.imageView.clipsToBounds = YES;
@@ -255,7 +259,9 @@
 #pragma mark - btnClick
 - (void)headerViewRefresh
 {
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_tableView.mj_header endRefreshing];
+    });
 }
 
 - (void)footerViewRefresh
@@ -265,7 +271,36 @@
 
 - (void)activeBtnclick:(UIButton*)sender
 {
-
+    if (sender.tag ==100){
+        //摇一摇
+        NewShakeViewController * shake = [[NewShakeViewController alloc] init];
+        shake.title = @"摇一摇";
+        [self.navigationController pushViewController:shake animated:YES];
+    }else if (sender.tag ==101){
+        SignViewController * vc = [[SignViewController alloc]init];
+        
+        NSArray *array1 = [NSArray arrayWithObjects:@"5",@"10",@"15",@"20",@"25", nil];
+        NSDictionary *rule = [NSDictionary dictionaryWithObjectsAndKeys:
+                              @"5",@"1",
+                              @"10",@"2",
+                              @"15",@"3",
+                              @"20",@"4",
+                              @"25",@"5",nil];
+        
+        NSDictionary *dicnew = [NSDictionary dictionaryWithObjectsAndKeys:
+                                array1,@"analysis_rule",
+                                @"1",@"current",
+                                rule,@"rule",
+                                @"103",@"score",
+                                @"5",@"sign_score",
+                                nil];
+        vc.transitioningDelegate = [UIApplication sharedApplication].keyWindow.rootViewController;
+        vc.modalPresentationStyle = UIModalPresentationCustom;
+        vc.dic = dicnew;
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:^{
+            
+        }];
+    }
 }
 
 #pragma mark --NewPagedFlowView Delegate
@@ -304,4 +339,5 @@
     
     return bannerView;
 }
+
 @end

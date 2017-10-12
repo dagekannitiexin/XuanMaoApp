@@ -9,7 +9,10 @@
 #import "XMFootLineView.h"
 
 @implementation XMFootLineView
-
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.width = SCREEN_WIDTH;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

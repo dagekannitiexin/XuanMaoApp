@@ -64,6 +64,15 @@
 		18D20C891F662E6A007B7905 /* XMMeMyOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C881F662E6A007B7905 /* XMMeMyOrder.m */; };
 		18D20C8C1F662F8F007B7905 /* XMMeGroupBuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C8B1F662F8F007B7905 /* XMMeGroupBuy.m */; };
 		18D20C8F1F66335E007B7905 /* XMMeFollowing.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C8E1F66335E007B7905 /* XMMeFollowing.m */; };
+		18D56AA51F8C9B3200C2DBF4 /* NewShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AA31F8C9B0B00C2DBF4 /* NewShakeViewController.m */; };
+		18D56AAB1F8C9B8A00C2DBF4 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AA81F8C9B7500C2DBF4 /* DismissingAnimator.m */; };
+		18D56AAC1F8C9B8E00C2DBF4 /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AAA1F8C9B7500C2DBF4 /* PresentingAnimator.m */; };
+		18D56AAD1F8C9E3C00C2DBF4 /* NewShakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D56AA41F8C9B0B00C2DBF4 /* NewShakeViewController.xib */; };
+		18D56AB21F8CA05E00C2DBF4 /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AB01F8CA05800C2DBF4 /* SignViewController.m */; };
+		18D56AB31F8CA06500C2DBF4 /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D56AB11F8CA05800C2DBF4 /* SignViewController.xib */; };
+		18D56AB61F8CA0A500C2DBF4 /* NZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AB41F8CA0A500C2DBF4 /* NZLabel.m */; };
+		18D56ABC1F8CA30F00C2DBF4 /* SignDismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AB91F8CA30700C2DBF4 /* SignDismissingAnimator.m */; };
+		18D56ABD1F8CA31200C2DBF4 /* SignPresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56ABB1F8CA30700C2DBF4 /* SignPresentingAnimator.m */; };
 		18DE408E1F61276D005D7942 /* XMMeHeadStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE408D1F61276D005D7942 /* XMMeHeadStyleView.m */; };
 		18DE40901F612779005D7942 /* XMMeHeadStyleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DE408F1F612779005D7942 /* XMMeHeadStyleView.xib */; };
 		18DE40961F61377F005D7942 /* XMMeCellStyleOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE40951F61377F005D7942 /* XMMeCellStyleOne.m */; };
@@ -252,6 +261,22 @@
 		18D20C8B1F662F8F007B7905 /* XMMeGroupBuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeGroupBuy.m; sourceTree = "<group>"; };
 		18D20C8D1F66335E007B7905 /* XMMeFollowing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeFollowing.h; sourceTree = "<group>"; };
 		18D20C8E1F66335E007B7905 /* XMMeFollowing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeFollowing.m; sourceTree = "<group>"; };
+		18D56AA21F8C9B0B00C2DBF4 /* NewShakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewShakeViewController.h; sourceTree = "<group>"; };
+		18D56AA31F8C9B0B00C2DBF4 /* NewShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShakeViewController.m; sourceTree = "<group>"; };
+		18D56AA41F8C9B0B00C2DBF4 /* NewShakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewShakeViewController.xib; sourceTree = "<group>"; };
+		18D56AA71F8C9B7500C2DBF4 /* DismissingAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissingAnimator.h; sourceTree = "<group>"; };
+		18D56AA81F8C9B7500C2DBF4 /* DismissingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
+		18D56AA91F8C9B7500C2DBF4 /* PresentingAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentingAnimator.h; sourceTree = "<group>"; };
+		18D56AAA1F8C9B7500C2DBF4 /* PresentingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimator.m; sourceTree = "<group>"; };
+		18D56AAF1F8CA05800C2DBF4 /* SignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
+		18D56AB01F8CA05800C2DBF4 /* SignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
+		18D56AB11F8CA05800C2DBF4 /* SignViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
+		18D56AB41F8CA0A500C2DBF4 /* NZLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NZLabel.m; path = "XuanMaoShopping/Classes/附加功能/摇一摇/NZLabel.m"; sourceTree = SOURCE_ROOT; };
+		18D56AB51F8CA0A500C2DBF4 /* NZLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NZLabel.h; path = "XuanMaoShopping/Classes/附加功能/摇一摇/NZLabel.h"; sourceTree = SOURCE_ROOT; };
+		18D56AB81F8CA30700C2DBF4 /* SignDismissingAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignDismissingAnimator.h; sourceTree = "<group>"; };
+		18D56AB91F8CA30700C2DBF4 /* SignDismissingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignDismissingAnimator.m; sourceTree = "<group>"; };
+		18D56ABA1F8CA30700C2DBF4 /* SignPresentingAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignPresentingAnimator.h; sourceTree = "<group>"; };
+		18D56ABB1F8CA30700C2DBF4 /* SignPresentingAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignPresentingAnimator.m; sourceTree = "<group>"; };
 		18DE408C1F61276D005D7942 /* XMMeHeadStyleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeHeadStyleView.h; sourceTree = "<group>"; };
 		18DE408D1F61276D005D7942 /* XMMeHeadStyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeHeadStyleView.m; sourceTree = "<group>"; };
 		18DE408F1F612779005D7942 /* XMMeHeadStyleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMMeHeadStyleView.xib; sourceTree = "<group>"; };
@@ -573,6 +598,52 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		18D56AA11F8C9B0B00C2DBF4 /* 摇一摇 */ = {
+			isa = PBXGroup;
+			children = (
+				18D56AA61F8C9B7500C2DBF4 /* PresentingAnimator */,
+				18D56AA21F8C9B0B00C2DBF4 /* NewShakeViewController.h */,
+				18D56AA31F8C9B0B00C2DBF4 /* NewShakeViewController.m */,
+				18D56AA41F8C9B0B00C2DBF4 /* NewShakeViewController.xib */,
+				18D56AB51F8CA0A500C2DBF4 /* NZLabel.h */,
+				18D56AB41F8CA0A500C2DBF4 /* NZLabel.m */,
+			);
+			path = "摇一摇";
+			sourceTree = "<group>";
+		};
+		18D56AA61F8C9B7500C2DBF4 /* PresentingAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				18D56AA71F8C9B7500C2DBF4 /* DismissingAnimator.h */,
+				18D56AA81F8C9B7500C2DBF4 /* DismissingAnimator.m */,
+				18D56AA91F8C9B7500C2DBF4 /* PresentingAnimator.h */,
+				18D56AAA1F8C9B7500C2DBF4 /* PresentingAnimator.m */,
+			);
+			path = PresentingAnimator;
+			sourceTree = "<group>";
+		};
+		18D56AAE1F8CA05800C2DBF4 /* 签到 */ = {
+			isa = PBXGroup;
+			children = (
+				18D56AB71F8CA30700C2DBF4 /* presentAnimation */,
+				18D56AAF1F8CA05800C2DBF4 /* SignViewController.h */,
+				18D56AB01F8CA05800C2DBF4 /* SignViewController.m */,
+				18D56AB11F8CA05800C2DBF4 /* SignViewController.xib */,
+			);
+			path = "签到";
+			sourceTree = "<group>";
+		};
+		18D56AB71F8CA30700C2DBF4 /* presentAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				18D56AB81F8CA30700C2DBF4 /* SignDismissingAnimator.h */,
+				18D56AB91F8CA30700C2DBF4 /* SignDismissingAnimator.m */,
+				18D56ABA1F8CA30700C2DBF4 /* SignPresentingAnimator.h */,
+				18D56ABB1F8CA30700C2DBF4 /* SignPresentingAnimator.m */,
+			);
+			path = presentAnimation;
+			sourceTree = "<group>";
+		};
 		18FF06AD1F5E813900EA1D13 /* NewPagedFlowView */ = {
 			isa = PBXGroup;
 			children = (
@@ -886,6 +957,8 @@
 		2377974D1F553281008B2DA8 /* 附加功能 */ = {
 			isa = PBXGroup;
 			children = (
+				18D56AAE1F8CA05800C2DBF4 /* 签到 */,
+				18D56AA11F8C9B0B00C2DBF4 /* 摇一摇 */,
 				18810AF71F72303C006EB0E4 /* Login */,
 			);
 			path = "附加功能";
@@ -1137,11 +1210,13 @@
 				187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */,
 				18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */,
 				18F6DA511F75067100C8144D /* SFTMoview.mp4 in Resources */,
+				18D56AB31F8CA06500C2DBF4 /* SignViewController.xib in Resources */,
 				18CA94C91F6A4F3800B1A198 /* LICENSE in Resources */,
 				18CA94DA1F6A5CBC00B1A198 /* address.json in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,
 				1817F9741F7A2F9400291F04 /* PublicSFTResources.plist in Resources */,
 				18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */,
+				18D56AAD1F8C9E3C00C2DBF4 /* NewShakeViewController.xib in Resources */,
 				18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */,
 				18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */,
 				18DE40901F612779005D7942 /* XMMeHeadStyleView.xib in Resources */,
@@ -1251,6 +1326,7 @@
 				1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */,
 				2377974E1F553281008B2DA8 /* XMHomeViewController.m in Sources */,
 				1808AC0F1F6A1E2900430405 /* XXTextView.m in Sources */,
+				18D56AB61F8CA0A500C2DBF4 /* NZLabel.m in Sources */,
 				18FF06A81F5E413000EA1D13 /* XMFootLineView.m in Sources */,
 				232D11311F5BA734008F9FF2 /* XMGoodsViewStyleTwoHeadView.m in Sources */,
 				2377974F1F553281008B2DA8 /* XMLearnViewController.m in Sources */,
@@ -1258,13 +1334,17 @@
 				18FF06B61F5E9D4100EA1D13 /* XMLearnStyleViewOne.m in Sources */,
 				23776AF31F5CE4BD00AF4470 /* XMGoodsViewStyleTwoView.m in Sources */,
 				18CA94FB1F6A65FE00B1A198 /* NSObject+MJClass.m in Sources */,
+				18D56ABD1F8CA31200C2DBF4 /* SignPresentingAnimator.m in Sources */,
 				18CA95031F6A663300B1A198 /* UIView+Frame.m in Sources */,
 				18233E361F68D8E200B80F69 /* XMMeAddressEmpty.m in Sources */,
+				18D56AAB1F8C9B8A00C2DBF4 /* DismissingAnimator.m in Sources */,
 				237797941F555979008B2DA8 /* UIView+SDExtension.m in Sources */,
 				237797BA1F5559A4008B2DA8 /* NSImage+WebCache.m in Sources */,
 				18CA94F71F6A65FE00B1A198 /* MJFoundation.m in Sources */,
+				18D56AA51F8C9B3200C2DBF4 /* NewShakeViewController.m in Sources */,
 				18DE408E1F61276D005D7942 /* XMMeHeadStyleView.m in Sources */,
 				18CA94F81F6A65FE00B1A198 /* MJProperty.m in Sources */,
+				18D56ABC1F8CA30F00C2DBF4 /* SignDismissingAnimator.m in Sources */,
 				237797911F555979008B2DA8 /* TAPageControl.m in Sources */,
 				18CA94CE1F6A4F3800B1A198 /* ActionSheetLocalePicker.m in Sources */,
 				18D20C8F1F66335E007B7905 /* XMMeFollowing.m in Sources */,
@@ -1279,6 +1359,7 @@
 				237797041F55321E008B2DA8 /* main.m in Sources */,
 				18CA94F61F6A65FE00B1A198 /* MJExtensionConst.m in Sources */,
 				18CA94F91F6A65FE00B1A198 /* MJPropertyKey.m in Sources */,
+				18D56AB21F8CA05E00C2DBF4 /* SignViewController.m in Sources */,
 				18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */,
 				1817F9711F7A1D1900291F04 /* XMThematilOfficialCell.m in Sources */,
 				2377977D1F5535B0008B2DA8 /* XMTabBarController.m in Sources */,
@@ -1316,6 +1397,7 @@
 				237797C41F5559A4008B2DA8 /* UIImage+GIF.m in Sources */,
 				18D20C8C1F662F8F007B7905 /* XMMeGroupBuy.m in Sources */,
 				18233E391F68FD9400B80F69 /* XMMeAddressEmptyDetail.m in Sources */,
+				18D56AAC1F8C9B8E00C2DBF4 /* PresentingAnimator.m in Sources */,
 				187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */,
 				2377978F1F555979008B2DA8 /* TAAnimatedDotView.m in Sources */,
 			);
@@ -1470,7 +1552,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1485,7 +1567,7 @@
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";

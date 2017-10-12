@@ -12,13 +12,25 @@
 #import "XMLearnViewController.h"
 #import "XMMeViewController.h"
 #import "XMThematicViewController.h"
+#import "SignPresentingAnimator.h"
+#import "SignDismissingAnimator.h"
 
-
-@interface XMTabBarController ()<UITabBarDelegate>
+@interface XMTabBarController ()<UITabBarDelegate,UIViewControllerTransitioningDelegate>
 
 @end
 
 @implementation XMTabBarController
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source
+{
+    return [SignPresentingAnimator new];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [SignDismissingAnimator new];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
