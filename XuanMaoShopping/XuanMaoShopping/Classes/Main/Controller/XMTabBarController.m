@@ -27,6 +27,7 @@
     return [SignPresentingAnimator new];
 }
 
+
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
     return [SignDismissingAnimator new];
@@ -35,15 +36,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
     // 添加子控制器
     [self addChildController:[[XMLearnViewController alloc]init] imageName:@"tabar_Homenew0" selectedImage:@"tabar_Homenew1" title:@"首页"];
     
     [self addChildController:[[XMThematicViewController alloc]init] imageName:@"tabar_activitynew0" selectedImage:@"tabar_activitynew1" title:@"专题"];
     
     [self addChildController:[[XMMeViewController alloc]init] imageName:@"tabar_shakenew0" selectedImage:@"tabar_shakenew1" title:@"我的"];
-    
     
 }
 
@@ -78,12 +76,11 @@
  */
 - (void)addChildController:(UIViewController *)childVC imageName:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title
 {
-    
     // 设置文字和图片
     childVC.title = title;
     childVC.tabBarItem.image = [UIImage mr_imageOriginalWithName:image];
     childVC.tabBarItem.selectedImage = [UIImage mr_imageOriginalWithName:selectedImage];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:RGBACOLOR(181, 38, 45, 1)} forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:RGBACOLOR(181, 38, 45, 1)} forState:UIControlStateSelected];     
     // 包装一个导航控制器，添加导航控制器为tabBarController的子控制器
     XMNavigationController *nav = [[XMNavigationController alloc] initWithRootViewController:childVC];
     
