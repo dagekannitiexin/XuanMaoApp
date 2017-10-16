@@ -17,6 +17,7 @@
 #import "XMFootLineView.h"
 #import "NewShakeViewController.h"
 #import "SignViewController.h"
+#import "XMArticleViewController.h"
 
 
 
@@ -238,6 +239,9 @@
         NSArray *array2 = [NSArray arrayWithObjects:@"Img_default",@"Img_default",@"Img_default", nil];
         [viewFour createImg:array2];
         
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(detailAltcter)];
+        [viewFour addGestureRecognizer:tap];
+        
         [headViewFour addSubview:viewFour];
         
         headViewFour.size = CGSizeMake(SCREEN_WIDTH, viewFour.bottom);
@@ -340,4 +344,10 @@
     return bannerView;
 }
 
+#pragma mark - detailAlter
+- (void)detailAltcter
+{
+    XMArticleViewController *article = [[XMArticleViewController alloc]init];
+    [self.navigationController pushViewController:article animated:YES];
+}
 @end

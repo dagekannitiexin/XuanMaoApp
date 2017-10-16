@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XMArticleViewController">
+            <connections>
+                <outlet property="buyBtnImg" destination="GXj-L1-8CE" id="ex7-Us-fGb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="zDD-63-EHp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7Z-wU-9oF">
+                    <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnGradientRedNormal" translatesAutoresizingMaskIntoConstraints="NO" id="GXj-L1-8CE">
+                            <rect key="frame" x="215" y="7" width="145" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="J2N-3x-Hcl"/>
+                                <constraint firstAttribute="width" constant="145" id="ZaP-tN-gpf"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥98 购买" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGx-bg-iPy">
+                            <rect key="frame" x="258" y="18" width="59" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="bpp-kb-qKF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-UD-ENf">
+                            <rect key="frame" x="17" y="16" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="MYc-QC-eTL"/>
+                                <constraint firstAttribute="width" constant="24" id="pCH-e7-6Wz"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="iconBottomBack"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfd-Oy-49x">
+                            <rect key="frame" x="71" y="16" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="rfJ-VN-Q8p"/>
+                                <constraint firstAttribute="width" constant="24" id="zTS-Dt-hhf"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="iconLikeNormal"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.4K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alD-DD-62x">
+                            <rect key="frame" x="101" y="16" width="27" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="27" id="7tf-oS-3LV"/>
+                                <constraint firstAttribute="height" constant="24" id="xLl-D0-d5B"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.75686274509803919" green="0.75686274509803919" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="394" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-aw-Fy9">
+                            <rect key="frame" x="168" y="16" width="31" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="3a3-lS-7uY"/>
+                                <constraint firstAttribute="width" constant="31" id="IY6-C6-qBe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE8-lq-zYl">
+                            <rect key="frame" x="138" y="16" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="VEx-jX-egF"/>
+                                <constraint firstAttribute="height" constant="24" id="zob-pu-hkd"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="btnGrayShare"/>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconGrayDisclosureIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="L4v-gu-2EX">
+                            <rect key="frame" x="323" y="18" width="24" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="KBQ-XQ-LeR"/>
+                                <constraint firstAttribute="width" constant="24" id="RKW-x7-CdT"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="alD-DD-62x" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="16" id="0eW-SP-s84"/>
+                        <constraint firstItem="L4v-gu-2EX" firstAttribute="leading" secondItem="dGx-bg-iPy" secondAttribute="trailing" constant="6" id="23N-iy-ScO"/>
+                        <constraint firstItem="Eco-UD-ENf" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="16" id="42c-oU-h6m"/>
+                        <constraint firstAttribute="height" constant="56" id="Fdy-VQ-tRU"/>
+                        <constraint firstItem="nfd-Oy-49x" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="16" id="IHo-cy-mgX"/>
+                        <constraint firstItem="sE8-lq-zYl" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="16" id="RWo-Je-4Cw"/>
+                        <constraint firstItem="5hC-aw-Fy9" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="16" id="Vn3-Sl-K1G"/>
+                        <constraint firstItem="5hC-aw-Fy9" firstAttribute="leading" secondItem="sE8-lq-zYl" secondAttribute="trailing" constant="6" id="Z1K-24-Z5u"/>
+                        <constraint firstItem="dGx-bg-iPy" firstAttribute="centerX" secondItem="GXj-L1-8CE" secondAttribute="centerX" id="aI0-5g-Xee"/>
+                        <constraint firstItem="sE8-lq-zYl" firstAttribute="leading" secondItem="alD-DD-62x" secondAttribute="trailing" constant="10" id="ajR-0y-sAC"/>
+                        <constraint firstItem="dGx-bg-iPy" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="18" id="cyz-ht-TPi"/>
+                        <constraint firstItem="dGx-bg-iPy" firstAttribute="centerY" secondItem="GXj-L1-8CE" secondAttribute="centerY" id="dxd-Kg-5Ui"/>
+                        <constraint firstItem="Eco-UD-ENf" firstAttribute="leading" secondItem="f7Z-wU-9oF" secondAttribute="leading" constant="17" id="f0a-0j-lp8"/>
+                        <constraint firstItem="GXj-L1-8CE" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="7" id="khV-CO-0yw"/>
+                        <constraint firstItem="nfd-Oy-49x" firstAttribute="leading" secondItem="Eco-UD-ENf" secondAttribute="trailing" constant="30" id="rz2-yy-ION"/>
+                        <constraint firstItem="L4v-gu-2EX" firstAttribute="top" secondItem="f7Z-wU-9oF" secondAttribute="top" constant="18" id="uop-lW-kFg"/>
+                        <constraint firstItem="alD-DD-62x" firstAttribute="leading" secondItem="nfd-Oy-49x" secondAttribute="trailing" constant="6" id="wwO-mL-GZ2"/>
+                        <constraint firstAttribute="trailing" secondItem="GXj-L1-8CE" secondAttribute="trailing" constant="15" id="xTZ-ib-aN5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="f7Z-wU-9oF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="BbI-VH-Kbc"/>
+                <constraint firstItem="f7Z-wU-9oF" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Q6j-PP-YfH"/>
+                <constraint firstItem="f7Z-wU-9oF" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="fFa-Sh-QGp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="93.5" y="59.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnGradientRedNormal" width="145" height="42"/>
+        <image name="btnGrayShare" width="24" height="24"/>
+        <image name="iconBottomBack" width="24" height="24"/>
+        <image name="iconGrayDisclosureIndicator" width="24" height="24"/>
+        <image name="iconLikeNormal" width="24" height="24"/>
+    </resources>
+</document>
