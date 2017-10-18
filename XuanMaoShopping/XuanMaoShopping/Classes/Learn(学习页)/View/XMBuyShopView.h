@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^cancelBtn) ();
+
 @interface XMBuyShopView : UIView
+
+@property (nonatomic ,copy) cancelBtn cancelBtnBlock;
+
 - (instancetype)initWithFrame:(CGRect)frame;
 @end

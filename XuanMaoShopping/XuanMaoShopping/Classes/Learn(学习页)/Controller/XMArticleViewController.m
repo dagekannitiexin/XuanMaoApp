@@ -68,8 +68,18 @@
 {
     if (!_shopView){
         _shopView = [[XMBuyShopView alloc]init];
+        __block XMArticleViewController *blockSelf = self;
+        _shopView.cancelBtnBlock = ^{
+            [UIView animateWithDuration:0.15 animations:^{
+                blockSelf.shopView.y = SCREEN_HEIGHT;
+            } completion:^(BOOL finished) {
+                [blockSelf.shopView removeFromSuperview];
+            }];
+            [blockSelf.effectView removeFromSuperview];
+        };
     }
     return _shopView;
 }
+
 
 @end
