@@ -54,7 +54,7 @@
     [self.view addSubview:navView];
     
     //添加返回按钮
-    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(30, 31.5, 12.5, 21)];
+    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, 44, 44)];
     [backBtn setImage:[UIImage imageNamed:@"Back Chevron"] forState:UIControlStateNormal];
     [backBtn setImage:[UIImage imageNamed:@"Back Helight"] forState:UIControlStateHighlighted];
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];

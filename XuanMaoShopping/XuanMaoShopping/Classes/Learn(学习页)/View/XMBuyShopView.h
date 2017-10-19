@@ -14,5 +14,6 @@ typedef void (^cancelBtn) ();
 
 @property (nonatomic ,copy) cancelBtn cancelBtnBlock;
 
+@property (nonatomic ,copy) cancelBtn payBtnBlock;
 - (instancetype)initWithFrame:(CGRect)frame;
 @end

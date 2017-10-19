@@ -47,6 +47,9 @@
                                 <constraint firstAttribute="width" constant="24" id="pCH-e7-6Wz"/>
                             </constraints>
                             <state key="normal" title="Button" image="iconBottomBack"/>
+                            <connections>
+                                <action selector="goToHomeClick:" destination="-1" eventType="touchUpInside" id="0DI-J1-JuF"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfd-Oy-49x">
                             <rect key="frame" x="71" y="16" width="24" height="24"/>

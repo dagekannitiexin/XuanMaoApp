@@ -63,6 +63,13 @@
     }];
 }
 
+//返回首页
+- (IBAction)goToHomeClick:(id)sender {
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 #pragma mark - lazyInit
 - (XMBuyShopView*)shopView
 {
@@ -70,6 +77,14 @@
         _shopView = [[XMBuyShopView alloc]init];
         __block XMArticleViewController *blockSelf = self;
         _shopView.cancelBtnBlock = ^{
+            [UIView animateWithDuration:0.15 animations:^{
+                blockSelf.shopView.y = SCREEN_HEIGHT;
+            } completion:^(BOOL finished) {
+                [blockSelf.shopView removeFromSuperview];
+            }];
+            [blockSelf.effectView removeFromSuperview];
+        };
+        _shopView.payBtnBlock = ^{
             [UIView animateWithDuration:0.15 animations:^{
                 blockSelf.shopView.y = SCREEN_HEIGHT;
             } completion:^(BOOL finished) {

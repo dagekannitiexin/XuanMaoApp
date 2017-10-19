@@ -8,11 +8,19 @@
 
 #import "XMBuyShopView.h"
 
-@interface XMBuyShopView()
+@interface XMBuyShopView(){
+    NSString *_choosePayWay; //用于保存选择的数据
+    UIImageView *_zhifubaoImg; //切换选中的支付宝样式
+    UIImageView *_selectedZhifubao; //切换选中状态
+    UIImageView *_weixinImg; //切换选中的微信样式
+    UIImageView *_selectedWeiXin; //切换选中状态
+}
 
 @property (nonatomic ,strong)UIView *orderViewOne;
-
 @property (nonatomic ,strong)UIView *orderViewTwo;
+@property (nonatomic ,strong)UIView *orderViewThree;
+@property (nonatomic ,strong)UIButton *cancelBtn; //取消返回按钮
+@property (nonatomic ,strong)UILabel *titleLabel; //标题
 @end
 
 @implementation XMBuyShopView
@@ -20,11 +28,17 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame])
     {
-        self.backgroundColor = [UIColor clearColor];
-        self.size = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT);
-        self.x = 0;
-        self.y = SCREEN_HEIGHT;
-        //创建第一步
+        self.backgroundColor = [UIColor whiteColor];
+        self.size = CGSizeMake(SCREEN_WIDTH-30, 400);
+        //设置初始位置
+        self.centerX = SCREEN_WIDTH/2;
+        self.centerY = SCREEN_HEIGHT/2;
+        self.layer.cornerRadius = 12.0;
+        self.clipsToBounds = YES;
+        //创建导航栏 和底部确认栏
+        [self createEditNavView];
+        
+        //创建第一步详细部分
         [self editTheOrder];
     }
     return self;
@@ -35,69 +49,43 @@
  创建订单
  */
 - (void)editTheOrder{
-    _orderViewOne = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-30, 400)];
+    _orderViewOne = [[UIView alloc]initWithFrame:CGRectMake(0, 55, self.width, 270+75)];
     _orderViewOne.backgroundColor = [UIColor whiteColor];
     [self addSubview:_orderViewOne];
-    _orderViewOne.layer.cornerRadius = 7.0;
-    //设置初始位置
-    _orderViewOne.centerX = SCREEN_WIDTH/2;
-    _orderViewOne.centerY = SCREEN_HEIGHT/2;
     
-    
-    //创建导航栏 和底部确认栏
-    [self createEditNavView];
-    [self createDetermineView];
     //创建详细
     [self createDetailView];
 }
 
 - (void)createEditNavView{
     //导航栏 取消and 编辑订单
-    UIView * editNavView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _orderViewOne.width, 55)];
-    [_orderViewOne addSubview:editNavView];
+    UIView * editNavView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.width, 55)];
+    [self addSubview:editNavView];
     
-    UIButton *cancelBtn = [[UIButton alloc]initWithFrame:CGRectMake(30, 20, 30, 15)];
-    [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [cancelBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal
+    _cancelBtn = [[UIButton alloc]initWithFrame:CGRectMake(15, 20, 40, 20)];
+    [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [_cancelBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal
      ];
-    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-    [cancelBtn addTarget:self action:@selector(cancelClick) forControlEvents:UIControlEventTouchUpInside];
-    [editNavView addSubview:cancelBtn];
+    _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [_cancelBtn addTarget:self action:@selector(cancelClick:) forControlEvents:UIControlEventTouchUpInside];
+    _cancelBtn.tag = 101;
+    [editNavView addSubview:_cancelBtn];
     
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
-    titleLabel.center = editNavView.center;
-    titleLabel.text = @"编辑订单";
-    titleLabel.font = [UIFont systemFontOfSize:16];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    [editNavView addSubview:titleLabel];
+    _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
+    _titleLabel.center = editNavView.center;
+    _titleLabel.text = @"编辑订单";
+    _titleLabel.font = [UIFont systemFontOfSize:16];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    [editNavView addSubview:_titleLabel];
     
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(12, 54, editNavView.width-24, 1)];
     lineView.backgroundColor = XMGaryColor;
     [editNavView addSubview:lineView];
 }
 
-- (void)createDetermineView{
-    UIView *footView =[[UIView alloc]initWithFrame:CGRectMake(0, _orderViewOne.height-75, _orderViewOne.width, 75)];
-    [_orderViewOne addSubview:footView];
-    
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, footView.width, 1)];
-    lineView.backgroundColor = XMGaryColor;
-    [footView addSubview:lineView];
-    
-    UIButton *determine = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
-    determine.centerX = footView.centerX;
-    determine.centerY = 75/2;
-    determine.backgroundColor = RGBACOLOR(209, 88, 84, 1);
-    [determine setTitle:@"¥129确认" forState:UIControlStateNormal];
-    [determine setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    determine.layer.cornerRadius = 7.0;
-    determine.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
-    [determine addTarget:self action:@selector(determineBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [footView addSubview:determine];
-}
 - (void)createDetailView{
     //设置homeView
-    UIScrollView *scrView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 55, _orderViewOne.width, 250)];
+    UIScrollView *scrView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, _orderViewOne.width, 270)];
     scrView.backgroundColor = [UIColor whiteColor];
     scrView.showsVerticalScrollIndicator = FALSE;
     scrView.showsHorizontalScrollIndicator = FALSE;
@@ -111,12 +99,12 @@
  
     UILabel *desc = [[UILabel alloc]initWithFrame:CGRectMake(15, 20, iconImg.left-20, 15)];
     desc.text = @"能搭配各种外套的满分内搭来哈哈哈哈哈哈哈哈";
-    desc.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
+    desc.font = [UIFont fontWithName:@"Helvetica" size:14];
     [scrView addSubview:desc];
     
     UILabel *price = [[UILabel alloc]initWithFrame:CGRectMake(15, desc.bottom+13, desc.width, 15)];
     price.text = @"69元";
-    price.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
+    price.font = [UIFont fontWithName:@"Helvetica" size:14];
     [scrView addSubview:price];
     
     UILabel *info = [[UILabel alloc]initWithFrame:CGRectMake(15, price.bottom+15, desc.width, 11)];
@@ -131,16 +119,61 @@
     imgView.image = [UIImage imageNamed:@"Img_default"];
     [scrView addSubview:imgView];
     
+    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, scrView.height-1, scrView.width, 0.5)];
+    lineView.backgroundColor = XMGaryColor;
+    [scrView addSubview:lineView];
+    
+    UIView *footViewOne =[[UIView alloc]initWithFrame:CGRectMake(0, scrView.bottom, self.width, 75)];
+    [_orderViewOne addSubview:footViewOne];
+    
+    UIButton * determine = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.width-30, 44)];
+    determine.centerX = footViewOne.centerX;
+    determine.centerY = 75/2;
+    determine.backgroundColor = RGBACOLOR(209, 88, 84, 1);
+    [determine setTitle:@"¥129确认" forState:UIControlStateNormal];
+    [determine setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    determine.layer.cornerRadius = 7.0;
+    determine.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
+    [determine addTarget:self action:@selector(determineBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [footViewOne addSubview:determine];
 }
 
 /*
  取消按钮
  */
-- (void)cancelClick{
-    if (self.cancelBtnBlock)
-    {
-        self.cancelBtnBlock();
+- (void)cancelClick:(UIButton *)seder{
+    
+    if (seder.tag ==101){
+        if (self.cancelBtnBlock)
+        {
+            self.cancelBtnBlock();
+        }
+    }else if (seder.tag == 102){
+        [UIView animateWithDuration:0.25 animations:^{
+            self.size = CGSizeMake(SCREEN_WIDTH-30, 400);
+            self.centerY = SCREEN_HEIGHT/2;
+        } completion:^(BOOL finished) {
+            self.size = CGSizeMake(SCREEN_WIDTH-30, 400);
+        }];
+        _orderViewTwo.hidden = YES;
+        _cancelBtn.titleLabel.text = @"取消";
+        _cancelBtn.tag = 101;
+        _titleLabel.text = @"编辑订单";
+        _orderViewOne.hidden = NO;
+    }else if (seder.tag == 103){
+        [UIView animateWithDuration:0.25 animations:^{
+            self.size = CGSizeMake(SCREEN_HEIGHT-30, 455);
+            self.centerY = SCREEN_HEIGHT/2;
+        } completion:^(BOOL finished) {
+            self.size = CGSizeMake(SCREEN_WIDTH-30, 455);
+        }];
+        _orderViewThree.hidden = YES;
+        _cancelBtn.titleLabel.text = @"返回";
+        _cancelBtn.tag = 102;
+        _titleLabel.text  = @"确认订单";
+        _orderViewTwo.hidden = NO;
     }
+    
 }
 
 /*
@@ -149,14 +182,15 @@
 - (void)determineBtnClick{
     //此处有动画
     [UIView animateWithDuration:0.15 animations:^{
-        self.orderViewOne.size = CGSizeMake(SCREEN_WIDTH-30, 465);
+        self.size = CGSizeMake(SCREEN_WIDTH-30, 455);
+        self.centerY = SCREEN_HEIGHT/2;
     } completion:^(BOOL finished) {
-        self.orderViewOne.size = CGSizeMake(SCREEN_WIDTH-30, 400);
-        //隐藏第一个界面
-        self.orderViewOne.hidden = YES;
-        //产生订单给用户 待确认
-        [self createDetermineViewTwo];
+        self.size = CGSizeMake(SCREEN_WIDTH-30, 455);
     }];
+    //隐藏第一个界面 并且底部也隐藏
+    self.orderViewOne.hidden = YES;
+    //产生订单给用户 待确认
+    [self createDetermineViewTwo];
     
 }
 
@@ -164,69 +198,21 @@
 
 - (void)createDetermineViewTwo{
     //创建第一步
-    _orderViewTwo = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-30, 465)];
+    _orderViewTwo = [[UIView alloc]initWithFrame:CGRectMake(0, 55, self.width, 455-55)];
     _orderViewTwo.backgroundColor = [UIColor whiteColor];
     [self addSubview:_orderViewTwo];
-    _orderViewTwo.layer.cornerRadius = 7.0;
-    //设置初始位置
-    _orderViewTwo.centerX = SCREEN_WIDTH/2;
-    _orderViewTwo.centerY = SCREEN_HEIGHT/2;
     
-    //创建导航栏 和底部确认栏
-    [self createEditNavViewTwo];
-    [self createFootViewTwo];
+    //修改导航栏 和底部确认栏
+    _cancelBtn.titleLabel.text = @"返回";
+    _cancelBtn.tag = 102;
+    _titleLabel.text = @"确认订单";
     //创建详细
     [self createDetailViewTwo];
 }
 
-- (void)createEditNavViewTwo{
-    //导航栏 取消and 编辑订单
-    UIView * editNavView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _orderViewOne.width, 55)];
-    [_orderViewTwo addSubview:editNavView];
-    
-    UIButton *cancelBtn = [[UIButton alloc]initWithFrame:CGRectMake(30, 20, 30, 15)];
-    [cancelBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [cancelBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal
-     ];
-    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-    [cancelBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
-    [editNavView addSubview:cancelBtn];
-    
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
-    titleLabel.center = editNavView.center;
-    titleLabel.text = @"确认订单";
-    titleLabel.font = [UIFont fontWithName:@"Helvetica-Regular" size:16];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    [editNavView addSubview:titleLabel];
-    
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(12, 54, editNavView.width-24, 1)];
-    lineView.backgroundColor = XMGaryColor;
-    [editNavView addSubview:lineView];
-}
-
-- (void)createFootViewTwo{
-    UIView *footView =[[UIView alloc]initWithFrame:CGRectMake(0, _orderViewTwo.height-75, _orderViewTwo.width, 75)];
-    [_orderViewTwo addSubview:footView];
-    
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, footView.width, 1)];
-    lineView.backgroundColor = XMGaryColor;
-    [footView addSubview:lineView];
-    
-    UIButton *determine = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _orderViewTwo.width-60, 44)];
-    determine.centerX = footView.centerX;
-    determine.centerY = 75/2;
-    determine.backgroundColor = RGBACOLOR(209, 88, 84, 1);
-    [determine setTitle:@"选择付款方式" forState:UIControlStateNormal];
-    [determine setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    determine.layer.cornerRadius = 7.0;
-    determine.titleLabel.font = [UIFont systemFontOfSize:17];
-    [determine addTarget:self action:@selector(chooseBuyBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [footView addSubview:determine];
-}
-
 - (void)createDetailViewTwo{
     //第一部分 地址icon 姓名 电话 详细地址 选择按钮
-    UIView *adressView = [[UIView alloc]initWithFrame:CGRectMake(0, 55, _orderViewTwo.width, 65)];
+    UIView *adressView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _orderViewTwo.width, 65)];
     [_orderViewTwo addSubview:adressView];
     
     UIImageView *adressImg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 22, 20, 20)];
@@ -358,21 +344,154 @@
     remarkTextFile.font = [UIFont systemFontOfSize:14];
     remarkTextFile.clearButtonMode = UITextFieldViewModeWhileEditing;
     [remarkView addSubview:remarkTextFile];
-}
-
-- (void)backClick{
-    //此处有动画
-    [UIView animateWithDuration:0.15 animations:^{
-        self.orderViewTwo.size = CGSizeMake(SCREEN_WIDTH-30, 400);
-    } completion:^(BOOL finished) {
-        self.orderViewTwo.size = CGSizeMake(SCREEN_WIDTH-30, 465);
-        //隐藏第二个界面
-        _orderViewTwo.hidden = YES;
-        _orderViewOne.hidden = NO;
-    }];
     
+    UIView *lineRemarkView = [[UIView alloc]initWithFrame:CGRectMake(12, 64, remarkView.width-24, 1)];
+    lineRemarkView.backgroundColor = XMGaryColor;
+    [remarkView addSubview:lineRemarkView];
+    
+    //第六部分
+    UIView *footView =[[UIView alloc]initWithFrame:CGRectMake(0, remarkView.bottom, self.width, 75)];
+    [_orderViewTwo addSubview:footView];
+    
+    UIButton *determine = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, _orderViewTwo.width-60, 44)];
+    determine.centerX = footView.centerX;
+    determine.centerY = 75/2;
+    determine.backgroundColor = RGBACOLOR(209, 88, 84, 1);
+    [determine setTitle:@"选择付款方式" forState:UIControlStateNormal];
+    [determine setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    determine.layer.cornerRadius = 7.0;
+    determine.titleLabel.font = [UIFont systemFontOfSize:17];
+    [determine addTarget:self action:@selector(chooseBuyBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [footView addSubview:determine];
 }
 
 - (void)chooseBuyBtnClick{
+    //创建动画
+    [UIView animateWithDuration:0.25 animations:^{
+        self.size = CGSizeMake(SCREEN_WIDTH-30, 260);
+        self.centerY = SCREEN_HEIGHT/2;
+    } completion:^(BOOL finished) {
+        self.size = CGSizeMake(SCREEN_WIDTH-30, 260);
+    }];
+    //隐藏第二个界面
+    self.orderViewTwo.hidden = YES;
+    [self createDetailViewThree];
 }
+
+#pragma mark - 支付界面
+- (void)createDetailViewThree
+{
+    _orderViewThree = [[UIView alloc]initWithFrame:CGRectMake(0, 55, self.width, 205)];
+    _orderViewThree.backgroundColor = [UIColor whiteColor];
+    [self addSubview:_orderViewThree];
+    
+    //修改导航栏 和底部确认栏
+    _cancelBtn.titleLabel.text = @"返回";
+    _cancelBtn.tag = 103;
+    _titleLabel.text = @"付款方式";
+    
+    //支付宝
+    UIView *zhifubaoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _orderViewThree.width, 65)];
+    [_orderViewThree addSubview:zhifubaoView];
+    
+    _zhifubaoImg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0, 64, 22.5)];
+    _zhifubaoImg.image = [UIImage imageNamed:@"iconAlipayNormal"];
+    _zhifubaoImg.centerY = zhifubaoView.height/2;
+    [zhifubaoView addSubview:_zhifubaoImg];
+    
+    _selectedZhifubao = [[UIImageView alloc]initWithFrame:CGRectMake(_orderViewThree.width-15-22.5,0, 22.5, 22.5)];
+    _selectedZhifubao.centerY = zhifubaoView.height/2;
+    _selectedZhifubao.image = [UIImage imageNamed:@"iconGrayCircle"];
+    [zhifubaoView addSubview:_selectedZhifubao];
+    
+    UIView *lineZhiFuBaoView = [[UIView alloc]initWithFrame:CGRectMake(12, 64, zhifubaoView.width-24, 1)];
+    lineZhiFuBaoView.backgroundColor = XMGaryColor;
+    [zhifubaoView addSubview:lineZhiFuBaoView];
+    
+    UITapGestureRecognizer *tapZhifubao = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(choosePayWayZhiFuBao)];
+    
+    [zhifubaoView addGestureRecognizer:tapZhifubao];
+    
+    //微信支付
+    UIView *weixinView = [[UIView alloc]initWithFrame:CGRectMake(0, 65, _orderViewThree.width, 65)];
+    [_orderViewThree addSubview:weixinView];
+    
+    _weixinImg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0, 83.3, 22.5)];
+    _weixinImg.image = [UIImage imageNamed:@"iconWechatNormal"];
+    _weixinImg.centerY = weixinView.height/2;
+    [weixinView addSubview:_weixinImg];
+    
+    _selectedWeiXin = [[UIImageView alloc]initWithFrame:CGRectMake(_orderViewThree.width-15-22.5,0, 22.5, 22.5)];
+    _selectedWeiXin.centerY = weixinView.height/2;
+    _selectedWeiXin.image = [UIImage imageNamed:@"iconGrayCircle"];
+    [weixinView addSubview:_selectedWeiXin];
+    
+    UIView *lineWeiXinView = [[UIView alloc]initWithFrame:CGRectMake(12, 64, weixinView.width-24, 1)];
+    lineWeiXinView.backgroundColor = XMGaryColor;
+    [weixinView addSubview:lineWeiXinView];
+    
+    UITapGestureRecognizer *tapWeiXin = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(choosePayWayWeiXin)];
+    
+    [weixinView addGestureRecognizer:tapWeiXin];
+    //立即支付
+    UIButton *payBtn = [[UIButton alloc]initWithFrame:CGRectMake(15, 0, self.width-30, 44)];
+    payBtn.centerY = weixinView.bottom+75/2;
+    payBtn.backgroundColor = RGBACOLOR(209, 88, 84, 1);
+    [payBtn setTitle:@"立即支付" forState:UIControlStateNormal];
+    [payBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    payBtn.layer.cornerRadius = 7.0;
+    payBtn.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
+    [payBtn addTarget:self action:@selector(payBtnSelect) forControlEvents:UIControlEventTouchUpInside];
+    [_orderViewThree addSubview:payBtn];
+    
+}
+//选择支付宝还是微信
+- (void)choosePayWayZhiFuBao
+{
+    //当之前选择微信时  将微信恢复正常状态
+    if ([_choosePayWay isEqualToString:@"微信"]){
+        _weixinImg.image = [UIImage imageNamed:@"iconWechatNormal"];
+        _selectedWeiXin.image = [UIImage imageNamed:@"iconGrayCircle"];
+        _selectedWeiXin.highlighted = NO;
+    }
+    _zhifubaoImg.image = [UIImage imageNamed:@"iconAlipaySelected"];
+    _selectedZhifubao.image = [UIImage imageNamed:@"iconCheckSelected"];
+    _choosePayWay = [NSString stringWithFormat:@"支付宝"];
+    _selectedZhifubao.highlighted = YES;
+}
+
+- (void)choosePayWayWeiXin
+{
+    //当之前选择微信时  将微信恢复正常状态
+    if ([_choosePayWay isEqualToString:@"支付宝"]){
+        _zhifubaoImg.image = [UIImage imageNamed:@"iconAlipayNormal"];
+        _selectedZhifubao.image = [UIImage imageNamed:@"iconGrayCircle"];
+        _selectedZhifubao.highlighted = NO;
+    }
+    _weixinImg.image = [UIImage imageNamed:@"iconWechatSelected"];
+    _selectedWeiXin.image = [UIImage imageNamed:@"iconCheckSelected"];
+    _choosePayWay = [NSString stringWithFormat:@"微信"];
+    _selectedWeiXin.highlighted = YES;
+}
+/*
+ 支付按钮选择
+ */
+- (void)payBtnSelect
+{
+    if (_selectedWeiXin.highlighted){
+        NSLog(@"去微信支付喽");
+        if (self.payBtnBlock)
+        {
+            self.payBtnBlock();
+        }
+    }else if (_selectedZhifubao.highlighted){
+        NSLog(@"去支付宝支付楼");
+        if (self.payBtnBlock)
+        {
+            self.payBtnBlock();
+        }
+    }
+}
+
+
 @end

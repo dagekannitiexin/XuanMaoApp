@@ -16,5 +16,6 @@
 #import "Utility.h"
 #import "UIImageView+WebCache.h"
 #import <MJRefresh.h>
+#import <SVProgressHUD.h>
 #endif /* XuanMaoShopping_Prefix_pch */
     

@@ -316,7 +316,6 @@
 
 - (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPagedFlowView *)flowView {
     
-    NSLog(@"CustomViewController 滚动到了第%ld页",pageNumber);
 }
 
 #warning 假设产品需求左右中间页显示大小为 Width - 50, (Width - 50) * 9 / 16
