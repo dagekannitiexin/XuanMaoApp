@@ -109,13 +109,8 @@
 
 - (void)addNewAddressBtnClick
 {
-    self.navigationController.navigationBarHidden = NO;
-    if (_pushOrPresent){
-        
-    }else {
-        XMMeAddressEmptyDetail *VC = [[XMMeAddressEmptyDetail alloc]init];
-        [self.navigationController pushViewController:VC animated:YES];
-    }
+    XMMeAddressEmptyDetail *VC = [[XMMeAddressEmptyDetail alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
     
 }
 @end

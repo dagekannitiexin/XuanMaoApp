@@ -22,18 +22,18 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+    self.navigationController.navigationBarHidden = YES;
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBarHidden = NO;
+  
+   self.navigationController.navigationBarHidden = NO;
     self.title = @"填写收货地址";
     
     [self creatnavigationbar];
-    
     [self createAdressView];
 }
 
