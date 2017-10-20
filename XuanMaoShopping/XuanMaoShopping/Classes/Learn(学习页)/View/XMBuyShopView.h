@@ -13,7 +13,8 @@ typedef void (^cancelBtn) ();
 @interface XMBuyShopView : UIView
 
 @property (nonatomic ,copy) cancelBtn cancelBtnBlock;
-
+@property (nonatomic ,copy) cancelBtn adressBtnBlock;
 @property (nonatomic ,copy) cancelBtn payBtnBlock;
+@property (nonatomic ,copy) cancelBtn couponsBlock;
 - (instancetype)initWithFrame:(CGRect)frame;
 @end

@@ -8,6 +8,8 @@
 
 #import "XMArticleViewController.h"
 #import "XMBuyShopView.h"
+#import "XMMeAddressEmpty.h"
+#import "XMMeCoupon.h"
 @interface XMArticleViewController ()
 /*
  毛玻璃界面
@@ -65,6 +67,7 @@
 
 //返回首页
 - (IBAction)goToHomeClick:(id)sender {
+    
     self.navigationController.navigationBarHidden = NO;
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -76,6 +79,7 @@
     if (!_shopView){
         _shopView = [[XMBuyShopView alloc]init];
         __block XMArticleViewController *blockSelf = self;
+        //取消按钮 响应
         _shopView.cancelBtnBlock = ^{
             [UIView animateWithDuration:0.15 animations:^{
                 blockSelf.shopView.y = SCREEN_HEIGHT;
@@ -84,6 +88,7 @@
             }];
             [blockSelf.effectView removeFromSuperview];
         };
+        //支付按钮响应
         _shopView.payBtnBlock = ^{
             [UIView animateWithDuration:0.15 animations:^{
                 blockSelf.shopView.y = SCREEN_HEIGHT;
@@ -91,6 +96,17 @@
                 [blockSelf.shopView removeFromSuperview];
             }];
             [blockSelf.effectView removeFromSuperview];
+        };
+        //地址按钮响应
+        _shopView.adressBtnBlock = ^{
+            XMMeAddressEmpty *addressVC = [[XMMeAddressEmpty alloc]init];
+            [blockSelf.navigationController pushViewController:addressVC animated:YES];
+        };
+        
+        //优惠券按钮响应
+        _shopView.couponsBlock = ^{
+            XMMeCoupon *couponVc =[[XMMeCoupon alloc]init];
+            [blockSelf.navigationController pushViewController:couponVc animated:YES];
         };
     }
     return _shopView;

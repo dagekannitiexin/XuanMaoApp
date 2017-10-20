@@ -1,15 +1,15 @@
 //
-//  XMMeAddressEmptyDetail.m
+//  XMMeAddressEmptyDetailPresent.m
 //  XuanMaoShopping
 //
-//  Created by apple on 17/9/13.
+//  Created by apple on 2017/10/19.
 //  Copyright © 2017年 林林尤达. All rights reserved.
 //
 
-#import "XMMeAddressEmptyDetail.h"
+#import "XMMeAddressEmptyDetailPresent.h"
 #import "XMMeAdressView.h"
 
-@interface XMMeAddressEmptyDetail (){
+@interface XMMeAddressEmptyDetailPresent (){
     UIImageView *_cricleImg;
 }
 @property (nonatomic, assign)BOOL isNomalAddress; //是否设置默认地址
@@ -17,14 +17,7 @@
 @property (nonatomic, strong)XXTextView *textView;
 @end
 
-@implementation XMMeAddressEmptyDetail
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
-}
-
+@implementation XMMeAddressEmptyDetailPresent
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -142,3 +135,4 @@
     
 }
 @end
+

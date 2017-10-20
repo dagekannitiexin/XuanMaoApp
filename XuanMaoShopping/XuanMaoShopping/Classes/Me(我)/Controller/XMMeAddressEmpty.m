@@ -29,12 +29,6 @@
     [self addAddressBtn];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -115,7 +109,13 @@
 
 - (void)addNewAddressBtnClick
 {
-    XMMeAddressEmptyDetail *VC = [[XMMeAddressEmptyDetail alloc]init];
-    [self.navigationController pushViewController:VC animated:YES];
+    self.navigationController.navigationBarHidden = NO;
+    if (_pushOrPresent){
+        
+    }else {
+        XMMeAddressEmptyDetail *VC = [[XMMeAddressEmptyDetail alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
 }
 @end

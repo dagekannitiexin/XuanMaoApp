@@ -32,6 +32,7 @@
 		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
 		189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 189994D51F739534008919DD /* XMLoginVerificationCode.m */; };
 		189994DA1F73ACC1008919DD /* WLUnitField.m in Sources */ = {isa = PBXBuildFile; fileRef = 189994D91F73ACC1008919DD /* WLUnitField.m */; };
+		189CBE791F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CBE781F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m */; };
 		18A441E81F67B5F300DB5C82 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E51F67B5F300DB5C82 /* Utility.m */; };
 		18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E71F67B5F300DB5C82 /* WebViewController.m */; };
 		18A441EF1F67B63400DB5C82 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441EC1F67B63400DB5C82 /* NJKWebViewProgress.m */; };
@@ -202,6 +203,8 @@
 		189994D51F739534008919DD /* XMLoginVerificationCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginVerificationCode.m; sourceTree = "<group>"; };
 		189994D81F73ACC1008919DD /* WLUnitField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLUnitField.h; sourceTree = "<group>"; };
 		189994D91F73ACC1008919DD /* WLUnitField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLUnitField.m; sourceTree = "<group>"; };
+		189CBE771F98CBE50061CDCF /* XMMeAddressEmptyDetailPresent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMMeAddressEmptyDetailPresent.h; sourceTree = "<group>"; };
+		189CBE781F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMMeAddressEmptyDetailPresent.m; sourceTree = "<group>"; };
 		18A441E41F67B5F300DB5C82 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		18A441E51F67B5F300DB5C82 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		18A441E61F67B5F300DB5C82 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -899,6 +902,8 @@
 				18233E351F68D8E200B80F69 /* XMMeAddressEmpty.m */,
 				18233E371F68FD9400B80F69 /* XMMeAddressEmptyDetail.h */,
 				18233E381F68FD9400B80F69 /* XMMeAddressEmptyDetail.m */,
+				189CBE771F98CBE50061CDCF /* XMMeAddressEmptyDetailPresent.h */,
+				189CBE781F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m */,
 				1854E7B21F6FC8F6004BDA63 /* XMMeSetting.h */,
 				1854E7B31F6FC8F6004BDA63 /* XMMeSetting.m */,
 			);
@@ -1400,6 +1405,7 @@
 				237797501F553281008B2DA8 /* XMMeViewController.m in Sources */,
 				18CA94FF1F6A65FE00B1A198 /* NSString+MJExtension.m in Sources */,
 				237797741F5534AA008B2DA8 /* XMNavigationController.m in Sources */,
+				189CBE791F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m in Sources */,
 				18233E3C1F69040000B80F69 /* XMMeAdressView.m in Sources */,
 				237797671F553401008B2DA8 /* UIImage+MRExtension.m in Sources */,
 				18810AFA1F723064006EB0E4 /* XMLoginViewController.m in Sources */,

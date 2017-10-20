@@ -10,4 +10,6 @@
 
 @interface XMMeAddressEmpty : XMBaseViewController
 
+@property (nonatomic , assign)BOOL pushOrPresent;
+
 @end

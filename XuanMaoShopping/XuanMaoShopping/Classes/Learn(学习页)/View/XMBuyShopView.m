@@ -215,6 +215,10 @@
     UIView *adressView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _orderViewTwo.width, 65)];
     [_orderViewTwo addSubview:adressView];
     
+    //增加手势
+    UITapGestureRecognizer *addressTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(chooseAdress)];
+    [adressView addGestureRecognizer:addressTap];
+    
     UIImageView *adressImg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 22, 20, 20)];
     adressImg.image = [UIImage imageNamed:@"iconTradeLocation"];
     [adressView addSubview:adressImg];
@@ -275,6 +279,9 @@
     //第三部分 优惠券icon 优惠券描述 优惠券选择
     UIView *couponsView = [[UIView alloc]initWithFrame:CGRectMake(0, shoppingView.bottom, _orderViewTwo.width, 65)];
     [_orderViewTwo addSubview:couponsView];
+    
+    UITapGestureRecognizer *couponsTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(couponsBtnClick)];
+    [couponsView addGestureRecognizer:couponsTap];
     
     UIImageView *couponsImg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 22, 20, 20)];
     couponsImg.image = [UIImage imageNamed:@"iconTradeCoupon"];
@@ -376,6 +383,28 @@
     //隐藏第二个界面
     self.orderViewTwo.hidden = YES;
     [self createDetailViewThree];
+}
+
+/*
+ 选择地址
+ */
+- (void)chooseAdress
+{
+    if (self.adressBtnBlock)
+    {
+        self.adressBtnBlock();
+    }
+}
+
+/*
+ 选择优惠券
+ */
+- (void)couponsBtnClick
+{
+    if (self.couponsBlock)
+    {
+        self.couponsBlock();
+    }
 }
 
 #pragma mark - 支付界面
