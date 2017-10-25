@@ -67,12 +67,10 @@
 
 //返回首页
 - (IBAction)goToHomeClick:(id)sender {
-    
     self.navigationController.navigationBarHidden = NO;
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
+ 
 #pragma mark - lazyInit
 - (XMBuyShopView*)shopView
 {

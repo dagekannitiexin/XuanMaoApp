@@ -18,6 +18,8 @@
 #import "NewShakeViewController.h"
 #import "SignViewController.h"
 #import "XMArticleViewController.h"
+#import "XMCreditsExchange.h"
+
 
 
 
@@ -306,6 +308,10 @@
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:^{
             
         }];
+    }else if (sender.tag == 102){
+        XMCreditsExchange *credits = [[XMCreditsExchange alloc]init];
+        credits.title = @"变美视频";
+        [self.navigationController pushViewController:credits animated:YES];
     }
 }
 

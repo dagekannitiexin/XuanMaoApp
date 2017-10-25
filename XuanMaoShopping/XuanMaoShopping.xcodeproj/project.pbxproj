@@ -12,18 +12,24 @@
 		1817F9711F7A1D1900291F04 /* XMThematilOfficialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817F96F1F7A1D1900291F04 /* XMThematilOfficialCell.m */; };
 		1817F9721F7A1D1900291F04 /* XMThematilOfficialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1817F9701F7A1D1900291F04 /* XMThematilOfficialCell.xib */; };
 		1817F9741F7A2F9400291F04 /* PublicSFTResources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1817F9731F7A2F9400291F04 /* PublicSFTResources.plist */; };
+		18195B541F9DFFA400A76761 /* XMCreditsExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 18195B531F9DFFA400A76761 /* XMCreditsExchange.m */; };
 		18233E331F68D06300B80F69 /* XMMeLikeEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E321F68D06300B80F69 /* XMMeLikeEmpty.m */; };
 		18233E361F68D8E200B80F69 /* XMMeAddressEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E351F68D8E200B80F69 /* XMMeAddressEmpty.m */; };
 		18233E391F68FD9400B80F69 /* XMMeAddressEmptyDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E381F68FD9400B80F69 /* XMMeAddressEmptyDetail.m */; };
 		18233E3C1F69040000B80F69 /* XMMeAdressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E3B1F69040000B80F69 /* XMMeAdressView.m */; };
 		18233E3E1F69041200B80F69 /* XMMeAdressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18233E3D1F69041200B80F69 /* XMMeAdressView.xib */; };
+		1831EAF31F99BB1C00AC9978 /* XMMeMtOrderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831EAF11F99BB1C00AC9978 /* XMMeMtOrderViewCell.m */; };
+		1831EAF41F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1831EAF21F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib */; };
 		183B30111F9483A900E6708B /* XMArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B300F1F9483A900E6708B /* XMArticleViewController.m */; };
 		183B30121F9483A900E6708B /* XMArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B30101F9483A900E6708B /* XMArticleViewController.xib */; };
 		183B30181F94A9B100E6708B /* XMBuyShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B30171F94A9B100E6708B /* XMBuyShopView.m */; };
+		184E21231F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E21211F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m */; };
+		184E21241F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184E21221F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib */; };
 		18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */; };
 		18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */; };
 		18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */; };
 		1854E7B41F6FC8F6004BDA63 /* XMMeSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854E7B31F6FC8F6004BDA63 /* XMMeSetting.m */; };
+		1855910D1FA08960005CE47B /* XMLearnVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855910C1FA08960005CE47B /* XMLearnVideoViewController.m */; };
 		187909111F676E5A004FD227 /* XMMeCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = 187909101F676E5A004FD227 /* XMMeCoupon.m */; };
 		187ED9B61F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED9B51F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.m */; };
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
@@ -167,6 +173,8 @@
 		1817F96F1F7A1D1900291F04 /* XMThematilOfficialCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMThematilOfficialCell.m; sourceTree = "<group>"; };
 		1817F9701F7A1D1900291F04 /* XMThematilOfficialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMThematilOfficialCell.xib; sourceTree = "<group>"; };
 		1817F9731F7A2F9400291F04 /* PublicSFTResources.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PublicSFTResources.plist; sourceTree = "<group>"; };
+		18195B521F9DFFA400A76761 /* XMCreditsExchange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCreditsExchange.h; sourceTree = "<group>"; };
+		18195B531F9DFFA400A76761 /* XMCreditsExchange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCreditsExchange.m; sourceTree = "<group>"; };
 		18233E311F68D06300B80F69 /* XMMeLikeEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeLikeEmpty.h; sourceTree = "<group>"; };
 		18233E321F68D06300B80F69 /* XMMeLikeEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeLikeEmpty.m; sourceTree = "<group>"; };
 		18233E341F68D8E200B80F69 /* XMMeAddressEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeAddressEmpty.h; sourceTree = "<group>"; };
@@ -176,11 +184,17 @@
 		18233E3A1F69040000B80F69 /* XMMeAdressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeAdressView.h; sourceTree = "<group>"; };
 		18233E3B1F69040000B80F69 /* XMMeAdressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeAdressView.m; sourceTree = "<group>"; };
 		18233E3D1F69041200B80F69 /* XMMeAdressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMMeAdressView.xib; sourceTree = "<group>"; };
+		1831EAF01F99BB1C00AC9978 /* XMMeMtOrderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMMeMtOrderViewCell.h; sourceTree = "<group>"; };
+		1831EAF11F99BB1C00AC9978 /* XMMeMtOrderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMMeMtOrderViewCell.m; sourceTree = "<group>"; };
+		1831EAF21F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMMeMtOrderViewCell.xib; sourceTree = "<group>"; };
 		183B300E1F9483A900E6708B /* XMArticleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMArticleViewController.h; sourceTree = "<group>"; };
 		183B300F1F9483A900E6708B /* XMArticleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMArticleViewController.m; sourceTree = "<group>"; };
 		183B30101F9483A900E6708B /* XMArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMArticleViewController.xib; sourceTree = "<group>"; };
 		183B30161F94A9B100E6708B /* XMBuyShopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMBuyShopView.h; sourceTree = "<group>"; };
 		183B30171F94A9B100E6708B /* XMBuyShopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMBuyShopView.m; sourceTree = "<group>"; };
+		184E21201F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCreditsExchangeTableViewCell.h; sourceTree = "<group>"; };
+		184E21211F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCreditsExchangeTableViewCell.m; sourceTree = "<group>"; };
+		184E21221F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMCreditsExchangeTableViewCell.xib; sourceTree = "<group>"; };
 		18501D201F5FCC4900FDCF51 /* XMLabelExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLabelExtension.h; sourceTree = "<group>"; };
 		18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLabelExtension.m; sourceTree = "<group>"; };
 		18501D231F5FF11F00FDCF51 /* XMLearnStyleViewFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewFour.h; sourceTree = "<group>"; };
@@ -188,6 +202,8 @@
 		18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewFour.xib; sourceTree = "<group>"; };
 		1854E7B21F6FC8F6004BDA63 /* XMMeSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeSetting.h; sourceTree = "<group>"; };
 		1854E7B31F6FC8F6004BDA63 /* XMMeSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeSetting.m; sourceTree = "<group>"; };
+		1855910B1FA08960005CE47B /* XMLearnVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLearnVideoViewController.h; sourceTree = "<group>"; };
+		1855910C1FA08960005CE47B /* XMLearnVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLearnVideoViewController.m; sourceTree = "<group>"; };
 		1879090F1F676E5A004FD227 /* XMMeCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeCoupon.h; sourceTree = "<group>"; };
 		187909101F676E5A004FD227 /* XMMeCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeCoupon.m; sourceTree = "<group>"; };
 		187ED9B41F5D2B8F009CDD61 /* XMGoodsViewStyleThreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGoodsViewStyleThreeView.h; sourceTree = "<group>"; };
@@ -486,6 +502,39 @@
 				1817F9641F79ED9D00291F04 /* XMThematicViewController.m */,
 			);
 			path = "父控制器";
+			sourceTree = "<group>";
+		};
+		184E21251F9F2ED9007F54F5 /* 视频播放 */ = {
+			isa = PBXGroup;
+			children = (
+				1855910B1FA08960005CE47B /* XMLearnVideoViewController.h */,
+				1855910C1FA08960005CE47B /* XMLearnVideoViewController.m */,
+				185591091FA0890E005CE47B /* Controller */,
+				1855910A1FA0890E005CE47B /* Model */,
+				185591081FA0890E005CE47B /* View */,
+			);
+			path = "视频播放";
+			sourceTree = "<group>";
+		};
+		185591081FA0890E005CE47B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185591091FA0890E005CE47B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1855910A1FA0890E005CE47B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		18810AF71F72303C006EB0E4 /* Login */ = {
@@ -826,9 +875,12 @@
 		2377973E1F553281008B2DA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				184E21251F9F2ED9007F54F5 /* 视频播放 */,
 				183B300E1F9483A900E6708B /* XMArticleViewController.h */,
 				183B300F1F9483A900E6708B /* XMArticleViewController.m */,
 				183B30101F9483A900E6708B /* XMArticleViewController.xib */,
+				18195B521F9DFFA400A76761 /* XMCreditsExchange.h */,
+				18195B531F9DFFA400A76761 /* XMCreditsExchange.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -857,6 +909,9 @@
 				18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */,
 				183B30161F94A9B100E6708B /* XMBuyShopView.h */,
 				183B30171F94A9B100E6708B /* XMBuyShopView.m */,
+				184E21201F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.h */,
+				184E21211F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m */,
+				184E21221F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -931,6 +986,9 @@
 				18233E3A1F69040000B80F69 /* XMMeAdressView.h */,
 				18233E3B1F69040000B80F69 /* XMMeAdressView.m */,
 				18233E3D1F69041200B80F69 /* XMMeAdressView.xib */,
+				1831EAF01F99BB1C00AC9978 /* XMMeMtOrderViewCell.h */,
+				1831EAF11F99BB1C00AC9978 /* XMMeMtOrderViewCell.m */,
+				1831EAF21F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1223,6 +1281,7 @@
 				18233E3E1F69041200B80F69 /* XMMeAdressView.xib in Resources */,
 				18CA94DB1F6A5CBC00B1A198 /* hotelcity.json in Resources */,
 				23776AF51F5CE4D900AF4470 /* XMGoodsViewStyleTwoView.xib in Resources */,
+				184E21241F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib in Resources */,
 				18CA94F51F6A65FE00B1A198 /* LICENSE in Resources */,
 				2377970F1F55321E008B2DA8 /* Assets.xcassets in Resources */,
 				23294DF91F56892200720245 /* XMGoodsTitleStyleView.xib in Resources */,
@@ -1233,6 +1292,7 @@
 				18CA94C91F6A4F3800B1A198 /* LICENSE in Resources */,
 				18CA94DA1F6A5CBC00B1A198 /* address.json in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,
+				1831EAF41F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib in Resources */,
 				1817F9741F7A2F9400291F04 /* PublicSFTResources.plist in Resources */,
 				18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */,
 				18D56AAD1F8C9E3C00C2DBF4 /* NewShakeViewController.xib in Resources */,
@@ -1330,6 +1390,7 @@
 				2377978E1F555979008B2DA8 /* TAAbstractDotView.m in Sources */,
 				18CA94FA1F6A65FE00B1A198 /* MJPropertyType.m in Sources */,
 				18233E331F68D06300B80F69 /* XMMeLikeEmpty.m in Sources */,
+				184E21231F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m in Sources */,
 				18CA94CB1F6A4F3800B1A198 /* ActionSheetCustomPicker.m in Sources */,
 				18A441E81F67B5F300DB5C82 /* Utility.m in Sources */,
 				1817F9651F79ED9D00291F04 /* XMThematicViewController.m in Sources */,
@@ -1337,6 +1398,7 @@
 				18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */,
 				237797071F55321E008B2DA8 /* AppDelegate.m in Sources */,
 				18A441F01F67B63400DB5C82 /* NJKWebViewProgressView.m in Sources */,
+				1855910D1FA08960005CE47B /* XMLearnVideoViewController.m in Sources */,
 				237797C51F5559A4008B2DA8 /* UIImage+MultiFormat.m in Sources */,
 				18CA94CC1F6A4F3800B1A198 /* ActionSheetDatePicker.m in Sources */,
 				189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */,
@@ -1351,10 +1413,12 @@
 				232D11311F5BA734008F9FF2 /* XMGoodsViewStyleTwoHeadView.m in Sources */,
 				2377974F1F553281008B2DA8 /* XMLearnViewController.m in Sources */,
 				183B30111F9483A900E6708B /* XMArticleViewController.m in Sources */,
+				1831EAF31F99BB1C00AC9978 /* XMMeMtOrderViewCell.m in Sources */,
 				18CA94D21F6A4F3800B1A198 /* SWActionSheet.m in Sources */,
 				18FF06B61F5E9D4100EA1D13 /* XMLearnStyleViewOne.m in Sources */,
 				23776AF31F5CE4BD00AF4470 /* XMGoodsViewStyleTwoView.m in Sources */,
 				18CA94FB1F6A65FE00B1A198 /* NSObject+MJClass.m in Sources */,
+				18195B541F9DFFA400A76761 /* XMCreditsExchange.m in Sources */,
 				18D56ABD1F8CA31200C2DBF4 /* SignPresentingAnimator.m in Sources */,
 				18CA95031F6A663300B1A198 /* UIView+Frame.m in Sources */,
 				18233E361F68D8E200B80F69 /* XMMeAddressEmpty.m in Sources */,
