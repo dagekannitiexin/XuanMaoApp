@@ -76,6 +76,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     XMLearnVideoViewController *VC = [[XMLearnVideoViewController alloc]init];
+    VC.URLString = @"http://flv.bn.netease.com/videolib3/1710/31/tbNPI5923/SD/movie_index.m3u8";
     [self.navigationController pushViewController:VC animated:YES];
 }
 @end

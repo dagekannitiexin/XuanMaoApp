@@ -4,4 +4,5 @@ pod 'MJRefresh'
 pod 'pop'
 pod 'SVProgressHUD'
 pod 'FDFullscreenPopGesture'
+pod 'Masonry'
 end

@@ -10,4 +10,6 @@
 
 @interface XMLearnVideoViewController : XMBaseViewController
 
+@property (nonatomic, retain)NSString * URLString;
+
 @end

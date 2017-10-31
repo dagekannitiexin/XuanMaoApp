@@ -64,6 +64,13 @@
 		18A67E141FA83F360068DEB7 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E131FA83F360068DEB7 /* Base64.m */; };
 		18A67E1B1FA83F8B0068DEB7 /* DesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E171FA83F8B0068DEB7 /* DesUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		18A67E1C1FA83F8B0068DEB7 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E191FA83F8B0068DEB7 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18A67E291FA863D30068DEB7 /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E221FA863D30068DEB7 /* FastForwardView.m */; };
+		18A67E2A1FA863D30068DEB7 /* FastForwardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A67E231FA863D30068DEB7 /* FastForwardView.xib */; };
+		18A67E2B1FA863D30068DEB7 /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E251FA863D30068DEB7 /* WMLightView.m */; };
+		18A67E2C1FA863D30068DEB7 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18A67E261FA863D30068DEB7 /* WMPlayer.bundle */; };
+		18A67E2D1FA863D30068DEB7 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E281FA863D30068DEB7 /* WMPlayer.m */; };
+		18A67E331FA866C00068DEB7 /* ScreenShotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E301FA866C00068DEB7 /* ScreenShotView.m */; };
+		18A67E341FA866C00068DEB7 /* UIViewController+GestureStateBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A67E321FA866C00068DEB7 /* UIViewController+GestureStateBlock.m */; };
 		18CA94C91F6A4F3800B1A198 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 18CA94B21F6A4F3800B1A198 /* LICENSE */; };
 		18CA94CA1F6A4F3800B1A198 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA94B51F6A4F3800B1A198 /* AbstractActionSheetPicker.m */; };
 		18CA94CB1F6A4F3800B1A198 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA94B71F6A4F3800B1A198 /* ActionSheetCustomPicker.m */; };
@@ -291,6 +298,18 @@
 		18A67E181FA83F8B0068DEB7 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		18A67E191FA83F8B0068DEB7 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		18A67E1A1FA83F8B0068DEB7 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		18A67E211FA863D30068DEB7 /* FastForwardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastForwardView.h; sourceTree = "<group>"; };
+		18A67E221FA863D30068DEB7 /* FastForwardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastForwardView.m; sourceTree = "<group>"; };
+		18A67E231FA863D30068DEB7 /* FastForwardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FastForwardView.xib; sourceTree = "<group>"; };
+		18A67E241FA863D30068DEB7 /* WMLightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLightView.h; sourceTree = "<group>"; };
+		18A67E251FA863D30068DEB7 /* WMLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLightView.m; sourceTree = "<group>"; };
+		18A67E261FA863D30068DEB7 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		18A67E271FA863D30068DEB7 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		18A67E281FA863D30068DEB7 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
+		18A67E2F1FA866C00068DEB7 /* ScreenShotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenShotView.h; sourceTree = "<group>"; };
+		18A67E301FA866C00068DEB7 /* ScreenShotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenShotView.m; sourceTree = "<group>"; };
+		18A67E311FA866C00068DEB7 /* UIViewController+GestureStateBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GestureStateBlock.h"; sourceTree = "<group>"; };
+		18A67E321FA866C00068DEB7 /* UIViewController+GestureStateBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GestureStateBlock.m"; sourceTree = "<group>"; };
 		18CA94B21F6A4F3800B1A198 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		18CA94B41F6A4F3800B1A198 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
 		18CA94B51F6A4F3800B1A198 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
@@ -569,16 +588,9 @@
 				1855910C1FA08960005CE47B /* XMLearnVideoViewController.m */,
 				185591091FA0890E005CE47B /* Controller */,
 				1855910A1FA0890E005CE47B /* Model */,
-				185591081FA0890E005CE47B /* View */,
+				18A67E1D1FA8631C0068DEB7 /* View */,
 			);
 			path = "视频播放";
-			sourceTree = "<group>";
-		};
-		185591081FA0890E005CE47B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		185591091FA0890E005CE47B /* Controller */ = {
@@ -721,6 +733,48 @@
 				18A67E1A1FA83F8B0068DEB7 /* GTMDefines.h */,
 			);
 			path = DES;
+			sourceTree = "<group>";
+		};
+		18A67E1D1FA8631C0068DEB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18A67E1F1FA863D30068DEB7 /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				18A67E2E1FA866C00068DEB7 /* ScreenShotBack */,
+				18A67E201FA863D30068DEB7 /* View */,
+				18A67E261FA863D30068DEB7 /* WMPlayer.bundle */,
+				18A67E271FA863D30068DEB7 /* WMPlayer.h */,
+				18A67E281FA863D30068DEB7 /* WMPlayer.m */,
+			);
+			path = WMPlayer;
+			sourceTree = "<group>";
+		};
+		18A67E201FA863D30068DEB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18A67E211FA863D30068DEB7 /* FastForwardView.h */,
+				18A67E221FA863D30068DEB7 /* FastForwardView.m */,
+				18A67E231FA863D30068DEB7 /* FastForwardView.xib */,
+				18A67E241FA863D30068DEB7 /* WMLightView.h */,
+				18A67E251FA863D30068DEB7 /* WMLightView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18A67E2E1FA866C00068DEB7 /* ScreenShotBack */ = {
+			isa = PBXGroup;
+			children = (
+				18A67E2F1FA866C00068DEB7 /* ScreenShotView.h */,
+				18A67E301FA866C00068DEB7 /* ScreenShotView.m */,
+				18A67E311FA866C00068DEB7 /* UIViewController+GestureStateBlock.h */,
+				18A67E321FA866C00068DEB7 /* UIViewController+GestureStateBlock.m */,
+			);
+			path = ScreenShotBack;
 			sourceTree = "<group>";
 		};
 		18CA94B11F6A4F3800B1A198 /* ActionSheetPicker-3.0 */ = {
@@ -1028,12 +1082,12 @@
 		2377973E1F553281008B2DA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				184E21251F9F2ED9007F54F5 /* 视频播放 */,
 				183B300E1F9483A900E6708B /* XMArticleViewController.h */,
 				183B300F1F9483A900E6708B /* XMArticleViewController.m */,
 				183B30101F9483A900E6708B /* XMArticleViewController.xib */,
 				18195B521F9DFFA400A76761 /* XMCreditsExchange.h */,
 				18195B531F9DFFA400A76761 /* XMCreditsExchange.m */,
+				184E21251F9F2ED9007F54F5 /* 视频播放 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1158,6 +1212,7 @@
 		2377974B1F553281008B2DA8 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				18A67E1F1FA863D30068DEB7 /* WMPlayer */,
 				18A441E41F67B5F300DB5C82 /* Utility.h */,
 				18A441E51F67B5F300DB5C82 /* Utility.m */,
 				18A441E61F67B5F300DB5C82 /* WebViewController.h */,
@@ -1437,6 +1492,7 @@
 				18CA94DB1F6A5CBC00B1A198 /* hotelcity.json in Resources */,
 				23776AF51F5CE4D900AF4470 /* XMGoodsViewStyleTwoView.xib in Resources */,
 				184E21241F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib in Resources */,
+				18A67E2A1FA863D30068DEB7 /* FastForwardView.xib in Resources */,
 				18CA94F51F6A65FE00B1A198 /* LICENSE in Resources */,
 				2377970F1F55321E008B2DA8 /* Assets.xcassets in Resources */,
 				23294DF91F56892200720245 /* XMGoodsTitleStyleView.xib in Resources */,
@@ -1444,6 +1500,7 @@
 				18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */,
 				18F6DA511F75067100C8144D /* SFTMoview.mp4 in Resources */,
 				18D56AB31F8CA06500C2DBF4 /* SignViewController.xib in Resources */,
+				18A67E2C1FA863D30068DEB7 /* WMPlayer.bundle in Resources */,
 				18CA94C91F6A4F3800B1A198 /* LICENSE in Resources */,
 				18CA94DA1F6A5CBC00B1A198 /* address.json in Resources */,
 				2377970D1F55321E008B2DA8 /* Main.storyboard in Resources */,
@@ -1536,6 +1593,7 @@
 				237797BF1F5559A4008B2DA8 /* SDWebImageDownloader.m in Sources */,
 				2377976F1F553432008B2DA8 /* XMBaseViewController.m in Sources */,
 				237797C81F5559A4008B2DA8 /* UIView+WebCache.m in Sources */,
+				18A67E331FA866C00068DEB7 /* ScreenShotView.m in Sources */,
 				18E3E7C01F5F8A1A007D86FC /* XMLearnStyleViewTwo.m in Sources */,
 				237797901F555979008B2DA8 /* TADotView.m in Sources */,
 				237797C91F5559A4008B2DA8 /* UIView+WebCacheOperation.m in Sources */,
@@ -1575,11 +1633,14 @@
 				183B30111F9483A900E6708B /* XMArticleViewController.m in Sources */,
 				1831EAF31F99BB1C00AC9978 /* XMMeMtOrderViewCell.m in Sources */,
 				18CA94D21F6A4F3800B1A198 /* SWActionSheet.m in Sources */,
+				18A67E291FA863D30068DEB7 /* FastForwardView.m in Sources */,
 				18FF06B61F5E9D4100EA1D13 /* XMLearnStyleViewOne.m in Sources */,
 				23776AF31F5CE4BD00AF4470 /* XMGoodsViewStyleTwoView.m in Sources */,
 				18A67E101FA83ED40068DEB7 /* Reachability.m in Sources */,
+				18A67E2D1FA863D30068DEB7 /* WMPlayer.m in Sources */,
 				18A67E071FA83ED40068DEB7 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				18A67E051FA83ED40068DEB7 /* RESTfulEngine.m in Sources */,
+				18A67E2B1FA863D30068DEB7 /* WMLightView.m in Sources */,
 				18CA94FB1F6A65FE00B1A198 /* NSObject+MJClass.m in Sources */,
 				18195B541F9DFFA400A76761 /* XMCreditsExchange.m in Sources */,
 				18D56ABD1F8CA31200C2DBF4 /* SignPresentingAnimator.m in Sources */,
@@ -1627,6 +1688,7 @@
 				18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */,
 				237797C61F5559A4008B2DA8 /* UIImageView+HighlightedWebCache.m in Sources */,
 				23294DF21F56509700720245 /* goodsViewStyleOne.m in Sources */,
+				18A67E341FA866C00068DEB7 /* UIViewController+GestureStateBlock.m in Sources */,
 				18A67E081FA83ED40068DEB7 /* NSData+Base64.m in Sources */,
 				1854E7B41F6FC8F6004BDA63 /* XMMeSetting.m in Sources */,
 				18CA94D31F6A4F3800B1A198 /* README.md in Sources */,

@@ -1,21 +1,24 @@
 PODS:
   - FDFullscreenPopGesture (1.1)
+  - Masonry (1.1.0)
   - MJRefresh (3.1.14)
   - pop (1.0.10)
   - SVProgressHUD (2.2.1)
 
 DEPENDENCIES:
   - FDFullscreenPopGesture
+  - Masonry
   - MJRefresh
   - pop
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
 
-PODFILE CHECKSUM: 9e4d681fdd4b1b7badf4c79282308ffef1561fe0
+PODFILE CHECKSUM: 2b2809d01cc42dcc30b9de9e8d8361786cdd9d56
 
 COCOAPODS: 1.3.1

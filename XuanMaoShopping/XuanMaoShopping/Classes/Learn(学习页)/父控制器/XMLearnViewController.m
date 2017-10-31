@@ -23,7 +23,6 @@
 
 
 
-
 @interface XMLearnViewController ()<NewPagedFlowViewDelegate,NewPagedFlowViewDataSource,UIViewControllerTransitioningDelegate>{
     CGFloat _totleHeight;
     UITableView *_tableView;
