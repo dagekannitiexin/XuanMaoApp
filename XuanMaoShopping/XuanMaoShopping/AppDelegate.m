@@ -31,6 +31,8 @@
     
     [self.window makeKeyAndVisible];
     
+    //新网络
+    self.engine = [[RESTfulEngine alloc]initWithHostName:@"118.31.4.245"];
     
     return YES;
 }

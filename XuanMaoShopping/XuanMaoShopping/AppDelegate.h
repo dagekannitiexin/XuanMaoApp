@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RESTfulEngine.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+#define XM_AppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+/** 后台连接管理*/
+@property (strong, nonatomic) RESTfulEngine *engine;
 @end
 

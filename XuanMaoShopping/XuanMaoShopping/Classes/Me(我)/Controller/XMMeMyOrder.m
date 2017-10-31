@@ -26,6 +26,22 @@
 //    [self createEmptyView];
     //有数据
     [self createTableView];
+    //创建网络
+    [self createNetWork];
+}
+
+- (void)createNetWork
+{
+    //设置常用参数
+    NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+    [requestInfo setValue:@"2" forKey:@"type"];
+    NSString *netPath = [NSString stringWithFormat:@"%@%@", @"118.31.4.245/smartapi", @"/api/Product/GetProductListByType"];
+    [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"GET" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
+        NSLog(@"%@",aDictronaryBaseObjects);
+    } onError:^(NSError *engineError) {
+        NSLog(@"%@",engineError);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

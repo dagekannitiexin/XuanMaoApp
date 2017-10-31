@@ -18,5 +18,6 @@
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
 #import <UINavigationController+FDFullscreenPopGesture.h>
+#import "AppDelegate.h"
 #endif /* XuanMaoShopping_Prefix_pch */
     
