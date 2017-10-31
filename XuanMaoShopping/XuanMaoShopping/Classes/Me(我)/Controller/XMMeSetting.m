@@ -28,6 +28,7 @@
     
     _titleArray = [NSMutableArray arrayWithObjects:@"清理缓存",@"鼓励一下",@"隐私和协议",@"加入我们",@"退出登录", nil];
     _imageArray = [NSMutableArray arrayWithObjects:@"iconCleanCach",@"iconSettingSore",@"iconSettingPrivacy",@"iconSettingAbout",@"iconSettingLogout", nil];
+    NSLog(@"jdoafj");
 }
 
 - (void)didReceiveMemoryWarning {
