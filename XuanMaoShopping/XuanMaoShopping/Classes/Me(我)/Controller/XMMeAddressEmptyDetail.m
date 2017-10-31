@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
-   self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBarHidden = NO;
     self.title = @"填写收货地址";
     
     [self creatnavigationbar];

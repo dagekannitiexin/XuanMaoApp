@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.fd_prefersNavigationBarHidden = YES;
     [self creatnavigationbar];
     
     //如果无数据

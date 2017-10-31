@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.fd_prefersNavigationBarHidden = YES;
     [self creatnavigationbar];
     //新建tableview
     [self createTableView];

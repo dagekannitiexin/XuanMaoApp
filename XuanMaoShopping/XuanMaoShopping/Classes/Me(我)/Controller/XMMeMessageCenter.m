@@ -18,6 +18,7 @@
     [super viewDidLoad];
 
 //    self.view.backgroundColor = [UIColor whiteColor];
+    self.fd_prefersNavigationBarHidden = YES;
     [self creatnavigationbar];
     
     //如果无数据

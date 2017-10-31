@@ -30,11 +30,28 @@
 
     [op onCompletion:^(MKNetworkOperation *completedOperation) {
         NSLog(@"%@",completedOperation);
-        NSString *jsonStirng = @"{\"Rdt\":{\"ErrorMessage\":\"\",\"ReData\":[{\"Name\":\"测试用数据2\",\"ProductCategory\":\"科技\",\"Intro\":\"测试简介\",\"OwnerName\":\"蛤蟆\",\"OwnerIntro\":\"蛤蟆\",\"OwnerImage\":\"\",\"OldValue\":2.0000,\"NewValue\":2.0000,\"Image\":\"\"},{\"Name\":\"测试用数据3\",\"ProductCategory\":\"科技\",\"Intro\":\"测试3\",\"OwnerName\":\"钩子\",\"OwnerIntro\":\"钩子\",\"OwnerImage\":null,\"OldValue\":24.0000,\"NewValue\":12.0000,\"Image\":\"\"},{\"Name\":\"测试用数据4\",\"ProductCategory\":\"科技\",\"Intro\":\"测试4\",\"OwnerName\":\"小猫\",\"OwnerIntro\":\"小猫\",\"OwnerImage\":null,\"OldValue\":121.0000,\"NewValue\":24.0000,\"Image\":\"\"}]},\"ReFlag\":\"1\"}";
-        
         NSString *resString = [op responseString];
         NSString *res = [resString substringWithRange:NSMakeRange(1, resString.length-2)];
-        NSDictionary *responseDictionary = [res  objectFromJSONString];
+        NSMutableString *responseString = [NSMutableString stringWithFormat:@"%@",res];
+        NSString *character = nil;
+        for (int i = 0; i < responseString.length; i ++) {
+            character = [responseString substringWithRange:NSMakeRange(i, 1)];
+            if ([character isEqualToString:@"\\"])
+                [responseString deleteCharactersInRange:NSMakeRange(i, 1)];
+        }
+        //将字符窜转化成字典
+        
+        NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *err;
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                       options:NSJSONReadingMutableContainers
+                                                                         error:&err];
+//        NSString *resString = [op responseString];
+//        NSData *data = [resString dataUsingEncoding:NSUTF8StringEncoding];
+//        NSString *result = [[NSString alloc] initWithData:data  encoding:NSUTF8StringEncoding];
+//        NSString *res = [resString substringWithRange:NSMakeRange(1, resString.length-2)];
+//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:[res dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+//        NSDictionary *responseDictionary = [res  objectFromJSONString];
 //        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:[res dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
         //如果无返回数据
         if (!responseDictionary)
