@@ -61,8 +61,8 @@
         }
         
         //有返回数据的情况下  暂时拿时间字判断
-        NSString *ret = [responseDictionary valueForKey:@"timestamp"];
-        if(ret.length>0){
+        NSString *ret = [responseDictionary valueForKey:@"ok"];
+        if(ret){
             
             [SVProgressHUD dismiss];
             succeededBlock(responseDictionary);

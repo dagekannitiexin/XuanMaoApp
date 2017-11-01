@@ -32,6 +32,8 @@
     NSMutableArray *_activeArray;
     NSMutableArray *_imageArray; //bannerImg
     NSMutableArray *_urlBannerArray;//bannerUrl
+    NSMutableArray *_urlRecommend; //推荐栏目的urlImg
+    NSArray        *_modelOfHotPeoPle; //最热买手
 }
 
 @end
@@ -46,12 +48,7 @@
     // Do any additional setup after loading the view.
     //banner
     [self ccreateData];
-    
-    
-    
-
-    _activeArray = [NSMutableArray arrayWithObjects:@"摇一摇",@"商学院",@"积分兑换",@"团队福利",@"团队公告", nil];
-    
+    [self createNetWork];
     //设置导航栏
     [self creatnavigationbar];
     
@@ -60,11 +57,11 @@
     dragon.image = [UIImage imageNamed:@"dragon"];
     [self.view addSubview:dragon];
     
-    //创建头部视图
-    [self initHeadView];
-    
-    //初始化tabview
-    [self initTableView];
+//    //创建头部视图
+//    [self initHeadView];
+//
+//    //初始化tabview
+//    [self initTableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -159,7 +156,7 @@
 - (UIView*)madeHeadViewTwo
 {
     //创建活动栏
-    UIScrollView *activeView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 80)];
+    UIScrollView *activeView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, _totleHeight+15, SCREEN_WIDTH, 90)];
     activeView.backgroundColor = [UIColor whiteColor];
     activeView.showsVerticalScrollIndicator = FALSE;
     activeView.showsHorizontalScrollIndicator = FALSE;
@@ -167,13 +164,13 @@
     activeView.layer.masksToBounds = YES;
     [_headView addSubview:activeView];
     
-    CGFloat btnrecommendedW = 60;
-    CGFloat btnrecommendedH = 81;
-    CGFloat recommendedspace = (SCREEN_WIDTH -2*15-5*btnrecommendedW)/4;
+    CGFloat btnrecommendedW = 50;
+    CGFloat btnrecommendedH = 70;
+    CGFloat recommendedspace = (SCREEN_WIDTH -2*20-4*btnrecommendedW)/3;
     for (int i=0; i<_activeArray.count; i++) {
-        HeadButton *btn = [[HeadButton alloc]initWithFrame:CGRectMake(15 + (btnrecommendedW+recommendedspace)*i, 0, btnrecommendedW, btnrecommendedH)];
+        HeadButton *btn = [[HeadButton alloc]initWithFrame:CGRectMake(20 + (btnrecommendedW+recommendedspace)*i, 0, btnrecommendedW, btnrecommendedH)];
         btn.tag = i+100;
-        [btn setImage:[UIImage imageNamed:@"Img_default"] forState:UIControlStateNormal];
+        [btn sd_setImageWithURL:[NSURL URLWithString:_urlRecommend[i]] forState:UIControlStateNormal];
         [btn setTitle:[_activeArray objectAtIndex:i] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(activeBtnclick:) forControlEvents:UIControlEventTouchUpInside];
         btn.imageView.layer.cornerRadius = btnrecommendedW/2;
@@ -188,10 +185,15 @@
 - (UIView*)madeHeadViewThree
 {
     UIView *headViewThree = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 315)];
-    headViewThree.backgroundColor = [UIColor yellowColor];
+    headViewThree.backgroundColor = XMBgColor;
     
-    XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
-    titleView.titleLabel.text =@"最热买手";
+    //添加背景板
+    UIImageView *backImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, headViewThree.width, headViewThree.height)];
+    backImg.image = [UIImage imageNamed:@"bgWhiteGradient"];
+    [headViewThree addSubview:backImg];
+    
+    XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    titleView.titleLabel.text =@"最热导师";
     titleView.backgroundColor = [UIColor whiteColor];
     [headViewThree addSubview:titleView];
     
@@ -202,7 +204,7 @@
     CGFloat hostViewSpace = 10;
     
     UIScrollView *hostScrView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, titleView.bottom, SCREEN_WIDTH, headViewThree.height-titleView.bottom)];
-    hostScrView.backgroundColor = RGBACOLOR(247, 247, 247, 1);
+    hostScrView.backgroundColor = [UIColor clearColor ];
     hostScrView.showsVerticalScrollIndicator = FALSE;
     hostScrView.showsHorizontalScrollIndicator = FALSE;
     hostScrView.alwaysBounceHorizontal = YES;
@@ -210,12 +212,12 @@
     [headViewThree addSubview:hostScrView];
     
     
+    
     for (int i=0; i<5; i++) {
         XMLearnStyleViewTwo *hostView = [[[NSBundle mainBundle]loadNibNamed:@"XMLearnStyleViewTwo" owner:nil options:nil]lastObject];
         hostView.origin = CGPointMake(hostSpace +(hostW+hostViewSpace)*i, 0);
         [hostScrView addSubview:hostView];
         hostScrView.contentSize = CGSizeMake(hostView.right+20, hostH);
-        
         NSArray *array = [NSArray arrayWithObjects:@"男生护肤",@"男闺蜜推荐",@"真人实测", nil];
         [hostView setlabelOfHost:array];
     }
@@ -369,5 +371,30 @@
     _imageArray = [NSMutableArray arrayWithObjects:@"http://img0.cosmeapp.com/product/201710/10/10/59/59dc37a3525d2452.jpg",@"http://img0.cosmeapp.com/product/201710/26/18/25/59f1b8003d86d798.jpg",@"http://img0.cosmeapp.com/product/201710/30/17/18/59f6ee63a619d938.jpg",@"http://img0.cosmeapp.com/product/201710/31/16/58/59f83b3b016ef967.jpg",@"http://img0.cosmeapp.com/product/201710/31/18/58/59f85744a2f44188.jpg",@"http://img0.cosmeapp.com/product/201711/01/10/48/59f936151d677883.jpg", nil];
     
     _urlBannerArray = [NSMutableArray arrayWithObjects:@"https://h5.cosmeapp.com/group/thread/292433?stats_type=bbsthread&stats_data=292433",@"https://h5.cosmeapp.com/group/thread/293726?stats_type=bbsthread&stats_data=293726",@"https://h5.cosmeapp.com/group/thread/293974?stats_type=bbsthread&stats_data=293974",@"https://h5.cosmeapp.com/group/thread/294079?stats_type=bbsthread&stats_data=294079",@"http://h5.cosmeapp.com/article/detail/295",@"https://h5.cosmeapp.com/group/thread/294149?stats_type=bbsthread&stats_data=294149", nil];
+    
+    _activeArray = [NSMutableArray arrayWithObjects:@"美妆鉴赏",@"专题",@"变美视频",@"大牌试用", nil];
+    _urlRecommend = [NSMutableArray arrayWithObjects:@"http://img0.cosmeapp.com/FulPtuDJpHpmjRa-VUUceTRjQZUJ",@"http://img0.cosmeapp.com/Frq7O6Ip9MhAI98oUuH0aFBKi0aZ",@"http://img0.cosmeapp.com/FkIaA6pmXaHaceUUxVH87S6fdFBm",@"http://img0.cosmeapp.com/FuKpvsn6eQ4bB0Jg5h8zWLc-dr5q", nil];
+}
+
+- (void)createNetWork
+{
+    //设置常用参数
+    NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+    [requestInfo setValue:@"G99NrwRHnT1N3aQzV8TOIZZJ" forKey:@"token"];
+    NSString *netPath = [NSString stringWithFormat:@"%@",@"api.xinpinget.com/buyermarket/list"];
+    [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"GET" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
+        NSDictionary *dicOne = [aDictronaryBaseObjects objectForKey:@"result"][0];
+        NSDictionary *dicPeoPle = [dicOne objectForKey:@"channelItem"];
+        NSArray *arrayChannel = [dicPeoPle objectForKey:@"channels"];
+        _modelOfHotPeoPle = arrayChannel;
+        
+        //创建头部视图
+        [self initHeadView];
+        
+        //初始化tabview
+        [self initTableView];
+    } onError:^(NSError *engineError) {
+        NSLog(@"no");
+    }];
 }
 @end

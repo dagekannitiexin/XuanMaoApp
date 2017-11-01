@@ -22,7 +22,7 @@
         
         // 查看更多标志
         UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 28, 28)];
-        image.image = [UIImage imageNamed:@"Img_default"];
+        image.image = [UIImage imageNamed:@"btnAdditionNormal"];
         [self addSubview:image];
         //重设位置
         image.centerY = self.titleLabel.centerY;
@@ -36,7 +36,7 @@
         [self addSubview:seeMore];
         //重设位置
         seeMore.centerY = self.titleLabel.centerY;
-        seeMore.right = image.x-10;
+        seeMore.right = image.x+5;
         
     }
     return self;
