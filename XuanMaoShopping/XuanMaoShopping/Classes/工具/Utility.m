@@ -8,13 +8,22 @@
 
 #import "Utility.h"
 #import "WebViewController.h"
+#import "WebViewBannerController.h"
 
 @implementation Utility
 
 
 +(void)goVcForItemId:(NSString *)itemid WithURL:(NSString *)url WithType:(NSString *)type WithNavGation:(UINavigationController *)nav
 {
-    if (url && url.length){
+    if ([type isEqualToString:@"banner"]){
+        WebViewBannerController *web = [[WebViewBannerController alloc]init];
+        web.urlStr = url;
+        web.fd_prefersNavigationBarHidden = YES;
+        [nav pushViewController:web animated:YES];
+        return;
+    }
+    
+    if ([type isEqualToString:@"专题"]){
         WebViewController *web = [[WebViewController alloc]init];
         web.title = @"SoFullTeam首富团官微";
         web.urlStr = url;

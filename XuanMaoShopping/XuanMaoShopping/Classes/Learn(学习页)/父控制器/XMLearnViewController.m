@@ -27,9 +27,11 @@
     CGFloat _totleHeight;
     UITableView *_tableView;
     UIView *_headView;
-    NSMutableArray *_imageArray;
+    
     NewPagedFlowView *_pageFlowView;
     NSMutableArray *_activeArray;
+    NSMutableArray *_imageArray; //bannerImg
+    NSMutableArray *_urlBannerArray;//bannerUrl
 }
 
 @end
@@ -42,13 +44,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //banner
+    [self ccreateData];
     
-    _imageArray = [NSMutableArray array];
-    for (int index = 0; index < 5; index++) {
-        UIImage *image = [UIImage imageNamed:@"Img_default"];
-        [_imageArray addObject:image];
-    }
     
+    
+
     _activeArray = [NSMutableArray arrayWithObjects:@"摇一摇",@"商学院",@"积分兑换",@"团队福利",@"团队公告", nil];
     
     //设置导航栏
@@ -74,7 +75,9 @@
 
 - (void)creatnavigationbar
 {
-    self.title = @"商学院";
+    UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:@[@"精选",@"关注"]];
+    segment.frame = CGRectMake(0, 0, 200, 44);
+    
 }
 
 -(void)initTableView
@@ -113,7 +116,7 @@
     //创建轮转图
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    NewPagedFlowView *pageFlowView = [[NewPagedFlowView alloc]initWithFrame:CGRectMake(0, 12, SCREEN_WIDTH, SCREEN_WIDTH *9/16.0)];
+    NewPagedFlowView *pageFlowView = [[NewPagedFlowView alloc]initWithFrame:CGRectMake(0, 12, SCREEN_WIDTH, SCREEN_WIDTH/2)];
     pageFlowView.backgroundColor = [UIColor whiteColor];
     pageFlowView.delegate = self;
     pageFlowView.dataSource = self;
@@ -316,7 +319,10 @@
 
 #pragma mark --NewPagedFlowView Delegate
 - (void)didSelectCell:(UIView *)subView withSubViewIndex:(NSInteger)subIndex {
-    
+    NSString * tag = @"没有tag";
+    NSString * out_url = _urlBannerArray[subIndex];
+    NSString * type = @"banner";
+    [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
     NSLog(@"点击了第%ld张图",(long)subIndex + 1);
     
 }
@@ -344,8 +350,8 @@
         bannerView.layer.masksToBounds = YES;
     }
     //在这里下载网络图片
-    //  [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:hostUrlsImg,imageDict[@"img"]]] placeholderImage:[UIImage imageNamed:@""]];
-    bannerView.mainImageView.image = _imageArray[index];
+      [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:_imageArray[index]] placeholderImage:[UIImage imageNamed:@"Img_default"]];
+//    bannerView.mainImageView.image = _imageArray[index];
     
     return bannerView;
 }
@@ -355,5 +361,13 @@
 {
     XMArticleViewController *article = [[XMArticleViewController alloc]init];
     [self.navigationController pushViewController:article animated:YES];
+}
+
+#pragma mark  - 假数据
+- (void)ccreateData
+{
+    _imageArray = [NSMutableArray arrayWithObjects:@"http://img0.cosmeapp.com/product/201710/10/10/59/59dc37a3525d2452.jpg",@"http://img0.cosmeapp.com/product/201710/26/18/25/59f1b8003d86d798.jpg",@"http://img0.cosmeapp.com/product/201710/30/17/18/59f6ee63a619d938.jpg",@"http://img0.cosmeapp.com/product/201710/31/16/58/59f83b3b016ef967.jpg",@"http://img0.cosmeapp.com/product/201710/31/18/58/59f85744a2f44188.jpg",@"http://img0.cosmeapp.com/product/201711/01/10/48/59f936151d677883.jpg", nil];
+    
+    _urlBannerArray = [NSMutableArray arrayWithObjects:@"https://h5.cosmeapp.com/group/thread/292433?stats_type=bbsthread&stats_data=292433",@"https://h5.cosmeapp.com/group/thread/293726?stats_type=bbsthread&stats_data=293726",@"https://h5.cosmeapp.com/group/thread/293974?stats_type=bbsthread&stats_data=293974",@"https://h5.cosmeapp.com/group/thread/294079?stats_type=bbsthread&stats_data=294079",@"http://h5.cosmeapp.com/article/detail/295",@"https://h5.cosmeapp.com/group/thread/294149?stats_type=bbsthread&stats_data=294149", nil];
 }
 @end

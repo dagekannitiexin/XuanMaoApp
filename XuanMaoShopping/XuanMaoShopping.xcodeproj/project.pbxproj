@@ -35,12 +35,13 @@
 		187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187ED9B71F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib */; };
 		18810AFA1F723064006EB0E4 /* XMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810AF91F723064006EB0E4 /* XMLoginViewController.m */; };
 		18810B021F727E04006EB0E4 /* XMLoginPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 18810B011F727E04006EB0E4 /* XMLoginPhone.m */; };
+		188D16CB1FA9BFF500AC2944 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D16CA1FA9BFF500AC2944 /* WebViewController.m */; };
+		188D16CE1FA9C06D00AC2944 /* WebViewBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D16CD1FA9C06D00AC2944 /* WebViewBannerController.m */; };
 		1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */; };
 		189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 189994D51F739534008919DD /* XMLoginVerificationCode.m */; };
 		189994DA1F73ACC1008919DD /* WLUnitField.m in Sources */ = {isa = PBXBuildFile; fileRef = 189994D91F73ACC1008919DD /* WLUnitField.m */; };
 		189CBE791F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CBE781F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m */; };
 		18A441E81F67B5F300DB5C82 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E51F67B5F300DB5C82 /* Utility.m */; };
-		18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441E71F67B5F300DB5C82 /* WebViewController.m */; };
 		18A441EF1F67B63400DB5C82 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441EC1F67B63400DB5C82 /* NJKWebViewProgress.m */; };
 		18A441F01F67B63400DB5C82 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441EE1F67B63400DB5C82 /* NJKWebViewProgressView.m */; };
 		18A441F31F67B78800DB5C82 /* XMMeGift.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A441F21F67B78800DB5C82 /* XMMeGift.m */; };
@@ -239,6 +240,10 @@
 		18810AF91F723064006EB0E4 /* XMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginViewController.m; sourceTree = "<group>"; };
 		18810B001F727E04006EB0E4 /* XMLoginPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginPhone.h; sourceTree = "<group>"; };
 		18810B011F727E04006EB0E4 /* XMLoginPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoginPhone.m; sourceTree = "<group>"; };
+		188D16C91FA9BFF500AC2944 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		188D16CA1FA9BFF500AC2944 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		188D16CC1FA9C06D00AC2944 /* WebViewBannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewBannerController.h; sourceTree = "<group>"; };
+		188D16CD1FA9C06D00AC2944 /* WebViewBannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewBannerController.m; sourceTree = "<group>"; };
 		1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMessageCenter.h; sourceTree = "<group>"; };
 		1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMessageCenter.m; sourceTree = "<group>"; };
 		189994D41F739534008919DD /* XMLoginVerificationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoginVerificationCode.h; sourceTree = "<group>"; };
@@ -249,8 +254,6 @@
 		189CBE781F98CBE60061CDCF /* XMMeAddressEmptyDetailPresent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMMeAddressEmptyDetailPresent.m; sourceTree = "<group>"; };
 		18A441E41F67B5F300DB5C82 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		18A441E51F67B5F300DB5C82 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
-		18A441E61F67B5F300DB5C82 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		18A441E71F67B5F300DB5C82 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		18A441EB1F67B63400DB5C82 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
 		18A441EC1F67B63400DB5C82 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		18A441ED1F67B63400DB5C82 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
@@ -618,6 +621,17 @@
 				189994D51F739534008919DD /* XMLoginVerificationCode.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		188D16C81FA9BFF500AC2944 /* 不同的Web */ = {
+			isa = PBXGroup;
+			children = (
+				188D16C91FA9BFF500AC2944 /* WebViewController.h */,
+				188D16CA1FA9BFF500AC2944 /* WebViewController.m */,
+				188D16CC1FA9C06D00AC2944 /* WebViewBannerController.h */,
+				188D16CD1FA9C06D00AC2944 /* WebViewBannerController.m */,
+			);
+			path = "不同的Web";
 			sourceTree = "<group>";
 		};
 		189994D71F73ACC1008919DD /* 验证码 */ = {
@@ -1212,11 +1226,10 @@
 		2377974B1F553281008B2DA8 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				188D16C81FA9BFF500AC2944 /* 不同的Web */,
 				18A67E1F1FA863D30068DEB7 /* WMPlayer */,
 				18A441E41F67B5F300DB5C82 /* Utility.h */,
 				18A441E51F67B5F300DB5C82 /* Utility.m */,
-				18A441E61F67B5F300DB5C82 /* WebViewController.h */,
-				18A441E71F67B5F300DB5C82 /* WebViewController.m */,
 			);
 			path = "工具";
 			sourceTree = "<group>";
@@ -1609,8 +1622,8 @@
 				18A441E81F67B5F300DB5C82 /* Utility.m in Sources */,
 				1817F9651F79ED9D00291F04 /* XMThematicViewController.m in Sources */,
 				18CA94D11F6A4F3800B1A198 /* DistancePickerView.m in Sources */,
-				18A441E91F67B5F300DB5C82 /* WebViewController.m in Sources */,
 				18A67E0F1FA83ED40068DEB7 /* MKNetworkOperation.m in Sources */,
+				188D16CE1FA9C06D00AC2944 /* WebViewBannerController.m in Sources */,
 				18A67E0E1FA83ED40068DEB7 /* MKNetworkEngine.m in Sources */,
 				237797071F55321E008B2DA8 /* AppDelegate.m in Sources */,
 				18A441F01F67B63400DB5C82 /* NJKWebViewProgressView.m in Sources */,
@@ -1670,6 +1683,7 @@
 				18CA94FE1F6A65FE00B1A198 /* NSObject+MJProperty.m in Sources */,
 				237797041F55321E008B2DA8 /* main.m in Sources */,
 				18CA94F61F6A65FE00B1A198 /* MJExtensionConst.m in Sources */,
+				188D16CB1FA9BFF500AC2944 /* WebViewController.m in Sources */,
 				18CA94F91F6A65FE00B1A198 /* MJPropertyKey.m in Sources */,
 				18D56AB21F8CA05E00C2DBF4 /* SignViewController.m in Sources */,
 				18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */,
