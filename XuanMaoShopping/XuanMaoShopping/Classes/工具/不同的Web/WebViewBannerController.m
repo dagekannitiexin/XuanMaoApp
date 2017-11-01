@@ -26,8 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    [SVProgressHUD setForegroundColor:RGBACOLOR(255, 192, 203, 1)];
+    [SVProgressHUD show];
     _web=[[UIWebView alloc]initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT+20)];
     [self.view addSubview:_web];
     
