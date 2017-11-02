@@ -22,11 +22,39 @@
         [nav pushViewController:web animated:YES];
         return;
     }
-    
+    if ([type isEqualToString:@"美妆鉴赏"]){
+        WebViewController *web = [[WebViewController alloc]init];
+        web.title = @"美妆心得大赛";
+        web.urlStr = url;
+        [nav pushViewController:web animated:YES];
+        return;
+    }
+    if ([type isEqualToString:@"专题栏"]){
+        WebViewController *web = [[WebViewController alloc]init];
+        web.title = @"专题栏";
+        web.urlStr = url;
+        [nav pushViewController:web animated:YES];
+        return;
+    }
+    if ([type isEqualToString:@"变美视频"]){
+        WebViewController *web = [[WebViewController alloc]init];
+        web.title = @"变美视频";
+        web.urlStr = url;
+        [nav pushViewController:web animated:YES];
+        return;
+    }
+    if ([type isEqualToString:@"大牌试用"]){
+        WebViewController *web = [[WebViewController alloc]init];
+        web.title = @"大牌试用";
+        web.urlStr = url;
+        [nav pushViewController:web animated:YES];
+        return;
+    }
     if ([type isEqualToString:@"专题"]){
         WebViewController *web = [[WebViewController alloc]init];
         web.title = @"SoFullTeam首富团官微";
         web.urlStr = url;
+        
         [nav pushViewController:web animated:YES];
         return;
     }

@@ -34,6 +34,8 @@
     NSMutableArray *_urlBannerArray;//bannerUrl
     NSMutableArray *_urlRecommend; //推荐栏目的urlImg
     NSArray        *_modelOfHotPeoPle; //最热买手
+    NSArray        *_modelOfNewPeoPle; //最新买手
+    NSMutableArray *_urlWithMeiZhuang; //美妆鉴赏
 }
 
 @end
@@ -53,7 +55,6 @@
     [self creatnavigationbar];
     
     UIImageView *dragon = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-40)/2, 64, 40, 40)];
-    dragon.backgroundColor = [UIColor yellowColor];
     dragon.image = [UIImage imageNamed:@"dragon"];
     [self.view addSubview:dragon];
     
@@ -72,8 +73,6 @@
 
 - (void)creatnavigationbar
 {
-    UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:@[@"精选",@"关注"]];
-    segment.frame = CGRectMake(0, 0, 200, 44);
     
 }
 
@@ -184,7 +183,7 @@
 
 - (UIView*)madeHeadViewThree
 {
-    UIView *headViewThree = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 315)];
+    UIView *headViewThree = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 290)];
     headViewThree.backgroundColor = XMBgColor;
     
     //添加背景板
@@ -213,12 +212,20 @@
     
     
     
-    for (int i=0; i<5; i++) {
+    for (int i=0; i<_modelOfHotPeoPle.count; i++) {
         XMLearnStyleViewTwo *hostView = [[[NSBundle mainBundle]loadNibNamed:@"XMLearnStyleViewTwo" owner:nil options:nil]lastObject];
         hostView.origin = CGPointMake(hostSpace +(hostW+hostViewSpace)*i, 0);
         [hostScrView addSubview:hostView];
         hostScrView.contentSize = CGSizeMake(hostView.right+20, hostH);
-        NSArray *array = [NSArray arrayWithObjects:@"男生护肤",@"男闺蜜推荐",@"真人实测", nil];
+        
+        //赋值
+        NSDictionary *dicHost = _modelOfHotPeoPle[i];
+        [hostView.backImg sd_setImageWithURL:[NSURL URLWithString:[dicHost objectForKey:@"buyerTabBg"]]];
+        [hostView.iconImg sd_setImageWithURL:[NSURL URLWithString:[dicHost objectForKey:@"icon"]]];
+        hostView.hostTitle.text = [NSString stringWithFormat:@"%@",[dicHost objectForKey:@"name"]];
+        hostView.hostDescribe.text = [NSString stringWithFormat:@"%@",[dicHost objectForKey:@"summary"]];
+        
+        NSArray *array = [dicHost objectForKey:@"labels"];
         [hostView setlabelOfHost:array];
     }
     
@@ -229,22 +236,33 @@
 
 - (UIView*)madeHeadViewFour
 {
+    //微调_totleHeight
+    _totleHeight = _totleHeight-10;
     UIView *headViewFour = [[UIView alloc]initWithFrame:CGRectMake(0, _totleHeight, SCREEN_WIDTH, 200)];
     headViewFour.backgroundColor = [UIColor yellowColor];
     
-    XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
-    titleView.titleLabel.text =@"推荐买手";
+    XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    titleView.titleLabel.text =@"最新导师";
     titleView.backgroundColor = [UIColor whiteColor];
     [headViewFour addSubview:titleView];
     
-    for (int i=0; i<10; i++) {
+    for (int i=0; i<_modelOfNewPeoPle.count; i++) {
         XMLearnStyleViewFour *viewFour = [[[NSBundle mainBundle]loadNibNamed:@"XMLearnStyleViewFour" owner:nil options:nil]lastObject];
         viewFour.origin = CGPointMake(0, titleView.bottom+viewFour.height*i);
         viewFour.width = SCREEN_WIDTH;
-        NSArray *array = [NSArray arrayWithObjects:@"美妆控",@"爱实测",@"爱分享~~", nil];
+        
+        //赋值
+        NSDictionary *dicHost = _modelOfNewPeoPle[i];
+        [viewFour.bagView sd_setImageWithURL:[NSURL URLWithString:[dicHost objectForKey:@"buyerTabBg"]]];
+        [viewFour.iconImg sd_setImageWithURL:[NSURL URLWithString:[dicHost objectForKey:@"background"]]];
+        viewFour.title.text = [NSString stringWithFormat:@"%@",[dicHost objectForKey:@"name"]];
+        viewFour.descLabel.text = [NSString stringWithFormat:@"%@",[dicHost objectForKey:@"summary"]];
+        viewFour.numberOfArticle.text = [NSString stringWithFormat:@"%@",[dicHost objectForKey:@"reviewcount"]];
+        NSArray *array = [dicHost objectForKey:@"labels"];
         [viewFour createLabel:array];
         
-        NSArray *array2 = [NSArray arrayWithObjects:@"Img_default",@"Img_default",@"Img_default", nil];
+        
+        NSArray *array2 = [dicHost objectForKey:@"reviews"];
         [viewFour createImg:array2];
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(detailAltcter)];
@@ -284,38 +302,56 @@
 - (void)activeBtnclick:(UIButton*)sender
 {
     if (sender.tag ==100){
-        //摇一摇
-        NewShakeViewController * shake = [[NewShakeViewController alloc] init];
-        shake.title = @"摇一摇";
-        [self.navigationController pushViewController:shake animated:YES];
+//        //摇一摇
+//        NewShakeViewController * shake = [[NewShakeViewController alloc] init];
+//        shake.title = @"摇一摇";
+//        [self.navigationController pushViewController:shake animated:YES];
+        //美妆鉴赏
+        NSString * tag = @"没有tag";
+        NSString * out_url = _urlWithMeiZhuang[0];
+        NSString * type = @"美妆鉴赏";
+        [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
     }else if (sender.tag ==101){
-        SignViewController * vc = [[SignViewController alloc]init];
-        
-        NSArray *array1 = [NSArray arrayWithObjects:@"5",@"10",@"15",@"20",@"25", nil];
-        NSDictionary *rule = [NSDictionary dictionaryWithObjectsAndKeys:
-                              @"5",@"1",
-                              @"10",@"2",
-                              @"15",@"3",
-                              @"20",@"4",
-                              @"25",@"5",nil];
-        
-        NSDictionary *dicnew = [NSDictionary dictionaryWithObjectsAndKeys:
-                                array1,@"analysis_rule",
-                                @"1",@"current",
-                                rule,@"rule",
-                                @"103",@"score",
-                                @"5",@"sign_score",
-                                nil];
-        vc.transitioningDelegate = [UIApplication sharedApplication].keyWindow.rootViewController;
-        vc.modalPresentationStyle = UIModalPresentationCustom;
-        vc.dic = dicnew;
-        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:^{
-            
-        }];
+//        SignViewController * vc = [[SignViewController alloc]init];
+//
+//        NSArray *array1 = [NSArray arrayWithObjects:@"5",@"10",@"15",@"20",@"25", nil];
+//        NSDictionary *rule = [NSDictionary dictionaryWithObjectsAndKeys:
+//                              @"5",@"1",
+//                              @"10",@"2",
+//                              @"15",@"3",
+//                              @"20",@"4",
+//                              @"25",@"5",nil];
+//
+//        NSDictionary *dicnew = [NSDictionary dictionaryWithObjectsAndKeys:
+//                                array1,@"analysis_rule",
+//                                @"1",@"current",
+//                                rule,@"rule",
+//                                @"103",@"score",
+//                                @"5",@"sign_score",
+//                                nil];
+//        vc.transitioningDelegate = [UIApplication sharedApplication].keyWindow.rootViewController;
+//        vc.modalPresentationStyle = UIModalPresentationCustom;
+//        vc.dic = dicnew;
+//        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:^{
+//
+//        }];
+        NSString * tag = @"没有tag";
+        NSString * out_url = _urlWithMeiZhuang[1];
+        NSString * type = @"专题栏";
+        [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
     }else if (sender.tag == 102){
-        XMCreditsExchange *credits = [[XMCreditsExchange alloc]init];
-        credits.title = @"变美视频";
-        [self.navigationController pushViewController:credits animated:YES];
+//        XMCreditsExchange *credits = [[XMCreditsExchange alloc]init];
+//        credits.title = @"变美视频";
+//        [self.navigationController pushViewController:credits animated:YES];
+        NSString * tag = @"没有tag";
+        NSString * out_url = _urlWithMeiZhuang[2];
+        NSString * type = @"变美视频";
+        [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
+    }else if (sender.tag ==103){
+        NSString * tag = @"没有tag";
+        NSString * out_url = _urlWithMeiZhuang[3];
+        NSString * type = @"大牌试用";
+        [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
     }
 }
 
@@ -374,6 +410,12 @@
     
     _activeArray = [NSMutableArray arrayWithObjects:@"美妆鉴赏",@"专题",@"变美视频",@"大牌试用", nil];
     _urlRecommend = [NSMutableArray arrayWithObjects:@"http://img0.cosmeapp.com/FulPtuDJpHpmjRa-VUUceTRjQZUJ",@"http://img0.cosmeapp.com/Frq7O6Ip9MhAI98oUuH0aFBKi0aZ",@"http://img0.cosmeapp.com/FkIaA6pmXaHaceUUxVH87S6fdFBm",@"http://img0.cosmeapp.com/FuKpvsn6eQ4bB0Jg5h8zWLc-dr5q", nil];
+    
+    _urlWithMeiZhuang = [NSMutableArray arrayWithObjects:@"https://public.cosmeapp.com/mapp/ranklist/2017m/list.html",
+        @"https://h5.cosmeapp.com/pgc/hot-thread",
+         @"https://h5.cosmeapp.com/pgc/new-video",
+         @"https://h5.cosmeapp.com/try/list",
+                         nil];
 }
 
 - (void)createNetWork
@@ -388,6 +430,8 @@
         NSArray *arrayChannel = [dicPeoPle objectForKey:@"channels"];
         _modelOfHotPeoPle = arrayChannel;
         
+        NSArray *arrayNewBuy = [[[aDictronaryBaseObjects objectForKey:@"result"][2]objectForKey:@"channelItem"]objectForKey:@"channels"];
+        _modelOfNewPeoPle = arrayNewBuy;
         //创建头部视图
         [self initHeadView];
         

@@ -38,7 +38,13 @@
     CGFloat labelSpace = 15;
     CGFloat labelViewSpace = 5;
     _bottomWith = labelSpace+self.iconImg.bottom;
-    for (int i=0; i<label.count; i++) {
+    NSInteger num = 0;
+    if (label.count >3){
+        num = 3;
+    }else {
+        num = label.count;
+    }
+    for (int i=0; i<num; i++) {
         XMLabelExtension *labelext = [[XMLabelExtension alloc]init];
         [labelext setLabelTextColor:RGBACOLOR(175, 175, 175, 1) textName:label[i]];
         labelext.frame = CGRectMake(_bottomWith, self.descLabel.bottom+10, labelext.width, labelext.height);
@@ -57,10 +63,15 @@
     CGFloat imageViewSapce = 9;
     CGFloat imageW = 45;
     CGFloat imageH = 45;
-    for (int i=0; i<imageArray.count; i++) {
+    NSInteger num = 0;
+    if (imageArray.count >3){
+        num = 3;
+    }else {
+        num = imageArray.count;
+    }
+    for (int i=0; i<num; i++) {
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.iconImg.bottom+imageSpace+(imageW+imageViewSapce)*i, self.descLabel.bottom+45, imageW,imageH)];
-        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageArray[i]]];
-        
+        [imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[imageArray[i]objectForKey:@"img"]]] placeholderImage:[UIImage imageNamed:@"Img_default"]];
         imageView.layer.cornerRadius = 3.0;
         imageView.clipsToBounds = YES;
         [self.homeView addSubview:imageView];

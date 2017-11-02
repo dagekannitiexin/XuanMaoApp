@@ -43,6 +43,7 @@
  作者写的文章数量
  */
 @property (weak, nonatomic) IBOutlet UIView *numberOfTitle;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfArticle;
 
 /*
  创建标签方法
