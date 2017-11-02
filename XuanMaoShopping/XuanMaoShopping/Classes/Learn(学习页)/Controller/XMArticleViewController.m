@@ -32,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //处理navigationBar
+    self.fd_prefersNavigationBarHidden = YES;
     [self createNavigationBar];
     
     self.buyBtnImg.userInteractionEnabled = YES;

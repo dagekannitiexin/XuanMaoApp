@@ -13,6 +13,7 @@
     UITableView  *_tableView;
     UIScrollView *_headView;
     NSArray      *_wetArray;
+    NSArray      *_urlImg;
 }
 
 @end
@@ -35,6 +36,7 @@
 - (void)loadData{
     NSString *path = [[NSBundle mainBundle]pathForResource:@"PublicSFTResources" ofType:@"plist"];
     _wetArray = [NSArray arrayWithContentsOfFile:path];
+    _urlImg = [NSArray arrayWithObjects:@"https://img0.cosmeapp.com/FryatMdcb8bqeV00Ytb91Y-CaUuJ",@"https://img0.cosmeapp.com/FgtNd-6HqsFeR8gS7SFXZ1iAJLhK",@"https://img0.cosmeapp.com/Fk7Jqcog8gWUIALCFTbJeur0a73I",@"https://img0.cosmeapp.com/Fl0161g1xwiwbXWuOrWKTmA2esLo",@"https://img0.cosmeapp.com/FriVc4UYIQ3n5N2WH9lvsbHlkVm6",@"https://img0.cosmeapp.com/Fgog3pb1UZzmYqdDD3kay4WNqU8h",@"https://img0.cosmeapp.com/Fl1K88p4qveDxqpi135bkdy_0q1d",@"https://img0.cosmeapp.com/Fk96TyHs7wZ06bPSvuJ2vyWUX_ao", nil];
 }
 
 - (void)createHeadView{
@@ -48,10 +50,9 @@
     CGFloat btnrecommendedW = 135;
     CGFloat btnrecommendedH = 75;
     CGFloat recommendedspace = 10;
-    for (int i =0; i<4; i++) {
+    for (int i =0; i<_urlImg.count; i++) {
         UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(15 + (btnrecommendedW+recommendedspace)*i, 10, btnrecommendedW, btnrecommendedH)];
-        btn.tag = i+100;
-        [btn setImage:[UIImage imageNamed:@"Img_default"] forState:UIControlStateNormal];
+        [btn sd_setImageWithURL:[NSURL URLWithString:_urlImg[i]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"Img_default"]];
         btn.tag = i+100;
         [btn addTarget:self action:@selector(headBtnclick:) forControlEvents:UIControlEventTouchUpInside];
         [_headView addSubview:btn];
@@ -107,7 +108,7 @@
     
     NSString * tag = @"没有tag";
     NSString * out_url = [_wetArray[indexPath.row]objectForKey:@"webUrl"];
-    NSString * type = @"没有type";
+    NSString * type = @"专题";
     [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
 }
 @end
