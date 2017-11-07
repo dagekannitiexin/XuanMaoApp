@@ -430,7 +430,7 @@
         NSArray *arrayChannel = [dicPeoPle objectForKey:@"channels"];
         _modelOfHotPeoPle = arrayChannel;
         
-        NSArray *arrayNewBuy = [[[aDictronaryBaseObjects objectForKey:@"result"][2]objectForKey:@"channelItem"]objectForKey:@"channels"];
+        NSArray *arrayNewBuy = [[[aDictronaryBaseObjects objectForKey:@"result"][1]objectForKey:@"channelItem"]objectForKey:@"channels"];
         _modelOfNewPeoPle = arrayNewBuy;
         //创建头部视图
         [self initHeadView];
@@ -442,3 +442,4 @@
     }];
 }
 @end
+

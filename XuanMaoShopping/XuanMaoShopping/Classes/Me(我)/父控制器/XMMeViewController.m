@@ -46,7 +46,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _arrayWithTitlte = [NSArray arrayWithObjects:@"消息中心",@"我的订单",@"我的拼团",@"我的关注",@"我的喜欢", nil];
+    _arrayWithTitlte = [NSArray arrayWithObjects:@"消息中心",@"我的订单",@"积分商城",@"我的关注",@"我的喜欢", nil];
     _arrayWithImg = [NSArray arrayWithObjects:@"iconMeMessage",@"iconMeOrder",@"iconGroupBuy",@"iconMeFollowing",@"iconMeLike",nil];
     
     _arrayWithTitleTwo = [NSArray arrayWithObjects:@"分享有奖",@"优惠券", nil];

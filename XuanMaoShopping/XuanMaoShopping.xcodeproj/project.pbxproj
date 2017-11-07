@@ -99,7 +99,6 @@
 		18CA95001F6A65FE00B1A198 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18CA94F41F6A65FE00B1A198 /* README.md */; };
 		18CA95031F6A663300B1A198 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA95021F6A663300B1A198 /* UIView+Frame.m */; };
 		18D20C891F662E6A007B7905 /* XMMeMyOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C881F662E6A007B7905 /* XMMeMyOrder.m */; };
-		18D20C8C1F662F8F007B7905 /* XMMeGroupBuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C8B1F662F8F007B7905 /* XMMeGroupBuy.m */; };
 		18D20C8F1F66335E007B7905 /* XMMeFollowing.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D20C8E1F66335E007B7905 /* XMMeFollowing.m */; };
 		18D56AA51F8C9B3200C2DBF4 /* NewShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AA31F8C9B0B00C2DBF4 /* NewShakeViewController.m */; };
 		18D56AAB1F8C9B8A00C2DBF4 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D56AA81F8C9B7500C2DBF4 /* DismissingAnimator.m */; };
@@ -118,6 +117,9 @@
 		18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */; };
 		18F6DA511F75067100C8144D /* SFTMoview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18F6DA501F75067100C8144D /* SFTMoview.mp4 */; };
 		18F8E02A1F5E39E600006A18 /* XMFootLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8E0291F5E39E600006A18 /* XMFootLineView.xib */; };
+		18FEB5AD1FB15D5300C9FE1C /* XMMeGroupBuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEB5AB1FB15D5300C9FE1C /* XMMeGroupBuy.m */; };
+		18FEB5B01FB15EB400C9FE1C /* XMIntegralHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEB5AF1FB15EB400C9FE1C /* XMIntegralHeadView.m */; };
+		18FEB5B21FB15F2B00C9FE1C /* XMIntegralHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FEB5B11FB15F2B00C9FE1C /* XMIntegralHeadView.xib */; };
 		18FF06A81F5E413000EA1D13 /* XMFootLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06A71F5E413000EA1D13 /* XMFootLineView.m */; };
 		18FF06B21F5E813900EA1D13 /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06AF1F5E813900EA1D13 /* NewPagedFlowView.m */; };
 		18FF06B31F5E813900EA1D13 /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06B11F5E813900EA1D13 /* PGIndexBannerSubiew.m */; };
@@ -364,8 +366,6 @@
 		18CA95021F6A663300B1A198 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18D20C871F662E6A007B7905 /* XMMeMyOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeMyOrder.h; sourceTree = "<group>"; };
 		18D20C881F662E6A007B7905 /* XMMeMyOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeMyOrder.m; sourceTree = "<group>"; };
-		18D20C8A1F662F8F007B7905 /* XMMeGroupBuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeGroupBuy.h; sourceTree = "<group>"; };
-		18D20C8B1F662F8F007B7905 /* XMMeGroupBuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeGroupBuy.m; sourceTree = "<group>"; };
 		18D20C8D1F66335E007B7905 /* XMMeFollowing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeFollowing.h; sourceTree = "<group>"; };
 		18D20C8E1F66335E007B7905 /* XMMeFollowing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeFollowing.m; sourceTree = "<group>"; };
 		18D56AA21F8C9B0B00C2DBF4 /* NewShakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewShakeViewController.h; sourceTree = "<group>"; };
@@ -395,6 +395,11 @@
 		18E3E7C11F5F8A26007D86FC /* XMLearnStyleViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLearnStyleViewTwo.xib; sourceTree = "<group>"; };
 		18F6DA501F75067100C8144D /* SFTMoview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFTMoview.mp4; sourceTree = "<group>"; };
 		18F8E0291F5E39E600006A18 /* XMFootLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMFootLineView.xib; sourceTree = "<group>"; };
+		18FEB5AB1FB15D5300C9FE1C /* XMMeGroupBuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeGroupBuy.m; sourceTree = "<group>"; };
+		18FEB5AC1FB15D5300C9FE1C /* XMMeGroupBuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeGroupBuy.h; sourceTree = "<group>"; };
+		18FEB5AE1FB15EB400C9FE1C /* XMIntegralHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMIntegralHeadView.h; sourceTree = "<group>"; };
+		18FEB5AF1FB15EB400C9FE1C /* XMIntegralHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMIntegralHeadView.m; sourceTree = "<group>"; };
+		18FEB5B11FB15F2B00C9FE1C /* XMIntegralHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMIntegralHeadView.xib; sourceTree = "<group>"; };
 		18FF06A61F5E413000EA1D13 /* XMFootLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFootLineView.h; sourceTree = "<group>"; };
 		18FF06A71F5E413000EA1D13 /* XMFootLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFootLineView.m; sourceTree = "<group>"; };
 		18FF06AE1F5E813900EA1D13 /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
@@ -923,6 +928,42 @@
 			path = presentAnimation;
 			sourceTree = "<group>";
 		};
+		18FEB5A71FB15D1300C9FE1C /* 积分商城 */ = {
+			isa = PBXGroup;
+			children = (
+				18FEB5A81FB15D1300C9FE1C /* Controller */,
+				18FEB5A91FB15D1300C9FE1C /* Model */,
+				18FEB5AA1FB15D1300C9FE1C /* View */,
+			);
+			path = "积分商城";
+			sourceTree = "<group>";
+		};
+		18FEB5A81FB15D1300C9FE1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18FEB5AC1FB15D5300C9FE1C /* XMMeGroupBuy.h */,
+				18FEB5AB1FB15D5300C9FE1C /* XMMeGroupBuy.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18FEB5A91FB15D1300C9FE1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18FEB5AA1FB15D1300C9FE1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18FEB5AE1FB15EB400C9FE1C /* XMIntegralHeadView.h */,
+				18FEB5AF1FB15EB400C9FE1C /* XMIntegralHeadView.m */,
+				18FEB5B11FB15F2B00C9FE1C /* XMIntegralHeadView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18FF06AD1F5E813900EA1D13 /* NewPagedFlowView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1029,6 +1070,7 @@
 				1817F95E1F79ED1D00291F04 /* thematic（专题） */,
 				237797441F553281008B2DA8 /* Me(我) */,
 				2377974B1F553281008B2DA8 /* 工具 */,
+				18FEB5A71FB15D1300C9FE1C /* 积分商城 */,
 				2377974C1F553281008B2DA8 /* 框架 */,
 				2377974D1F553281008B2DA8 /* 附加功能 */,
 			);
@@ -1164,8 +1206,6 @@
 				1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */,
 				18D20C871F662E6A007B7905 /* XMMeMyOrder.h */,
 				18D20C881F662E6A007B7905 /* XMMeMyOrder.m */,
-				18D20C8A1F662F8F007B7905 /* XMMeGroupBuy.h */,
-				18D20C8B1F662F8F007B7905 /* XMMeGroupBuy.m */,
 				18D20C8D1F66335E007B7905 /* XMMeFollowing.h */,
 				18D20C8E1F66335E007B7905 /* XMMeFollowing.m */,
 				18233E311F68D06300B80F69 /* XMMeLikeEmpty.h */,
@@ -1524,6 +1564,7 @@
 				18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */,
 				18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */,
 				18DE40901F612779005D7942 /* XMMeHeadStyleView.xib in Resources */,
+				18FEB5B21FB15F2B00C9FE1C /* XMIntegralHeadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,6 +1689,7 @@
 				18CA94D21F6A4F3800B1A198 /* SWActionSheet.m in Sources */,
 				18A67E291FA863D30068DEB7 /* FastForwardView.m in Sources */,
 				18FF06B61F5E9D4100EA1D13 /* XMLearnStyleViewOne.m in Sources */,
+				18FEB5B01FB15EB400C9FE1C /* XMIntegralHeadView.m in Sources */,
 				23776AF31F5CE4BD00AF4470 /* XMGoodsViewStyleTwoView.m in Sources */,
 				18A67E101FA83ED40068DEB7 /* Reachability.m in Sources */,
 				18A67E2D1FA863D30068DEB7 /* WMPlayer.m in Sources */,
@@ -1674,6 +1716,7 @@
 				18D20C8F1F66335E007B7905 /* XMMeFollowing.m in Sources */,
 				18A441F31F67B78800DB5C82 /* XMMeGift.m in Sources */,
 				183B30181F94A9B100E6708B /* XMBuyShopView.m in Sources */,
+				18FEB5AD1FB15D5300C9FE1C /* XMMeGroupBuy.m in Sources */,
 				18CA95001F6A65FE00B1A198 /* README.md in Sources */,
 				237797B91F5559A4008B2DA8 /* NSData+ImageContentType.m in Sources */,
 				18CA94D01F6A4F3800B1A198 /* ActionSheetStringPicker.m in Sources */,
@@ -1730,7 +1773,6 @@
 				237797C31F5559A4008B2DA8 /* UIButton+WebCache.m in Sources */,
 				18CA94CD1F6A4F3800B1A198 /* ActionSheetDistancePicker.m in Sources */,
 				237797C41F5559A4008B2DA8 /* UIImage+GIF.m in Sources */,
-				18D20C8C1F662F8F007B7905 /* XMMeGroupBuy.m in Sources */,
 				18233E391F68FD9400B80F69 /* XMMeAddressEmptyDetail.m in Sources */,
 				18D56AAC1F8C9B8E00C2DBF4 /* PresentingAnimator.m in Sources */,
 				18A67E031FA83ED40068DEB7 /* JSONModel.m in Sources */,
@@ -1885,6 +1927,8 @@
 			baseConfigurationReference = F1E42A9C3459AF76A5229ECD /* Pods-XuanMaoShopping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
@@ -1892,6 +1936,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1900,6 +1945,8 @@
 			baseConfigurationReference = 203668276F28B681D0927FA0 /* Pods-XuanMaoShopping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9KZX2DWJL;
 				GCC_PREFIX_HEADER = "XuanMaoShopping/Classes/Main/XuanMaoShopping-Prefix.pch";
 				INFOPLIST_FILE = XuanMaoShopping/Info.plist;
@@ -1907,6 +1954,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuanmao.XuanMaoShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

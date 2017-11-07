@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HaA-b1-OQX" id="RPR-8z-qIq">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大哥看你贴心" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTg-9L-JcI">
@@ -29,10 +29,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买到5个好物·6个关注·0个喜欢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lv-dh-qqE">
-                        <rect key="frame" x="17" y="81" width="170" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买到5个好物·6个关注·0个喜欢·256个积分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lv-dh-qqE">
+                        <rect key="frame" x="17" y="81" width="200" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="170" id="OQg-6E-GnL"/>
+                            <constraint firstAttribute="width" constant="200" id="OQg-6E-GnL"/>
                             <constraint firstAttribute="height" constant="21" id="fPB-xL-B6w"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -61,7 +61,7 @@
                     <constraint firstItem="0lv-dh-qqE" firstAttribute="top" secondItem="DTg-9L-JcI" secondAttribute="bottom" constant="10" id="aV2-b5-gpv"/>
                     <constraint firstItem="0lv-dh-qqE" firstAttribute="leading" secondItem="RPR-8z-qIq" secondAttribute="leadingMargin" constant="9" id="eyT-fQ-GJi"/>
                     <constraint firstAttribute="trailingMargin" secondItem="iMs-EZ-LIa" secondAttribute="trailing" constant="12" id="faJ-cD-UqJ"/>
-                    <constraint firstItem="0lv-dh-qqE" firstAttribute="centerX" secondItem="DTg-9L-JcI" secondAttribute="centerX" constant="15" id="gEk-Qn-hEU"/>
+                    <constraint firstItem="0lv-dh-qqE" firstAttribute="centerX" secondItem="DTg-9L-JcI" secondAttribute="centerX" constant="30" id="gEk-Qn-hEU"/>
                     <constraint firstAttribute="bottom" secondItem="YEF-LI-v8i" secondAttribute="bottom" id="mcO-Wv-F1W"/>
                     <constraint firstAttribute="trailing" secondItem="YEF-LI-v8i" secondAttribute="trailing" constant="17" id="una-WQ-WV2"/>
                 </constraints>
