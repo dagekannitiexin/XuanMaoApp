@@ -120,6 +120,9 @@
 		18FEB5AD1FB15D5300C9FE1C /* XMMeGroupBuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEB5AB1FB15D5300C9FE1C /* XMMeGroupBuy.m */; };
 		18FEB5B01FB15EB400C9FE1C /* XMIntegralHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEB5AF1FB15EB400C9FE1C /* XMIntegralHeadView.m */; };
 		18FEB5B21FB15F2B00C9FE1C /* XMIntegralHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FEB5B11FB15F2B00C9FE1C /* XMIntegralHeadView.xib */; };
+		18FEB5B51FB1A25D00C9FE1C /* XMShopCostIntegralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEB5B41FB1A25D00C9FE1C /* XMShopCostIntegralViewController.m */; };
+		18FEB5B91FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEB5B71FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.m */; };
+		18FEB5BA1FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FEB5B81FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.xib */; };
 		18FF06A81F5E413000EA1D13 /* XMFootLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06A71F5E413000EA1D13 /* XMFootLineView.m */; };
 		18FF06B21F5E813900EA1D13 /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06AF1F5E813900EA1D13 /* NewPagedFlowView.m */; };
 		18FF06B31F5E813900EA1D13 /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF06B11F5E813900EA1D13 /* PGIndexBannerSubiew.m */; };
@@ -400,6 +403,11 @@
 		18FEB5AE1FB15EB400C9FE1C /* XMIntegralHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMIntegralHeadView.h; sourceTree = "<group>"; };
 		18FEB5AF1FB15EB400C9FE1C /* XMIntegralHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMIntegralHeadView.m; sourceTree = "<group>"; };
 		18FEB5B11FB15F2B00C9FE1C /* XMIntegralHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMIntegralHeadView.xib; sourceTree = "<group>"; };
+		18FEB5B31FB1A25D00C9FE1C /* XMShopCostIntegralViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMShopCostIntegralViewController.h; sourceTree = "<group>"; };
+		18FEB5B41FB1A25D00C9FE1C /* XMShopCostIntegralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMShopCostIntegralViewController.m; sourceTree = "<group>"; };
+		18FEB5B61FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMintegralCollectionViewCell.h; sourceTree = "<group>"; };
+		18FEB5B71FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMintegralCollectionViewCell.m; sourceTree = "<group>"; };
+		18FEB5B81FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMintegralCollectionViewCell.xib; sourceTree = "<group>"; };
 		18FF06A61F5E413000EA1D13 /* XMFootLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFootLineView.h; sourceTree = "<group>"; };
 		18FF06A71F5E413000EA1D13 /* XMFootLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFootLineView.m; sourceTree = "<group>"; };
 		18FF06AE1F5E813900EA1D13 /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
@@ -943,6 +951,8 @@
 			children = (
 				18FEB5AC1FB15D5300C9FE1C /* XMMeGroupBuy.h */,
 				18FEB5AB1FB15D5300C9FE1C /* XMMeGroupBuy.m */,
+				18FEB5B31FB1A25D00C9FE1C /* XMShopCostIntegralViewController.h */,
+				18FEB5B41FB1A25D00C9FE1C /* XMShopCostIntegralViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -960,6 +970,9 @@
 				18FEB5AE1FB15EB400C9FE1C /* XMIntegralHeadView.h */,
 				18FEB5AF1FB15EB400C9FE1C /* XMIntegralHeadView.m */,
 				18FEB5B11FB15F2B00C9FE1C /* XMIntegralHeadView.xib */,
+				18FEB5B61FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.h */,
+				18FEB5B71FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.m */,
+				18FEB5B81FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1547,6 +1560,7 @@
 				184E21241F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib in Resources */,
 				18A67E2A1FA863D30068DEB7 /* FastForwardView.xib in Resources */,
 				18CA94F51F6A65FE00B1A198 /* LICENSE in Resources */,
+				18FEB5BA1FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.xib in Resources */,
 				2377970F1F55321E008B2DA8 /* Assets.xcassets in Resources */,
 				23294DF91F56892200720245 /* XMGoodsTitleStyleView.xib in Resources */,
 				187ED9B81F5D2BAF009CDD61 /* XMGoodsViewStyleThreeView.xib in Resources */,
@@ -1674,10 +1688,12 @@
 				189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */,
 				23294DF71F56890800720245 /* XMGoodsTitleStyleView.m in Sources */,
 				18D20C891F662E6A007B7905 /* XMMeMyOrder.m in Sources */,
+				18FEB5B51FB1A25D00C9FE1C /* XMShopCostIntegralViewController.m in Sources */,
 				237797931F555979008B2DA8 /* SDCycleScrollView.m in Sources */,
 				1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */,
 				2377974E1F553281008B2DA8 /* XMHomeViewController.m in Sources */,
 				1808AC0F1F6A1E2900430405 /* XXTextView.m in Sources */,
+				18FEB5B91FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.m in Sources */,
 				18A67E1B1FA83F8B0068DEB7 /* DesUtil.m in Sources */,
 				18A67E041FA83ED40068DEB7 /* RESTError.m in Sources */,
 				18D56AB61F8CA0A500C2DBF4 /* NZLabel.m in Sources */,
