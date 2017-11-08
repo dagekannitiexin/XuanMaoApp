@@ -312,29 +312,7 @@
         NSString * type = @"美妆鉴赏";
         [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
     }else if (sender.tag ==101){
-//        SignViewController * vc = [[SignViewController alloc]init];
-//
-//        NSArray *array1 = [NSArray arrayWithObjects:@"5",@"10",@"15",@"20",@"25", nil];
-//        NSDictionary *rule = [NSDictionary dictionaryWithObjectsAndKeys:
-//                              @"5",@"1",
-//                              @"10",@"2",
-//                              @"15",@"3",
-//                              @"20",@"4",
-//                              @"25",@"5",nil];
-//
-//        NSDictionary *dicnew = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                array1,@"analysis_rule",
-//                                @"1",@"current",
-//                                rule,@"rule",
-//                                @"103",@"score",
-//                                @"5",@"sign_score",
-//                                nil];
-//        vc.transitioningDelegate = [UIApplication sharedApplication].keyWindow.rootViewController;
-//        vc.modalPresentationStyle = UIModalPresentationCustom;
-//        vc.dic = dicnew;
-//        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:^{
-//
-//        }];
+  
         NSString * tag = @"没有tag";
         NSString * out_url = _urlWithMeiZhuang[1];
         NSString * type = @"专题栏";

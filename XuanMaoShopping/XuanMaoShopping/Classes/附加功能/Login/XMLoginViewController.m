@@ -9,6 +9,8 @@
 #import "XMLoginViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "XMLoginPhone.h"
+#import <UMSocialCore/UMSocialCore.h>
+
 
 @interface XMLoginViewController ()
 
@@ -252,6 +254,29 @@
             break;
         case 102:
             NSLog(@"使用微信登录");
+            [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_WechatSession currentViewController:nil completion:^(id result, NSError *error) {
+                if (error) {
+                    NSLog(@"%@",error);
+                } else {
+                    UMSocialUserInfoResponse *resp = result;
+                    
+                    // 授权信息
+                    NSLog(@"Wechat uid: %@", resp.uid);
+                    NSLog(@"Wechat openid: %@", resp.openid);
+                    NSLog(@"Wechat unionid: %@", resp.unionId);
+                    NSLog(@"Wechat accessToken: %@", resp.accessToken);
+                    NSLog(@"Wechat refreshToken: %@", resp.refreshToken);
+                    NSLog(@"Wechat expiration: %@", resp.expiration);
+                    
+                    // 用户信息
+                    NSLog(@"Wechat name: %@", resp.name);
+                    NSLog(@"Wechat iconurl: %@", resp.iconurl);
+                    NSLog(@"Wechat gender: %@", resp.unionGender);
+                    
+                    // 第三方平台SDK源数据
+                    NSLog(@"Wechat originalResponse: %@", resp.originalResponse);
+                }
+            }];
             break;
         case 103:
             NSLog(@"使用QQ登录");

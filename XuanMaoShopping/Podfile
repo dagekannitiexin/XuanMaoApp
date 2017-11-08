@@ -5,4 +5,7 @@ pod 'pop'
 pod 'SVProgressHUD'
 pod 'FDFullscreenPopGesture'
 pod 'Masonry'
+pod ‘UMengUShare/Social/ReducedWeChat'
+pod ‘UMengUShare/Social/ReducedQQ'
+pod ‘UMengUShare/Social/ReducedSina'
 end
