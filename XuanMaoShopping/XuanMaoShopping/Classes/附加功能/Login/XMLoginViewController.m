@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBarHidden = YES;
+    self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     //添加播放器
     [self createMp4];
@@ -136,7 +136,7 @@
     [weCatBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginViewOne addSubview:weCatBtn];
     
-    UILabel *otherLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, weCatBtn.bottom+35, 66, 11)];
+    UILabel *otherLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, weCatBtn.bottom+20, 66, 50)];
     otherLabel.centerX = self.loginViewOne.centerX;
     otherLabel.textAlignment = NSTextAlignmentCenter;
     [otherLabel setLineBreakMode:NSLineBreakByWordWrapping];
@@ -260,7 +260,7 @@
                 } else {
                     UMSocialUserInfoResponse *resp = result;
                     
-                    // 授权信息
+                    //1 授权信息
                     NSLog(@"Wechat uid: %@", resp.uid);
                     NSLog(@"Wechat openid: %@", resp.openid);
                     NSLog(@"Wechat unionid: %@", resp.unionId);
@@ -280,9 +280,52 @@
             break;
         case 103:
             NSLog(@"使用QQ登录");
+            [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_QQ currentViewController:nil completion:^(id result, NSError *error) {
+                if (error) {
+                    
+                } else {
+                    UMSocialUserInfoResponse *resp = result;
+                    
+                    // 授权信息
+                    NSLog(@"QQ uid: %@", resp.uid);
+                    NSLog(@"QQ openid: %@", resp.openid);
+                    NSLog(@"QQ unionid: %@", resp.unionId);
+                    NSLog(@"QQ accessToken: %@", resp.accessToken);
+                    NSLog(@"QQ expiration: %@", resp.expiration);
+                    
+                    // 用户信息
+                    NSLog(@"QQ name: %@", resp.name);
+                    NSLog(@"QQ iconurl: %@", resp.iconurl);
+                    NSLog(@"QQ gender: %@", resp.unionGender);
+                    
+                    // 第三方平台SDK源数据
+                    NSLog(@"QQ originalResponse: %@", resp.originalResponse);
+                }
+            }];
             break;
         case 104:
             NSLog(@"使用微博登录");
+            [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_Sina currentViewController:nil completion:^(id result, NSError *error) {
+                if (error) {
+                    
+                } else {
+                    UMSocialUserInfoResponse *resp = result;
+                    
+                    // 授权信息
+                    NSLog(@"Sina uid: %@", resp.uid);
+                    NSLog(@"Sina accessToken: %@", resp.accessToken);
+                    NSLog(@"Sina refreshToken: %@", resp.refreshToken);
+                    NSLog(@"Sina expiration: %@", resp.expiration);
+                    
+                    // 用户信息
+                    NSLog(@"Sina name: %@", resp.name);
+                    NSLog(@"Sina iconurl: %@", resp.iconurl);
+                    NSLog(@"Sina gender: %@", resp.unionGender);
+                    
+                    // 第三方平台SDK源数据
+                    NSLog(@"Sina originalResponse: %@", resp.originalResponse);
+                }
+            }];
             break;
         default:
             break;

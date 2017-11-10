@@ -31,9 +31,8 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>1、tencent1106334812</string>
-				<string>
-2、QQ41f1545c</string>
+				<string>tencent1106334812
+QQ41f1545c</string>
 			</array>
 		</dict>
 		<dict>
