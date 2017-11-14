@@ -97,21 +97,17 @@
     NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
     [requestInfo setValue:@"oX84XxIjjTO467fpFwkOSASm4kc0" forKey:@"openid"];
     [requestInfo setValue:_numTextField.text forKey:@"telnumber"];
-    NSString *netPath = [NSString stringWithFormat:@"%@",@"118.31.4.245/smartapi/api/User/RegTelNumberByWechatId"];
+    [requestInfo setValue:@"1234" forKey:@"code"];
+    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.137.143/smartapi/api/User/RegTelNumberByWechatId"];
     [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
         NSLog(@"%@",aDictronaryBaseObjects);
     } onError:^(NSError *engineError) {
         NSLog(@"no");
     }];
-//    NSLog(@"号码已输入完全");
-//    XMLoginVerificationCode *VCVer = [[XMLoginVerificationCode alloc]init];
-//    [VCVer setNumberOfPhone:_numTextField.text];
-//    [self.navigationController pushViewController:VCVer animated:YES];
 }
 #pragma mark - uitextfieldDelegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    
     if (textField.text.length == 10){
         self.nextBtn.enabled = YES;
         return YES;

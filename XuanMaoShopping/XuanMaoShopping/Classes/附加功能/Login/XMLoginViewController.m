@@ -114,18 +114,8 @@
     CGFloat buttonWith = 150;
     CGFloat buttonOrginX = 28*KWidth_Scale;
     CGFloat buttonSapce = SCREEN_WIDTH - buttonWith*2 -buttonOrginX*2;
-    UIButton *phoneBtn = [[UIButton alloc]initWithFrame:CGRectMake(buttonOrginX, 14, buttonWith, 45)];
-    phoneBtn.backgroundColor = RGBACOLOR(90, 144, 220, 1);
-    phoneBtn.layer.cornerRadius = 5;
-    phoneBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    [phoneBtn setTitle:@"使用手机登录" forState:UIControlStateNormal];
-    [phoneBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [phoneBtn setImage:[UIImage imageNamed:@"iconLoginPhone"] forState:UIControlStateNormal];
-    phoneBtn.tag = 101;
-    [phoneBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
-    [self.loginViewOne addSubview:phoneBtn];
     
-    UIButton *weCatBtn = [[UIButton alloc]initWithFrame:CGRectMake(buttonOrginX+buttonWith+buttonSapce, 14, buttonWith, 45)];
+    UIButton *weCatBtn = [[UIButton alloc]initWithFrame:CGRectMake(buttonOrginX, 14, buttonWith, 45)];
     weCatBtn.backgroundColor = RGBACOLOR(106, 188, 64, 1);
     weCatBtn.layer.cornerRadius = 5;
     weCatBtn.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -135,6 +125,17 @@
     weCatBtn.tag = 102;
     [weCatBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginViewOne addSubview:weCatBtn];
+    
+    UIButton *phoneBtn = [[UIButton alloc]initWithFrame:CGRectMake(buttonOrginX+buttonWith+buttonSapce, 14, buttonWith, 45)];
+    phoneBtn.backgroundColor = RGBACOLOR(90, 144, 220, 1);
+    phoneBtn.layer.cornerRadius = 5;
+    phoneBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+    [phoneBtn setTitle:@"使用手机登录" forState:UIControlStateNormal];
+    [phoneBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [phoneBtn setImage:[UIImage imageNamed:@"iconLoginPhone"] forState:UIControlStateNormal];
+    phoneBtn.tag = 101;
+    [phoneBtn addTarget:self action:@selector(loginWay:) forControlEvents:UIControlEventTouchUpInside];
+    [self.loginViewOne addSubview:phoneBtn];
     
     UILabel *otherLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, weCatBtn.bottom+20, 66, 50)];
     otherLabel.centerX = self.loginViewOne.centerX;
@@ -393,7 +394,7 @@
  */
 - (void)postInfo:(NSMutableDictionary *)resp LoginType:(NSString*)type{
 
-    NSString *netPath = [NSString stringWithFormat:@"%@",@"118.31.4.245/smartapi/api/User/LoginByWechat"];
+    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.137.143/smartapi/api/User/LoginByWechat"];
     [XM_AppDelegate.engine sendRequesttoSLT:resp portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
         NSLog(@"%@",aDictronaryBaseObjects);
         
