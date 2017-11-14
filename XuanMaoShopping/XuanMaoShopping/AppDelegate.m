@@ -110,7 +110,8 @@
      100424468.no permission of union id
      [QQ/QZone平台集成说明]http://dev.umeng.com/social/ios/%E8%BF%9B%E9%98%B6%E6%96%87%E6%A1%A3#1_3
      */
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1106334812"/*设置QQ平台的appID*/  appSecret:@"EbgIP27SbN67GihJ" redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1106452219"/*设置QQ平台的appID*/  appSecret:@"9axUgUrdxjKifugr" redirectURL:@"http://mobile.umeng.com/social"];
+
     
     /*
      设置新浪的appKey和appSecret

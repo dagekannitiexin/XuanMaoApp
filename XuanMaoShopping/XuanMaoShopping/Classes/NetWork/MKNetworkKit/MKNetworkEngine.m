@@ -156,7 +156,7 @@ static NSOperationQueue *_sharedNetworkQueue;
 
 + (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object 
                          change:(NSDictionary *)change context:(void *)context
-{
+{ 
   if (object == _sharedNetworkQueue && [keyPath isEqualToString:@"operationCount"]) {
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kMKNetworkEngineOperationCountChanged 

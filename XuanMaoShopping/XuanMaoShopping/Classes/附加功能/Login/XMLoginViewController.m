@@ -253,6 +253,7 @@
         }
             break;
         case 102:
+        {
             NSLog(@"使用微信登录");
             [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_WechatSession currentViewController:nil completion:^(id result, NSError *error) {
                 if (error) {
@@ -275,10 +276,26 @@
                     
                     // 第三方平台SDK源数据
                     NSLog(@"Wechat originalResponse: %@", resp.originalResponse);
+
+                    //统一调用一个方法
+                    NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+                    [requestInfo setValue:resp.uid forKey:@"Openid"];
+                    [requestInfo setValue:resp.unionId forKey:@"Unionid"];
+                    [requestInfo setValue:resp.name forKey:@"Nickname"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"sex"] forKey:@"Sex"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"province"] forKey:@"Province"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"city"] forKey:@"City"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"country"] forKey:@"Country"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"privilege"] forKey:@"Privilege"];
+                    [requestInfo setValue:resp.iconurl forKey:@"HeadImageUrl"];
+                    [requestInfo setValue:[NSNumber numberWithInteger:1] forKey:@"Flag"];
+                    [self postInfo:requestInfo LoginType:@"微信"];
                 }
             }];
+        }
             break;
         case 103:
+        {
             NSLog(@"使用QQ登录");
             [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_QQ currentViewController:nil completion:^(id result, NSError *error) {
                 if (error) {
@@ -297,13 +314,33 @@
                     NSLog(@"QQ name: %@", resp.name);
                     NSLog(@"QQ iconurl: %@", resp.iconurl);
                     NSLog(@"QQ gender: %@", resp.unionGender);
-                    
+                    NSNumber *sex = [NSNumber new];
+                    if ([resp.unionGender isEqualToString:@"男"]){
+                        sex = [NSNumber numberWithInteger:1];
+                    }else {
+                        sex = [NSNumber numberWithInteger:0];
+                    }
                     // 第三方平台SDK源数据
                     NSLog(@"QQ originalResponse: %@", resp.originalResponse);
+                    //统一调用一个方法
+                    NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+                    [requestInfo setValue:resp.uid forKey:@"Openid"];
+                    [requestInfo setValue:resp.accessToken forKey:@"Unionid"];
+                    [requestInfo setValue:resp.name forKey:@"Nickname"];
+                    [requestInfo setValue:sex forKey:@"Sex"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"province"] forKey:@"Province"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"city"] forKey:@"City"];
+                    [requestInfo setValue:resp.iconurl forKey:@"HeadImageUrl"];
+                    [requestInfo setValue:@"中国" forKey:@"Country"];
+                    [requestInfo setValue:nil forKey:@"Privilege"];
+                    [requestInfo setValue:[NSNumber numberWithInteger:2] forKey:@"Flag"];
+                    [self postInfo:requestInfo LoginType:@"QQ"];
                 }
             }];
+    }
             break;
         case 104:
+        {
             NSLog(@"使用微博登录");
             [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_Sina currentViewController:nil completion:^(id result, NSError *error) {
                 if (error) {
@@ -321,14 +358,47 @@
                     NSLog(@"Sina name: %@", resp.name);
                     NSLog(@"Sina iconurl: %@", resp.iconurl);
                     NSLog(@"Sina gender: %@", resp.unionGender);
-                    
+                    NSNumber *sex = [NSNumber new];
+                    if ([resp.unionGender isEqualToString:@"男"]){
+                        sex = [NSNumber numberWithInteger:1];
+                    }else {
+                        sex = [NSNumber numberWithInteger:0];
+                    }
                     // 第三方平台SDK源数据
                     NSLog(@"Sina originalResponse: %@", resp.originalResponse);
+                    //统一调用一个方法
+                    NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+                    [requestInfo setValue:resp.uid forKey:@"Openid"];
+                    [requestInfo setValue:resp.accessToken forKey:@"Unionid"];
+                    [requestInfo setValue:resp.name forKey:@"Nickname"];
+                    [requestInfo setValue:sex forKey:@"Sex"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"province"] forKey:@"Province"];
+                    [requestInfo setValue:[resp.originalResponse objectForKey:@"city"] forKey:@"City"];
+                    [requestInfo setValue:resp.iconurl forKey:@"HeadImageUrl"];
+                    [requestInfo setValue:@"中国" forKey:@"Country"];
+                    [requestInfo setValue:nil forKey:@"Privilege"];
+                    [requestInfo setValue:[NSNumber numberWithInteger:3] forKey:@"Flag"];
+                    [self postInfo:requestInfo LoginType:@"新浪"];
                 }
             }];
+    }
             break;
         default:
             break;
     }
+}
+
+/*
+ 上传用户信息
+ */
+- (void)postInfo:(NSMutableDictionary *)resp LoginType:(NSString*)type{
+
+    NSString *netPath = [NSString stringWithFormat:@"%@",@"118.31.4.245/smartapi/api/User/LoginByWechat"];
+    [XM_AppDelegate.engine sendRequesttoSLT:resp portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
+        NSLog(@"%@",aDictronaryBaseObjects);
+        
+    } onError:^(NSError *engineError) {
+        NSLog(@"no");
+    }];
 }
 @end

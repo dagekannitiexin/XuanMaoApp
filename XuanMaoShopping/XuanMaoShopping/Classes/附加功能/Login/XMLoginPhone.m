@@ -93,10 +93,20 @@
 
 - (void)nextBtnClick
 {
-    NSLog(@"号码已输入完全");
-    XMLoginVerificationCode *VCVer = [[XMLoginVerificationCode alloc]init];
-    [VCVer setNumberOfPhone:_numTextField.text];
-    [self.navigationController pushViewController:VCVer animated:YES];
+    //设置常用参数
+    NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+    [requestInfo setValue:@"oX84XxIjjTO467fpFwkOSASm4kc0" forKey:@"openid"];
+    [requestInfo setValue:_numTextField.text forKey:@"telnumber"];
+    NSString *netPath = [NSString stringWithFormat:@"%@",@"118.31.4.245/smartapi/api/User/RegTelNumberByWechatId"];
+    [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
+        NSLog(@"%@",aDictronaryBaseObjects);
+    } onError:^(NSError *engineError) {
+        NSLog(@"no");
+    }];
+//    NSLog(@"号码已输入完全");
+//    XMLoginVerificationCode *VCVer = [[XMLoginVerificationCode alloc]init];
+//    [VCVer setNumberOfPhone:_numTextField.text];
+//    [self.navigationController pushViewController:VCVer animated:YES];
 }
 #pragma mark - uitextfieldDelegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
