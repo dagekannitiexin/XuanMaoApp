@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1808AC0F1F6A1E2900430405 /* XXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808AC0E1F6A1E2900430405 /* XXTextView.m */; };
+		1810C7211FC7AC390010D1C9 /* XMMeInformationModification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1810C71F1FC7AC390010D1C9 /* XMMeInformationModification.m */; };
+		1810C7221FC7AC390010D1C9 /* XMMeInformationModification.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1810C7201FC7AC390010D1C9 /* XMMeInformationModification.xib */; };
 		1817F9651F79ED9D00291F04 /* XMThematicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817F9641F79ED9D00291F04 /* XMThematicViewController.m */; };
 		1817F9711F7A1D1900291F04 /* XMThematilOfficialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817F96F1F7A1D1900291F04 /* XMThematilOfficialCell.m */; };
 		1817F9721F7A1D1900291F04 /* XMThematilOfficialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1817F9701F7A1D1900291F04 /* XMThematilOfficialCell.xib */; };
@@ -199,6 +201,9 @@
 /* Begin PBXFileReference section */
 		1808AC0D1F6A1E2900430405 /* XXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTextView.h; sourceTree = "<group>"; };
 		1808AC0E1F6A1E2900430405 /* XXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTextView.m; sourceTree = "<group>"; };
+		1810C71E1FC7AC390010D1C9 /* XMMeInformationModification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMMeInformationModification.h; sourceTree = "<group>"; };
+		1810C71F1FC7AC390010D1C9 /* XMMeInformationModification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMMeInformationModification.m; sourceTree = "<group>"; };
+		1810C7201FC7AC390010D1C9 /* XMMeInformationModification.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMMeInformationModification.xib; sourceTree = "<group>"; };
 		1817F9631F79ED9D00291F04 /* XMThematicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMThematicViewController.h; sourceTree = "<group>"; };
 		1817F9641F79ED9D00291F04 /* XMThematicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMThematicViewController.m; sourceTree = "<group>"; };
 		1817F96E1F7A1D1900291F04 /* XMThematilOfficialCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMThematilOfficialCell.h; sourceTree = "<group>"; };
@@ -1215,6 +1220,9 @@
 		237797451F553281008B2DA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1810C71E1FC7AC390010D1C9 /* XMMeInformationModification.h */,
+				1810C71F1FC7AC390010D1C9 /* XMMeInformationModification.m */,
+				1810C7201FC7AC390010D1C9 /* XMMeInformationModification.xib */,
 				1895DD091F62ADB70036B2C5 /* XMMeMessageCenter.h */,
 				1895DD0A1F62ADB70036B2C5 /* XMMeMessageCenter.m */,
 				18D20C871F662E6A007B7905 /* XMMeMyOrder.h */,
@@ -1551,6 +1559,7 @@
 				232D11321F5BA734008F9FF2 /* XMGoodsViewStyleTwoHeadView.xib in Resources */,
 				1817F9721F7A1D1900291F04 /* XMThematilOfficialCell.xib in Resources */,
 				23294DF41F5650A800720245 /* goodsViewStyleOne.xib in Resources */,
+				1810C7221FC7AC390010D1C9 /* XMMeInformationModification.xib in Resources */,
 				237797121F55321E008B2DA8 /* LaunchScreen.storyboard in Resources */,
 				183B30121F9483A900E6708B /* XMArticleViewController.xib in Resources */,
 				18233E3E1F69041200B80F69 /* XMMeAdressView.xib in Resources */,
@@ -1689,6 +1698,7 @@
 				189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */,
 				23294DF71F56890800720245 /* XMGoodsTitleStyleView.m in Sources */,
 				18D20C891F662E6A007B7905 /* XMMeMyOrder.m in Sources */,
+				1810C7211FC7AC390010D1C9 /* XMMeInformationModification.m in Sources */,
 				18FEB5B51FB1A25D00C9FE1C /* XMShopCostIntegralViewController.m in Sources */,
 				237797931F555979008B2DA8 /* SDCycleScrollView.m in Sources */,
 				1895DD0B1F62ADB70036B2C5 /* XMMeMessageCenter.m in Sources */,

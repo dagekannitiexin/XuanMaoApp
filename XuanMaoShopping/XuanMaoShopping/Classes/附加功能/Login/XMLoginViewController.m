@@ -380,6 +380,7 @@
                     [requestInfo setValue:nil forKey:@"Privilege"];
                     [requestInfo setValue:[NSNumber numberWithInteger:3] forKey:@"Flag"];
                     [self postInfo:requestInfo LoginType:@"新浪"];
+                    
                 }
             }];
     }
@@ -394,10 +395,20 @@
  */
 - (void)postInfo:(NSMutableDictionary *)resp LoginType:(NSString*)type{
 
-    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.137.143/smartapi/api/User/LoginByWechat"];
+    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.50.178/smartapi/api/User/LoginByWechat"];
     [XM_AppDelegate.engine sendRequesttoSLT:resp portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
         NSLog(@"%@",aDictronaryBaseObjects);
-        
+        if (![aDictronaryBaseObjects objectForKey:@"ReFlag"]){
+            return;
+        }
+        NSDictionary *dic = [aDictronaryBaseObjects objectForKey:@"Rdt"];
+        if ([[dic objectForKey:@"ReData"]isEqualToString:@"NoTel"]){
+            NSLog(@"跳到手机验证页");
+            XMLoginPhone *VCPhone = [[XMLoginPhone alloc]init];
+            VCPhone.openid = [dic objectForKey:@"IdData"];
+            [self.navigationController pushViewController:VCPhone animated:YES];
+        }
+
     } onError:^(NSError *engineError) {
         NSLog(@"no");
     }];

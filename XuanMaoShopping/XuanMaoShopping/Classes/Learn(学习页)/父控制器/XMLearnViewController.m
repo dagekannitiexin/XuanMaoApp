@@ -242,7 +242,7 @@
     headViewFour.backgroundColor = [UIColor yellowColor];
     
     XMLearnStyleTitleView *titleView = [[XMLearnStyleTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-    titleView.titleLabel.text =@"最新导师";
+    titleView.titleLabel.text =@"🔥爆课程";
     titleView.backgroundColor = [UIColor whiteColor];
     [headViewFour addSubview:titleView];
     
@@ -366,7 +366,9 @@
         bannerView.layer.masksToBounds = YES;
     }
     //在这里下载网络图片
-      [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:_imageArray[index]] placeholderImage:[UIImage imageNamed:@"Img_default"]];
+//      [bannerView.mainImageView sd_setImageWithURL:[NSURL URLWithString:_imageArray[index]] placeholderImage:[UIImage imageNamed:@"Img_default"]];
+    NSArray *array = [NSArray arrayWithObjects:@"_DSC3849",@"37877_20151208",@"37888_20151208",@"20170223微商-化妆品00106",@"20170223微商-化妆品00166",@"乳液03", nil];
+    bannerView.mainImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",array[index]]];
 //    bannerView.mainImageView.image = _imageArray[index];
     
     return bannerView;

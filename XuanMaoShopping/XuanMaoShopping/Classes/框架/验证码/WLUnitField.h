@@ -51,7 +51,7 @@ IB_DESIGNABLE
  */
 @property (nonatomic, assign) IBInspectable NSUInteger inputUnitCount;
 #else
-@property (nonatomic, assign, readonly) NSUInteger inputUnitCount;
+@property (nonatomic, assign) NSUInteger inputUnitCount;
 #endif
 
 

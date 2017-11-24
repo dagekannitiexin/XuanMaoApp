@@ -95,12 +95,15 @@
 {
     //设置常用参数
     NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
-    [requestInfo setValue:@"oX84XxIjjTO467fpFwkOSASm4kc0" forKey:@"openid"];
-    [requestInfo setValue:_numTextField.text forKey:@"telnumber"];
-    [requestInfo setValue:@"1234" forKey:@"code"];
-    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.137.143/smartapi/api/User/RegTelNumberByWechatId"];
-    [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
-        NSLog(@"%@",aDictronaryBaseObjects);
+    [requestInfo setValue:_numTextField.text forKey:@"telNumber"];
+    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.50.178/smartapi/api/User/GetMessageCode"];
+    [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"GET" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
+        if ([[aDictronaryBaseObjects objectForKey:@"ReFlag"]isEqualToString:@"1"])
+        {
+            XMLoginVerificationCode *vc = [[XMLoginVerificationCode alloc]init];
+            [vc setNumberOfPhone:_numTextField.text setOpenId:self.openid];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     } onError:^(NSError *engineError) {
         NSLog(@"no");
     }];

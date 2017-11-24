@@ -45,8 +45,10 @@
             
             [SVProgressHUD dismiss];
             succeededBlock(responseDictionary);
+            return;
         }
-        
+        [SVProgressHUD dismiss];
+        succeededBlock(responseDictionary);
         
         
     } onError:^(NSError *error) {

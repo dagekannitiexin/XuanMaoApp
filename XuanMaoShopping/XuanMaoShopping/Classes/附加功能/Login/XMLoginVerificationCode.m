@@ -8,6 +8,7 @@
 
 #import "XMLoginVerificationCode.h"
 #import "WLUnitField.h"
+#import "XMTabBarController.h"
 
 @interface XMLoginVerificationCode ()<WLUnitFieldDelegate>
 
@@ -21,6 +22,10 @@
 @property (nonatomic,strong) NSString *fourNum;
 //验证码
 @property (nonatomic,strong) WLUnitField *unitField;
+
+@property (nonatomic ,strong)NSString *phonenNumber;
+@property (nonatomic ,strong)NSString *openId;
+@property (nonatomic ,strong)NSString *code;
 @end
 
 @implementation XMLoginVerificationCode
@@ -98,6 +103,7 @@
     
     //验证码
     _unitField = [[WLUnitField alloc]initWithFrame:CGRectMake(0,_loadTimeAgain.bottom+20, 250, 53.5)];
+    _unitField.inputUnitCount = 6;
     _unitField.centerX = self.view.centerX;
     _unitField.borderRadius = 6.0;
     _unitField.cursorColor = [UIColor blueColor];
@@ -135,6 +141,7 @@
     //重开定时器 并且加入循环池
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadTimerAction) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
 }
 
 - (void)loadTimerAction
@@ -155,8 +162,10 @@
     
 }
 
-- (void)setNumberOfPhone:(NSString *)numberOfPhone
+- (void)setNumberOfPhone:(NSString *)numberOfPhone setOpenId:(NSString*)openId
 {
+    self.phonenNumber = numberOfPhone;
+    self.openId = openId;
     if(numberOfPhone.length ==11){
         //截取后四位
         NSString *FourNum = [numberOfPhone substringFromIndex:7];
@@ -166,9 +175,33 @@
 
 #pragma mark - delegate
 - (BOOL)unitField:(WLUnitField *)uniField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSString *text = [uniField.text stringByReplacingCharactersInRange:range withString:string];
-    NSLog(@"******>%@", text);
+    NSLog(@"%@",string);
+    NSLog(@"******>%@",uniField.text);
+    NSString *allString = [uniField.text stringByAppendingString:string];
+    if (allString.length ==6){
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            //设置常用参数
+//            NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+//            [requestInfo setValue:self.phonenNumber forKey:@"telNumber"];
+//            [requestInfo setValue:self.openId forKey:@"openid"];
+//            [requestInfo setValue:_unitField.text forKey:@"code"];
+//            NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.50.178/smartapi/api/User/RegTelNumberByWechatId"];
+//            [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
+//                [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+//                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+//            } onError:^(NSError *engineError) {
+//                NSLog(@"no");
+//
+//            }];
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+            [XM_AppDelegate setRootView];
+        });
+        
+    }
+    
     return YES;
 }
+
+
 
 @end

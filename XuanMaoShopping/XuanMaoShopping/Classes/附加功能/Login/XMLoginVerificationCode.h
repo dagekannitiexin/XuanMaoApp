@@ -10,5 +10,5 @@
 
 @interface XMLoginVerificationCode : XMBaseViewController
 
-- (void)setNumberOfPhone:(NSString *)numberOfPhone;
+- (void)setNumberOfPhone:(NSString *)numberOfPhone setOpenId:(NSString*)openId;
 @end

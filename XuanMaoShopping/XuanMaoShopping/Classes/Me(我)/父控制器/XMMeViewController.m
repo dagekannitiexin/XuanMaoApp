@@ -10,6 +10,7 @@
 #import "XMMeHeadStyleView.h"
 #import "XMMeCellStyleOne.h"
 //跳转到下列控制器
+#import "XMMeInformationModification.h"
 #import "XMMeMessageCenter.h"
 #import "XMMeMyOrder.h"
 #import "XMMeGroupBuy.h"
@@ -183,7 +184,10 @@
 {
     //分组点击事件触发
     if (indexPath.section ==0){
-        
+        if (indexPath.row == 0){//修改用户信息
+            XMMeInformationModification *VCInfo = [[XMMeInformationModification alloc]init];
+            [self.navigationController pushViewController:VCInfo animated:YES];
+        }
         if (indexPath.row == 1){ //消息中心
             XMMeMessageCenter *VCMessage = [[XMMeMessageCenter alloc]init];
             [self.navigationController pushViewController:VCMessage animated:YES];

@@ -16,5 +16,7 @@
 
 /** 后台连接管理*/
 @property (strong, nonatomic) RESTfulEngine *engine;
+
+- (void)setRootView;
 @end
 

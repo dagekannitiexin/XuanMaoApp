@@ -10,4 +10,6 @@
 
 @interface XMLoginPhone : XMBaseViewController
 
+@property (nonatomic,strong)NSString *openid;
+
 @end
