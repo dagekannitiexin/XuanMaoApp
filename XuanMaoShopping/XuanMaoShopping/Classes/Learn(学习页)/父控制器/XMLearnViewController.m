@@ -388,8 +388,9 @@
     
     _urlBannerArray = [NSMutableArray arrayWithObjects:@"https://h5.cosmeapp.com/group/thread/292433?stats_type=bbsthread&stats_data=292433",@"https://h5.cosmeapp.com/group/thread/293726?stats_type=bbsthread&stats_data=293726",@"https://h5.cosmeapp.com/group/thread/293974?stats_type=bbsthread&stats_data=293974",@"https://h5.cosmeapp.com/group/thread/294079?stats_type=bbsthread&stats_data=294079",@"http://h5.cosmeapp.com/article/detail/295",@"https://h5.cosmeapp.com/group/thread/294149?stats_type=bbsthread&stats_data=294149", nil];
     
-    _activeArray = [NSMutableArray arrayWithObjects:@"美妆鉴赏",@"专题",@"变美视频",@"大牌试用", nil];
-    _urlRecommend = [NSMutableArray arrayWithObjects:@"http://img0.cosmeapp.com/FulPtuDJpHpmjRa-VUUceTRjQZUJ",@"http://img0.cosmeapp.com/Frq7O6Ip9MhAI98oUuH0aFBKi0aZ",@"http://img0.cosmeapp.com/FkIaA6pmXaHaceUUxVH87S6fdFBm",@"http://img0.cosmeapp.com/FuKpvsn6eQ4bB0Jg5h8zWLc-dr5q", nil];
+    _activeArray   = [NSMutableArray arrayWithObjects:@"美妆鉴赏",@"专题",@"变美视频",@"大牌试用", nil];
+    
+    _urlRecommend  = [NSMutableArray arrayWithObjects:@"http://img0.cosmeapp.com/FulPtuDJpHpmjRa-VUUceTRjQZUJ",@"http://img0.cosmeapp.com/Frq7O6Ip9MhAI98oUuH0aFBKi0aZ",@"http://img0.cosmeapp.com/FkIaA6pmXaHaceUUxVH87S6fdFBm",@"http://img0.cosmeapp.com/FuKpvsn6eQ4bB0Jg5h8zWLc-dr5q", nil];
     
     _urlWithMeiZhuang = [NSMutableArray arrayWithObjects:@"https://public.cosmeapp.com/mapp/ranklist/2017m/list.html",
         @"https://h5.cosmeapp.com/pgc/hot-thread",
