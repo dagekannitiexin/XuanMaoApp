@@ -28,8 +28,7 @@
     [super viewDidLoad];
     
     
-
-    _web=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
+    _web=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     [self.view addSubview:_web];
     
     _web.backgroundColor = [UIColor whiteColor];

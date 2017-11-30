@@ -22,11 +22,14 @@
 		18233E3E1F69041200B80F69 /* XMMeAdressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18233E3D1F69041200B80F69 /* XMMeAdressView.xib */; };
 		1831EAF31F99BB1C00AC9978 /* XMMeMtOrderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831EAF11F99BB1C00AC9978 /* XMMeMtOrderViewCell.m */; };
 		1831EAF41F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1831EAF21F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib */; };
+		18387C601FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18387C5D1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.xib */; };
+		18387C611FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18387C5E1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.m */; };
+		18387C651FCFD1A300344BE4 /* XMVideoInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18387C621FCFD1A300344BE4 /* XMVideoInfo.xib */; };
+		18387C661FCFD1A300344BE4 /* XMVideoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18387C641FCFD1A300344BE4 /* XMVideoInfo.m */; };
+		18387C691FCFD8EE00344BE4 /* XMLearnVideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18387C681FCFD8EE00344BE4 /* XMLearnVideoListModel.m */; };
 		183B30111F9483A900E6708B /* XMArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B300F1F9483A900E6708B /* XMArticleViewController.m */; };
 		183B30121F9483A900E6708B /* XMArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B30101F9483A900E6708B /* XMArticleViewController.xib */; };
 		183B30181F94A9B100E6708B /* XMBuyShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B30171F94A9B100E6708B /* XMBuyShopView.m */; };
-		184E21231F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E21211F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m */; };
-		184E21241F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184E21221F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib */; };
 		18501D221F5FCC4900FDCF51 /* XMLabelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */; };
 		18501D251F5FF11F00FDCF51 /* XMLearnStyleViewFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 18501D241F5FF11F00FDCF51 /* XMLearnStyleViewFour.m */; };
 		18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */; };
@@ -224,14 +227,19 @@
 		1831EAF01F99BB1C00AC9978 /* XMMeMtOrderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMMeMtOrderViewCell.h; sourceTree = "<group>"; };
 		1831EAF11F99BB1C00AC9978 /* XMMeMtOrderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMMeMtOrderViewCell.m; sourceTree = "<group>"; };
 		1831EAF21F99BB1C00AC9978 /* XMMeMtOrderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMMeMtOrderViewCell.xib; sourceTree = "<group>"; };
+		18387C5D1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMCreditsExchangeTableViewCell.xib; sourceTree = "<group>"; };
+		18387C5E1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMCreditsExchangeTableViewCell.m; sourceTree = "<group>"; };
+		18387C5F1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMCreditsExchangeTableViewCell.h; sourceTree = "<group>"; };
+		18387C621FCFD1A300344BE4 /* XMVideoInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMVideoInfo.xib; sourceTree = "<group>"; };
+		18387C631FCFD1A300344BE4 /* XMVideoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMVideoInfo.h; sourceTree = "<group>"; };
+		18387C641FCFD1A300344BE4 /* XMVideoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMVideoInfo.m; sourceTree = "<group>"; };
+		18387C671FCFD8EE00344BE4 /* XMLearnVideoListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLearnVideoListModel.h; sourceTree = "<group>"; };
+		18387C681FCFD8EE00344BE4 /* XMLearnVideoListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLearnVideoListModel.m; sourceTree = "<group>"; };
 		183B300E1F9483A900E6708B /* XMArticleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMArticleViewController.h; sourceTree = "<group>"; };
 		183B300F1F9483A900E6708B /* XMArticleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMArticleViewController.m; sourceTree = "<group>"; };
 		183B30101F9483A900E6708B /* XMArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMArticleViewController.xib; sourceTree = "<group>"; };
 		183B30161F94A9B100E6708B /* XMBuyShopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMBuyShopView.h; sourceTree = "<group>"; };
 		183B30171F94A9B100E6708B /* XMBuyShopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMBuyShopView.m; sourceTree = "<group>"; };
-		184E21201F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCreditsExchangeTableViewCell.h; sourceTree = "<group>"; };
-		184E21211F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCreditsExchangeTableViewCell.m; sourceTree = "<group>"; };
-		184E21221F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMCreditsExchangeTableViewCell.xib; sourceTree = "<group>"; };
 		18501D201F5FCC4900FDCF51 /* XMLabelExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLabelExtension.h; sourceTree = "<group>"; };
 		18501D211F5FCC4900FDCF51 /* XMLabelExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLabelExtension.m; sourceTree = "<group>"; };
 		18501D231F5FF11F00FDCF51 /* XMLearnStyleViewFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLearnStyleViewFour.h; sourceTree = "<group>"; };
@@ -1169,6 +1177,8 @@
 		2377973F1F553281008B2DA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18387C671FCFD8EE00344BE4 /* XMLearnVideoListModel.h */,
+				18387C681FCFD8EE00344BE4 /* XMLearnVideoListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1190,9 +1200,12 @@
 				18501D261F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib */,
 				183B30161F94A9B100E6708B /* XMBuyShopView.h */,
 				183B30171F94A9B100E6708B /* XMBuyShopView.m */,
-				184E21201F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.h */,
-				184E21211F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m */,
-				184E21221F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib */,
+				18387C5F1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.h */,
+				18387C5E1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.m */,
+				18387C5D1FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.xib */,
+				18387C631FCFD1A300344BE4 /* XMVideoInfo.h */,
+				18387C641FCFD1A300344BE4 /* XMVideoInfo.m */,
+				18387C621FCFD1A300344BE4 /* XMVideoInfo.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1560,13 +1573,13 @@
 				1817F9721F7A1D1900291F04 /* XMThematilOfficialCell.xib in Resources */,
 				23294DF41F5650A800720245 /* goodsViewStyleOne.xib in Resources */,
 				1810C7221FC7AC390010D1C9 /* XMMeInformationModification.xib in Resources */,
+				18387C651FCFD1A300344BE4 /* XMVideoInfo.xib in Resources */,
 				237797121F55321E008B2DA8 /* LaunchScreen.storyboard in Resources */,
 				183B30121F9483A900E6708B /* XMArticleViewController.xib in Resources */,
 				18233E3E1F69041200B80F69 /* XMMeAdressView.xib in Resources */,
 				18A67E011FA83ED40068DEB7 /* Errors_en_US.plist in Resources */,
 				18CA94DB1F6A5CBC00B1A198 /* hotelcity.json in Resources */,
 				23776AF51F5CE4D900AF4470 /* XMGoodsViewStyleTwoView.xib in Resources */,
-				184E21241F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.xib in Resources */,
 				18A67E2A1FA863D30068DEB7 /* FastForwardView.xib in Resources */,
 				18CA94F51F6A65FE00B1A198 /* LICENSE in Resources */,
 				18FEB5BA1FB1B3DD00C9FE1C /* XMintegralCollectionViewCell.xib in Resources */,
@@ -1585,6 +1598,7 @@
 				18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */,
 				18D56AAD1F8C9E3C00C2DBF4 /* NewShakeViewController.xib in Resources */,
 				18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */,
+				18387C601FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.xib in Resources */,
 				18E3E7C21F5F8A26007D86FC /* XMLearnStyleViewTwo.xib in Resources */,
 				18DE40901F612779005D7942 /* XMMeHeadStyleView.xib in Resources */,
 				18FEB5B21FB15F2B00C9FE1C /* XMIntegralHeadView.xib in Resources */,
@@ -1682,7 +1696,6 @@
 				2377978E1F555979008B2DA8 /* TAAbstractDotView.m in Sources */,
 				18CA94FA1F6A65FE00B1A198 /* MJPropertyType.m in Sources */,
 				18233E331F68D06300B80F69 /* XMMeLikeEmpty.m in Sources */,
-				184E21231F9F1DB9007F54F5 /* XMCreditsExchangeTableViewCell.m in Sources */,
 				18CA94CB1F6A4F3800B1A198 /* ActionSheetCustomPicker.m in Sources */,
 				18A441E81F67B5F300DB5C82 /* Utility.m in Sources */,
 				1817F9651F79ED9D00291F04 /* XMThematicViewController.m in Sources */,
@@ -1693,11 +1706,13 @@
 				237797071F55321E008B2DA8 /* AppDelegate.m in Sources */,
 				18A441F01F67B63400DB5C82 /* NJKWebViewProgressView.m in Sources */,
 				1855910D1FA08960005CE47B /* XMLearnVideoViewController.m in Sources */,
+				18387C661FCFD1A300344BE4 /* XMVideoInfo.m in Sources */,
 				237797C51F5559A4008B2DA8 /* UIImage+MultiFormat.m in Sources */,
 				18CA94CC1F6A4F3800B1A198 /* ActionSheetDatePicker.m in Sources */,
 				189994D61F739534008919DD /* XMLoginVerificationCode.m in Sources */,
 				23294DF71F56890800720245 /* XMGoodsTitleStyleView.m in Sources */,
 				18D20C891F662E6A007B7905 /* XMMeMyOrder.m in Sources */,
+				18387C611FCFD19C00344BE4 /* XMCreditsExchangeTableViewCell.m in Sources */,
 				1810C7211FC7AC390010D1C9 /* XMMeInformationModification.m in Sources */,
 				18FEB5B51FB1A25D00C9FE1C /* XMShopCostIntegralViewController.m in Sources */,
 				237797931F555979008B2DA8 /* SDCycleScrollView.m in Sources */,
@@ -1717,6 +1732,7 @@
 				18A67E291FA863D30068DEB7 /* FastForwardView.m in Sources */,
 				18FF06B61F5E9D4100EA1D13 /* XMLearnStyleViewOne.m in Sources */,
 				18FEB5B01FB15EB400C9FE1C /* XMIntegralHeadView.m in Sources */,
+				18387C691FCFD8EE00344BE4 /* XMLearnVideoListModel.m in Sources */,
 				23776AF31F5CE4BD00AF4470 /* XMGoodsViewStyleTwoView.m in Sources */,
 				18A67E101FA83ED40068DEB7 /* Reachability.m in Sources */,
 				18A67E2D1FA863D30068DEB7 /* WMPlayer.m in Sources */,

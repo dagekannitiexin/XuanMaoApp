@@ -84,7 +84,7 @@
 
 // 全局主题颜色
 #define MRGlobalBg MRRGBColor(250, 250, 250)
-
+#define MRRedBg MRRGBColor(245, 80, 83)
 // 主题背景颜色
 #define LYBgColor MRRGBColor(244, 244, 244)
 
@@ -145,7 +145,7 @@ attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
 
 //******网络通信************
 
-#define kBaseURL @"cms.dknb.nbtv.cn"
+#define kBaseURL @"192.168.50.178"
 #define MallBaseURL @"apimall.dknb.nbtv.cn"
 
 

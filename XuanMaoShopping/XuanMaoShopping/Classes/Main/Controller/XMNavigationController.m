@@ -7,8 +7,8 @@
 //
 
 #import "XMNavigationController.h"
-#import "Define.h"
-@interface XMNavigationController ()<UIGestureRecognizerDelegate>
+
+@interface XMNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -20,10 +20,10 @@
     UINavigationBar *navigationBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[XMNavigationController class]]];
     
     // 设置背景图片
-    navigationBar.barTintColor = MRGlobalBg;
-    navigationBar.translucent = NO;
+    navigationBar.barTintColor = MRRedBg;
+    
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     
     [navigationBar setTitleTextAttributes:attrs];
     [navigationBar setTintColor:[UIColor whiteColor]];
@@ -64,7 +64,7 @@
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 @end

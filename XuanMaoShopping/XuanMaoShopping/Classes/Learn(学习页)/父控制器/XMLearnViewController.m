@@ -52,7 +52,6 @@
     [self ccreateData];
     [self createNetWork];
     //设置导航栏
-    [self creatnavigationbar];
     
     UIImageView *dragon = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH-40)/2, 64, 40, 40)];
     dragon.image = [UIImage imageNamed:@"dragon"];
@@ -71,14 +70,9 @@
     
 }
 
-- (void)creatnavigationbar
-{
-    
-}
-
 -(void)initTableView
 {
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49-64)];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49)];
     [self.view addSubview:_tableView];
     _tableView.backgroundColor = LYBgColor;
  _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
@@ -318,13 +312,13 @@
         NSString * type = @"专题栏";
         [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
     }else if (sender.tag == 102){
-//        XMCreditsExchange *credits = [[XMCreditsExchange alloc]init];
-//        credits.title = @"变美视频";
-//        [self.navigationController pushViewController:credits animated:YES];
-        NSString * tag = @"没有tag";
-        NSString * out_url = _urlWithMeiZhuang[2];
-        NSString * type = @"变美视频";
-        [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
+        XMCreditsExchange *credits = [[XMCreditsExchange alloc]init];
+        credits.title = @"变美视频";
+        [self.navigationController pushViewController:credits animated:YES];
+//        NSString * tag = @"没有tag";
+//        NSString * out_url = _urlWithMeiZhuang[2];
+//        NSString * type = @"变美视频";
+//        [Utility goVcForItemId:tag WithURL:out_url WithType:type WithNavGation:self.navigationController];
     }else if (sender.tag ==103){
         NSString * tag = @"没有tag";
         NSString * out_url = _urlWithMeiZhuang[3];

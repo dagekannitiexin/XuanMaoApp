@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drama in Paris 温婉可人深秋酒红系妆容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGV-gI-hvv">
-                        <rect key="frame" x="15" y="210" width="345" height="21"/>
+                        <rect key="frame" x="23" y="210" width="329" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Zi5-vg-q1w"/>
                         </constraints>
@@ -36,14 +36,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="2dl-hI-L97">
-                        <rect key="frame" x="15" y="246" width="25" height="25"/>
+                        <rect key="frame" x="23" y="246" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="BN5-0i-FhS"/>
                             <constraint firstAttribute="height" constant="25" id="TX6-Vb-jUp"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YouTube搬运工" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utb-o3-T30">
-                        <rect key="frame" x="48" y="248" width="85" height="21"/>
+                        <rect key="frame" x="56" y="248" width="85" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="TwM-Yy-f45"/>
                         </constraints>
@@ -52,7 +52,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnv-RO-2kS">
-                        <rect key="frame" x="352" y="248" width="8" height="21"/>
+                        <rect key="frame" x="344" y="248" width="8" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="JkW-Bh-5P2"/>
                         </constraints>
@@ -60,15 +60,15 @@
                         <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="0cW-VL-MZR">
-                        <rect key="frame" x="337" y="252" width="12" height="12"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_video_play_count" translatesAutoresizingMaskIntoConstraints="NO" id="0cW-VL-MZR">
+                        <rect key="frame" x="331" y="252" width="10" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="53Q-y0-Roy"/>
-                            <constraint firstAttribute="width" constant="12" id="Msr-6j-Nkm"/>
+                            <constraint firstAttribute="width" constant="10" id="Msr-6j-Nkm"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p92-hE-69B">
-                        <rect key="frame" x="293" y="248" width="32" height="21"/>
+                        <rect key="frame" x="287" y="248" width="32" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="qe4-Cz-uKR"/>
                         </constraints>
@@ -76,8 +76,8 @@
                         <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-kN-QmS">
-                        <rect key="frame" x="278" y="252" width="12" height="12"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_video_duration" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-kN-QmS">
+                        <rect key="frame" x="272" y="252" width="12" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="HZw-A5-mcZ"/>
                             <constraint firstAttribute="width" constant="12" id="nv5-yQ-Y0w"/>
@@ -106,10 +106,20 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="HeadImageUrl" destination="2dl-hI-L97" id="IGz-J2-lpn"/>
+                <outlet property="HeadPortrait" destination="MOl-0S-IYD" id="JTY-wQ-m8D"/>
+                <outlet property="OwnerName" destination="utb-o3-T30" id="sNO-ty-Ahn"/>
+                <outlet property="ProductName" destination="LGV-gI-hvv" id="Ay1-rW-30f"/>
+                <outlet property="ReadNum" destination="Rnv-RO-2kS" id="sb5-Mn-gs6"/>
+                <outlet property="VideoLength" destination="p92-hE-69B" id="eE4-Mj-cHs"/>
+            </connections>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Img_default" width="640" height="360"/>
+        <image name="icon_video_duration" width="10" height="10"/>
+        <image name="icon_video_play_count" width="7" height="9"/>
     </resources>
 </document>

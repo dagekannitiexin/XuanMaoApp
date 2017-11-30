@@ -61,7 +61,7 @@
 }
 
 - (void)createTableView{
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49-64)];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49)];
     [self.view addSubview:_tableView];
     
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
