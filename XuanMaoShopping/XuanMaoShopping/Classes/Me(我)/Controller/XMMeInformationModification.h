@@ -10,4 +10,6 @@
 
 @interface XMMeInformationModification : XMBaseViewController
 
+@property (strong,nonatomic) NSString *pickType;//头像的手段
+
 @end

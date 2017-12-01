@@ -14,6 +14,7 @@
     [super awakeFromNib];
     // Initialization code
     self.HeadImageUrl.layer.cornerRadius = self.HeadImageUrl.width/2;
+    self.HeadImageUrl.clipsToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

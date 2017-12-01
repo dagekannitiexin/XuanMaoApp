@@ -9,6 +9,7 @@
 #import "XMLearnVideoViewController.h"
 #import "WMPlayer.h"
 #import "UIViewController+GestureStateBlock.h"
+#import "XMVideoInfo.h"
 
 @interface XMLearnVideoViewController ()<WMPlayerDelegate>{
     WMPlayer  *wmPlayer;
@@ -17,6 +18,8 @@
     BOOL isRotateEable;//记录支不支持旋转
     BOOL isStartPlay; //记录第一次播放
 }
+
+@property (nonatomic , strong)XMVideoInfo *videoInfo;
 
 @end
 
@@ -258,7 +261,12 @@
         isRotateEable = YES;
     };
     
-    
+    //增加视屏下面的视图
+    _videoInfo = [[[NSBundle mainBundle]loadNibNamed:@"XMVideoInfo" owner:nil options:nil]lastObject];
+    _videoInfo.origin = CGPointMake(0, playerFrame.size.height);
+    [self setViewInfo];
+    [self.view addSubview:_videoInfo];
+     
 }
 
 - (void)releaseWMPlayer
@@ -282,5 +290,35 @@
     [self releaseWMPlayer];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     NSLog(@"DetailViewController deallco");
+}
+
+#pragma mark - 下视图设置
+- (void)setListModel:(listVideoModel *)listModel
+{
+    _listModel = listModel;
+}
+
+/*
+ 设置view
+ */
+- (void)setViewInfo
+{
+    //产品名称
+    self.videoInfo.ProductName.text = _listModel.ProductName;
+    
+    //头像地址
+    [self.videoInfo.HeadImageUrl sd_setImageWithURL:[NSURL URLWithString:_listModel.HeadImageUrl]placeholderImage:[UIImage imageNamed:@"Img_default"]];
+    
+    //所有者名称
+    self.videoInfo.OwnerName.text = _listModel.OwnerName;
+    
+    //视频时间
+    self.videoInfo.VideoLength.text = _listModel.VideoLength;
+    
+    //阅读人数
+    self.videoInfo.ReadNum.text = _listModel.ReadNum;
+    
+    //导师标签
+    self.videoInfo.Tag.text = _listModel.Tag;
 }
 @end

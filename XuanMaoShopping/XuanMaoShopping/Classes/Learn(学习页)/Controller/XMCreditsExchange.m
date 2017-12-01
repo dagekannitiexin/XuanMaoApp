@@ -102,6 +102,7 @@
 {
     XMLearnVideoViewController *VC = [[XMLearnVideoViewController alloc]init];
     VC.URLString = @"http://flv.bn.netease.com/videolib3/1710/31/tbNPI5923/SD/movie_index.m3u8";
+    VC.listModel = self.listModel.ReData[indexPath.row];
     [self.navigationController pushViewController:VC animated:YES];
 }
 @end

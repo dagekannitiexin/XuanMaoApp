@@ -255,7 +255,6 @@
         NSArray *array = [dicHost objectForKey:@"labels"];
         [viewFour createLabel:array];
         
-        
         NSArray *array2 = [dicHost objectForKey:@"reviews"];
         [viewFour createImg:array2];
         

@@ -10,7 +10,11 @@
 #import "XMBuyShopView.h"
 #import "XMMeAddressEmpty.h"
 #import "XMMeCoupon.h"
-@interface XMArticleViewController ()
+
+#define HeadHeight 164
+@interface XMArticleViewController ()<UIScrollViewDelegate>{
+    CGRect orginYframe;
+}
 /*
  毛玻璃界面
  */
@@ -23,6 +27,12 @@
  */
 @property (weak, nonatomic) IBOutlet UIImageView *buyBtnImg;
 
+/*
+ 头部背景图片
+ */
+@property (nonatomic, strong) UIImageView *headBgView;
+@property (nonatomic, strong) UIScrollView *bgView; //底部滚动视图
+
 @end
 
 @implementation XMArticleViewController
@@ -33,11 +43,30 @@
     // Do any additional setup after loading the view from its nib.
     //处理navigationBar
     self.fd_prefersNavigationBarHidden = YES;
+    self.fd_interactivePopDisabled = YES;
     [self createNavigationBar];
     
     self.buyBtnImg.userInteractionEnabled = YES;
     UITapGestureRecognizer *buyTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(buyViewShow)];
     [self.buyBtnImg addGestureRecognizer:buyTap];
+    
+    //主题view
+    _bgView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49)];
+    _bgView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT*1.5);
+    _bgView.backgroundColor = [UIColor whiteColor];
+    _bgView.showsVerticalScrollIndicator = FALSE;
+    _bgView.showsHorizontalScrollIndicator = FALSE;
+    _bgView.alwaysBounceHorizontal = NO;
+    _bgView.layer.masksToBounds = YES;
+    _bgView.delegate = self;
+    _bgView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_bgView];
+    
+    _headBgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeadHeight)];
+    _headBgView.image = [UIImage imageNamed:@"Img_default"];
+    orginYframe = _headBgView.frame;
+    _headBgView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.view addSubview:_headBgView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,5 +140,31 @@
     return _shopView;
 }
 
+#pragma maek - 视图主体设置
 
+/*
+ scrollViewDidScroll Delegate
+ */
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offSetY = scrollView.contentOffset.y+20;
+    if (offSetY >= 0)
+    {
+        _headBgView.frame = ({
+            CGRect frame = _headBgView.frame;
+            frame.origin.y = orginYframe.origin.y - offSetY;
+            frame;
+        });
+    }
+    else
+    {
+        _headBgView.frame = ({
+            CGRect frame = _headBgView.frame;
+            frame.size.width =orginYframe.size.width -offSetY;
+            frame.size.height = orginYframe.size.height *frame.size.width/ orginYframe.size.width;
+            frame.origin.x = -(frame.size.width - orginYframe.size.width)/2;
+            frame;
+        });
+    }
+}
 @end

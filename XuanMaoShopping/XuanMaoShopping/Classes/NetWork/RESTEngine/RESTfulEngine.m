@@ -64,4 +64,40 @@
     return op;
 }
 
+
+- (id)sendRequesttoWeiBo:(NSMutableDictionary *)requestInfo fileDate:(NSData*)fileData portPath:(NSString *)portPath onSucceeded:(DictronaryBlock) succeededBlock
+                 onError:(ErrorBlock) errorBlock{
+    Reachability *reach = [Reachability reachabilityForInternetConnection];
+    if(reach ==nil || !reach.isReachable){
+        [SVProgressHUD showErrorWithStatus:kServiceErrorMessage];
+        return nil;
+    }
+    
+    RESTfulOperation *op = (RESTfulOperation*) [self operationWithPath:portPath params:requestInfo httpMethod:@"POST"];
+    op.stringEncoding = NSUTF8StringEncoding;
+    
+    [op addData:fileData forKey:@"fileUp" mimeType:@"image/png" fileName:@"image.png"];
+    NSLog(@"%@",[op description]);
+    [op onCompletion:^(MKNetworkOperation *completedOperation) {
+        NSLog(@"%@",[op responseString]);
+        
+        NSDictionary *responseDictionary = [[op responseString]  objectFromJSONString];
+        NSString *  ret = [responseDictionary valueForKey:@"token_status"];
+        if(ret){
+            [SVProgressHUD dismiss];
+            succeededBlock(responseDictionary);
+        }else {
+            succeededBlock(responseDictionary);
+        }
+        
+    } onError:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:kServiceErrorMessage];
+        
+    }];
+    
+    [self enqueueOperation:op];
+    
+    return op;
+    
+}
 @end

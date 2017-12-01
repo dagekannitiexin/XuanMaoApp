@@ -7,9 +7,10 @@
 //
 
 #import "XMBaseViewController.h"
+#import "XMLearnVideoListModel.h"
 
 @interface XMLearnVideoViewController : XMBaseViewController
 
 @property (nonatomic, retain)NSString * URLString;
-
+@property (nonatomic, strong)listVideoModel *listModel;
 @end

@@ -27,4 +27,7 @@ typedef void (^ErrorBlock)(NSError* engineError);
 
 - (id)sendRequesttoSLT:(NSMutableDictionary *)requestInfo portPath:(NSString *)portPath  Method:(NSString*)method onSucceeded:(DictronaryBlock) succeededBlock
                 onError:(ErrorBlock) errorBlock;
+
+- (id)sendRequesttoWeiBo:(NSMutableDictionary *)requestInfo fileDate:(NSData*)fileData portPath:(NSString *)portPath onSucceeded:(DictronaryBlock) succeededBlock
+                 onError:(ErrorBlock) errorBlock;
 @end
