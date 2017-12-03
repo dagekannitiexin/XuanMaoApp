@@ -19,6 +19,7 @@
 #import "SignViewController.h"
 #import "XMArticleViewController.h"
 #import "XMCreditsExchange.h"
+#import "XMWriterViewController.h"
 
 
 
@@ -75,7 +76,7 @@
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49)];
     [self.view addSubview:_tableView];
     _tableView.backgroundColor = LYBgColor;
- _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     _tableView.showsVerticalScrollIndicator = NO;
     [_tableView setTableHeaderView:_headView];
     //设置上下拉刷新
@@ -211,6 +212,8 @@
         hostView.origin = CGPointMake(hostSpace +(hostW+hostViewSpace)*i, 0);
         [hostScrView addSubview:hostView];
         hostScrView.contentSize = CGSizeMake(hostView.right+20, hostH);
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(peopleView)];
+        [hostScrView addGestureRecognizer:tap];
         
         //赋值
         NSDictionary *dicHost = _modelOfHotPeoPle[i];
@@ -372,6 +375,12 @@
 {
     XMArticleViewController *article = [[XMArticleViewController alloc]init];
     [self.navigationController pushViewController:article animated:YES];
+}
+
+- (void)peopleView
+{
+    XMWriterViewController *peopleView = [[XMWriterViewController alloc]init];
+    [self.navigationController pushViewController:peopleView animated:YES];
 }
 
 #pragma mark  - 假数据
