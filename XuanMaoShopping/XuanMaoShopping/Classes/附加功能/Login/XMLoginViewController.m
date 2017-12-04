@@ -395,14 +395,14 @@
  */
 - (void)postInfo:(NSMutableDictionary *)resp LoginType:(NSString*)type{
 
-    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.50.178/smartapi/api/User/LoginByWechat"];
+    NSString *netPath = [NSString stringWithFormat:@"%@%@",kBaseURL,@"/smartapi/api/Login/LoginByWechat"];
     [XM_AppDelegate.engine sendRequesttoSLT:resp portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
         NSLog(@"%@",aDictronaryBaseObjects);
         if (![aDictronaryBaseObjects objectForKey:@"ReFlag"]){
             return;
         }
         NSDictionary *dic = [aDictronaryBaseObjects objectForKey:@"Rdt"];
-        if ([[dic objectForKey:@"ReData"]isEqualToString:@"NoTel"]){
+        if ([[dic objectForKey:@"ReData"]isEqualToString:@"NoTel"] || [[dic objectForKey:@"ReData"]isEqualToString:@"New"]){
             NSLog(@"跳到手机验证页");
             XMLoginPhone *VCPhone = [[XMLoginPhone alloc]init];
             VCPhone.openid = [dic objectForKey:@"IdData"];

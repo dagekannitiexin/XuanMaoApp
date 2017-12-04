@@ -96,7 +96,7 @@
     //设置常用参数
     NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
     [requestInfo setValue:_numTextField.text forKey:@"telNumber"];
-    NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.50.178/smartapi/api/User/GetMessageCode"];
+    NSString *netPath = [NSString stringWithFormat:@"%@%@",kBaseURL,@"/smartapi/api/Login/GetMessageCode"];
     [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"GET" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
         if ([[aDictronaryBaseObjects objectForKey:@"ReFlag"]isEqualToString:@"1"])
         {

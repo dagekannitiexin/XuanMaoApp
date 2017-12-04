@@ -9,6 +9,7 @@
 #import "XMWriterViewController.h"
 #import "WMPlayer.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "XMProductViewTableViewCell.h"
 
 @interface XMWriterViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -37,6 +38,7 @@
     
     [self createTableView];
     [self createTableHead];
+    [self createNavigation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +51,7 @@
 {
     _headView = [[UIView alloc]initWithFrame:CGRectZero];
     _headView.origin = CGPointZero;
+    _headView.backgroundColor = [UIColor whiteColor];
     [_tableView setTableHeaderView:_headView];
     
     //头部播放视频
@@ -151,8 +154,27 @@
     [iconViwe addSubview:introduce];
     
     //添加横线
+    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(introduce.x, introduce.bottom +15, SCREEN_WIDTH-introduce.x, 1)];
+    lineView.backgroundColor = RGBACOLOR(171, 171, 171, 0.3);
+    [iconViwe addSubview:lineView];
     
-    _heigLight = iconViwe.bottom;
+    _heigLight = _heigLight + lineView.bottom -100 +15;
+}
+
+/*
+ 创建导航栏
+ */
+- (void)createNavigation
+{
+    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(16, 30, 22, 44)];
+    [backBtn setImage:[UIImage imageNamed:@"Back Chevron"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"Back Helight"] forState:UIControlStateHighlighted];
+    [self.view addSubview:backBtn];
+    
+    UIButton *shareBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 24, 24)];
+    [shareBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [shareBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    [self.view addSubview:shareBtn];
 }
 
 - (MPMoviePlayerController *)moviePlayerController
@@ -187,13 +209,48 @@
 {
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
-//    _tableView.delegate = self;
-//    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor whiteColor];
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    _tableView.alwaysBounceVertical = NO;
     _tableView.showsVerticalScrollIndicator = NO;
+    [_tableView registerNib:[UINib nibWithNibName:@"XMProductViewTableViewCell" bundle:nil] forCellReuseIdentifier:@"productCell"];
     [self.view addSubview:_tableView];
     
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 365;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"productCell";
+    XMProductViewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell){
+        
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+
+//禁止下拉刷新
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (_tableView.contentOffset.y <= 100) {
+        _tableView.bounces = NO;
+    }
+    else
+    {
+        _tableView.bounces = YES;
+    }
+}
 @end

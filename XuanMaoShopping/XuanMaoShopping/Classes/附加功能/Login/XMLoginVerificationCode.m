@@ -180,19 +180,18 @@
     NSString *allString = [uniField.text stringByAppendingString:string];
     if (allString.length ==6){
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            //设置常用参数
-//            NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
-//            [requestInfo setValue:self.phonenNumber forKey:@"telNumber"];
-//            [requestInfo setValue:self.openId forKey:@"openid"];
-//            [requestInfo setValue:_unitField.text forKey:@"code"];
-//            NSString *netPath = [NSString stringWithFormat:@"%@",@"192.168.50.178/smartapi/api/User/RegTelNumberByWechatId"];
-//            [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
-//                [SVProgressHUD showSuccessWithStatus:@"登录成功"];
-//                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-//            } onError:^(NSError *engineError) {
-//                NSLog(@"no");
-//
-//            }];
+            //设置常用参数
+            NSMutableDictionary *requestInfo = [[NSMutableDictionary alloc]init];
+            [requestInfo setValue:self.phonenNumber forKey:@"telNumber"];
+            [requestInfo setValue:self.openId forKey:@"openid"];
+            [requestInfo setValue:_unitField.text forKey:@"code"];
+            NSString *netPath = [NSString stringWithFormat:@"%@%@",kBaseURL,@"/smartapi/api/Login/RegTelNumberByWechatId"];
+            [XM_AppDelegate.engine sendRequesttoSLT:requestInfo portPath:netPath Method:@"POST" onSucceeded:^(NSDictionary *aDictronaryBaseObjects) {
+                [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+            } onError:^(NSError *engineError) {
+                NSLog(@"no");
+            }];
             [SVProgressHUD showSuccessWithStatus:@"登录成功"];
             [XM_AppDelegate setRootView];
         });

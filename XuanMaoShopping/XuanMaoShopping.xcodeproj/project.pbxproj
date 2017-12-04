@@ -15,6 +15,8 @@
 		1817F9721F7A1D1900291F04 /* XMThematilOfficialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1817F9701F7A1D1900291F04 /* XMThematilOfficialCell.xib */; };
 		1817F9741F7A2F9400291F04 /* PublicSFTResources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1817F9731F7A2F9400291F04 /* PublicSFTResources.plist */; };
 		18195B541F9DFFA400A76761 /* XMCreditsExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 18195B531F9DFFA400A76761 /* XMCreditsExchange.m */; };
+		181C9A421FD4F7F4005FCCB7 /* XMProductViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181C9A401FD4F7F4005FCCB7 /* XMProductViewTableViewCell.m */; };
+		181C9A431FD4F7F4005FCCB7 /* XMProductViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181C9A411FD4F7F4005FCCB7 /* XMProductViewTableViewCell.xib */; };
 		18233E331F68D06300B80F69 /* XMMeLikeEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E321F68D06300B80F69 /* XMMeLikeEmpty.m */; };
 		18233E361F68D8E200B80F69 /* XMMeAddressEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E351F68D8E200B80F69 /* XMMeAddressEmpty.m */; };
 		18233E391F68FD9400B80F69 /* XMMeAddressEmptyDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233E381F68FD9400B80F69 /* XMMeAddressEmptyDetail.m */; };
@@ -218,6 +220,9 @@
 		1817F9731F7A2F9400291F04 /* PublicSFTResources.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PublicSFTResources.plist; sourceTree = "<group>"; };
 		18195B521F9DFFA400A76761 /* XMCreditsExchange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCreditsExchange.h; sourceTree = "<group>"; };
 		18195B531F9DFFA400A76761 /* XMCreditsExchange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCreditsExchange.m; sourceTree = "<group>"; };
+		181C9A3F1FD4F7F4005FCCB7 /* XMProductViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMProductViewTableViewCell.h; sourceTree = "<group>"; };
+		181C9A401FD4F7F4005FCCB7 /* XMProductViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMProductViewTableViewCell.m; sourceTree = "<group>"; };
+		181C9A411FD4F7F4005FCCB7 /* XMProductViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMProductViewTableViewCell.xib; sourceTree = "<group>"; };
 		18233E311F68D06300B80F69 /* XMMeLikeEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeLikeEmpty.h; sourceTree = "<group>"; };
 		18233E321F68D06300B80F69 /* XMMeLikeEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMMeLikeEmpty.m; sourceTree = "<group>"; };
 		18233E341F68D8E200B80F69 /* XMMeAddressEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMMeAddressEmpty.h; sourceTree = "<group>"; };
@@ -668,6 +673,9 @@
 		18259B301FD2979B004E74B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				181C9A3F1FD4F7F4005FCCB7 /* XMProductViewTableViewCell.h */,
+				181C9A401FD4F7F4005FCCB7 /* XMProductViewTableViewCell.m */,
+				181C9A411FD4F7F4005FCCB7 /* XMProductViewTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1673,6 +1681,7 @@
 				18259B2E1FD26083004E74B4 /* XMLearnPeopleProfile.xib in Resources */,
 				1817F9741F7A2F9400291F04 /* PublicSFTResources.plist in Resources */,
 				18501D271F5FF12A00FDCF51 /* XMLearnStyleViewFour.xib in Resources */,
+				181C9A431FD4F7F4005FCCB7 /* XMProductViewTableViewCell.xib in Resources */,
 				18D56AAD1F8C9E3C00C2DBF4 /* NewShakeViewController.xib in Resources */,
 				18DE40981F61378E005D7942 /* XMMeCellStyleOne.xib in Resources */,
 				18259B291FD255EC004E74B4 /* XMArticleViewController.xib in Resources */,
@@ -1843,6 +1852,7 @@
 				18A441EF1F67B63400DB5C82 /* NJKWebViewProgress.m in Sources */,
 				237797C71F5559A4008B2DA8 /* UIImageView+WebCache.m in Sources */,
 				237797CC1F5568E0008B2DA8 /* HeadButton.m in Sources */,
+				181C9A421FD4F7F4005FCCB7 /* XMProductViewTableViewCell.m in Sources */,
 				18CA94FE1F6A65FE00B1A198 /* NSObject+MJProperty.m in Sources */,
 				237797041F55321E008B2DA8 /* main.m in Sources */,
 				18CA94F61F6A65FE00B1A198 /* MJExtensionConst.m in Sources */,
