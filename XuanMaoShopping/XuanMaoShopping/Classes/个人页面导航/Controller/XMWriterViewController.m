@@ -15,7 +15,9 @@
     UITableView *_tableView;
     WMPlayer    *wmPlayer;
     UIView      *_headView;
-    CGFloat  _heigLight;
+    CGFloat     _heigLight;
+    CGFloat     _alpha;
+    UIView      *_navView;
 }
 
 @property (nonatomic,strong)MPMoviePlayerController *moviePlayerController;
@@ -24,10 +26,6 @@
 @end
 
 @implementation XMWriterViewController
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,7 +48,7 @@
 - (void)createTableHead
 {
     _headView = [[UIView alloc]initWithFrame:CGRectZero];
-    _headView.origin = CGPointZero;
+    _headView.origin = CGPointMake(0, -20);
     _headView.backgroundColor = [UIColor whiteColor];
     [_tableView setTableHeaderView:_headView];
     
@@ -66,7 +64,7 @@
 //video one
 - (void)addVideoView
 {
-    UIView *tapView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH/16*9)];
+    UIView *tapView = [[UIView alloc]initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_WIDTH/16*9)];
     tapView.backgroundColor = [UIColor whiteColor];
     [_headView addSubview:tapView];
     //路径
@@ -76,16 +74,22 @@
     [tapView addGestureRecognizer:self.tap];
     [self.moviePlayerController play];
     
-    _heigLight = _heigLight + tapView.height;
+    //虚化img
+    UIImageView *xuhuaImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH/16*9)];
+    xuhuaImg.image = [UIImage imageNamed:@"未标题-1"];
+    [_headView addSubview:xuhuaImg];
+    
+    _heigLight = _heigLight + tapView.height -20;
 }
 
 //iconImg  and 简介
 - (void)addIconImg
 {
     UIView *iconViwe = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
-    iconViwe.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
+    iconViwe.backgroundColor = [UIColor clearColor];
     iconViwe.centerY = _heigLight;
     [_headView addSubview:iconViwe];
+    
     
     UIImageView *iconPlace = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 147, 168)];
     iconPlace.image = [UIImage imageNamed:@"iconRecommendNormal"];
@@ -166,14 +170,23 @@
  */
 - (void)createNavigation
 {
-    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(16, 30, 22, 44)];
-    [backBtn setImage:[UIImage imageNamed:@"Back Chevron"] forState:UIControlStateNormal];
-    [backBtn setImage:[UIImage imageNamed:@"Back Helight"] forState:UIControlStateHighlighted];
+    _navView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
+    _navView.backgroundColor = [UIColor whiteColor];
+    _navView.alpha = 0.0;
+    [self.view addSubview:_navView];
+
+    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(16, 0, 24, 20)];
+    backBtn.centerY = _navView.height/2+10;
+    [backBtn setImage:[UIImage imageNamed:@"navIconBackDefault"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"navIconBackDefault"] forState:UIControlStateHighlighted];
+    [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:backBtn];
-    
-    UIButton *shareBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 24, 24)];
-    [shareBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [shareBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+
+    UIButton *shareBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-16-24, 0, 22, 22)];
+    shareBtn.centerY = _navView.height/2+10;
+    [shareBtn setImage:[UIImage imageNamed:@"btnBlackShare"] forState:UIControlStateNormal];
+    [shareBtn setImage:[UIImage imageNamed:@"btnBlackShare"] forState:UIControlStateHighlighted];
+    [shareBtn addTarget:self action:@selector(shareClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:shareBtn];
 }
 
@@ -252,5 +265,28 @@
     {
         _tableView.bounces = YES;
     }
+    // 计算当前偏移位置
+    CGFloat threholdHeight = (SCREEN_WIDTH * 9 / 16) - 64;
+    if (scrollView.contentOffset.y >= -20 &&
+        scrollView.contentOffset.y <= threholdHeight) {
+        _alpha = scrollView.contentOffset.y / threholdHeight;
+        _navView.alpha = _alpha;
+    }else{
+        _navView.alpha = 1.0;
+    }
+}
+
+#pragma mark - 按钮点击事件
+/*
+ 返回按钮
+ */
+- (void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)shareClick
+{
+    
 }
 @end
