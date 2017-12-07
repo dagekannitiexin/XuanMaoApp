@@ -116,7 +116,7 @@
     UIButton *guanzhuBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 65, 30)];
     guanzhuBtn.right = SCREEN_WIDTH-20;
     guanzhuBtn.centerY = nameLabel.centerY;
-    [guanzhuBtn setTitle:@"已关注" forState:UIControlStateNormal];
+    [guanzhuBtn setTitle:@"关注" forState:UIControlStateNormal];
     [guanzhuBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [iconViwe addSubview:guanzhuBtn];
     

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6n-5z-weQ">
                         <rect key="frame" x="0.0" y="10" width="375" height="358"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="JxB-K3-gQv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c1cafd9060248ce520dc_500_500" translatesAutoresizingMaskIntoConstraints="NO" id="JxB-K3-gQv">
                                 <rect key="frame" x="15" y="10" width="33" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="4iY-wh-fhr"/>
@@ -41,33 +42,33 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="永远不过时的黑白经典和地区hi初七号此前hi切换器" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NJ-LY-VBE">
-                                <rect key="frame" x="15" y="278" width="340" height="46"/>
+                                <rect key="frame" x="15" y="268" width="340" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="2ko-dx-5z0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="那些严选经典的黑白好物" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb5-ye-e5x">
-                                <rect key="frame" x="15" y="324" width="146" height="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所谓少即是多，简单就是百搭和高级。网易严选这款羊毛围巾，是冬日必备的基础款。相比于动辄上千的大牌我们有部署他们的材质：100%内蒙古优质羊毛，只选用未到三岁小羊身上最细腻的部分留存高级感" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb5-ye-e5x">
+                                <rect key="frame" x="15" y="314" width="345" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="Dy6-yW-1Cg"/>
-                                    <constraint firstAttribute="height" constant="13" id="su2-WY-hLY"/>
+                                    <constraint firstAttribute="height" constant="35" id="su2-WY-hLY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fb5-ye-e5x" secondAttribute="trailing" constant="15" id="7XX-Nb-Svi"/>
                             <constraint firstItem="JxB-K3-gQv" firstAttribute="top" secondItem="B6n-5z-weQ" secondAttribute="top" constant="10" id="81B-Cw-taK"/>
                             <constraint firstItem="Fb5-ye-e5x" firstAttribute="leading" secondItem="B6n-5z-weQ" secondAttribute="leading" constant="15" id="D80-I5-ux6"/>
                             <constraint firstItem="NuI-BD-VHd" firstAttribute="centerY" secondItem="JxB-K3-gQv" secondAttribute="centerY" id="OiE-7i-Zdf"/>
                             <constraint firstItem="Fb5-ye-e5x" firstAttribute="top" secondItem="3NJ-LY-VBE" secondAttribute="bottom" id="Ruc-Lb-e7y"/>
                             <constraint firstItem="3NJ-LY-VBE" firstAttribute="leading" secondItem="B6n-5z-weQ" secondAttribute="leading" constant="15" id="RvW-NZ-fL9"/>
-                            <constraint firstItem="3NJ-LY-VBE" firstAttribute="top" secondItem="wiH-1u-rxh" secondAttribute="bottom" constant="15" id="UQr-F7-27U"/>
+                            <constraint firstItem="3NJ-LY-VBE" firstAttribute="top" secondItem="wiH-1u-rxh" secondAttribute="bottom" constant="5" id="UQr-F7-27U"/>
                             <constraint firstAttribute="trailing" secondItem="3NJ-LY-VBE" secondAttribute="trailing" constant="20" id="Wyx-30-dTE"/>
                             <constraint firstItem="NuI-BD-VHd" firstAttribute="leading" secondItem="JxB-K3-gQv" secondAttribute="trailing" constant="20" id="YOI-jK-rrA"/>
                             <constraint firstItem="wiH-1u-rxh" firstAttribute="leading" secondItem="B6n-5z-weQ" secondAttribute="leading" id="cYg-fz-qQK"/>
@@ -98,5 +99,6 @@
     </objects>
     <resources>
         <image name="Img_default" width="640" height="360"/>
+        <image name="c1cafd9060248ce520dc_500_500" width="500" height="500"/>
     </resources>
 </document>

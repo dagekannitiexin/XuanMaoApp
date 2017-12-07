@@ -95,7 +95,7 @@
     }
     
     NSDictionary *dic = _wetArray[indexPath.row];
-    cell.writerImg.image = [UIImage imageNamed:@"Img_default"];
+    cell.writerImg.image = [UIImage imageNamed:@"c1cafd9060248ce520dc_500_500"];
     cell.writerName.text = @"首富团推荐";
     [cell.articlesImg sd_setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"img"]]];
     cell.articlesTime.text  = [dic objectForKey:@"date"];
