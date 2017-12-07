@@ -58,6 +58,7 @@
     dragon.image = [UIImage imageNamed:@"dragon"];
     [self.view addSubview:dragon];
     
+    
 //    //创建头部视图
 //    [self initHeadView];
 //
